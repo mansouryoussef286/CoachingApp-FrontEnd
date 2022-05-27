@@ -14,7 +14,7 @@ function App() {
     return (
         <Router>
             <Routes>
-            <Route path="" element={<LandingPage/>} />
+            <Route path="/" element={<LandingPage/>}/>
             <Route path="login" element={<Login/>} />
             <Route path="*" element={<NotFound/>} />
             </Routes>
@@ -27,12 +27,12 @@ export default App;
 
 
 
+    // more routing
+    // {/* <Header logoutRef={this.logout} /> */}
+    //         {/* <Route component={(props)=> <Header setLoggedInRef={this.setLoggedIn} logoutRef={this.logout}  {...props}/>} path='/' /> */}
+            
+            
+    //         {/* <Route component={(props)=> <NoAccess {...props}/>} path='/noaccess'/> */}
+    //         {/* <Footer/> */}
+            // {/* <Route component={(props)=> <Footer/>} path='/' /> */}
 
-// more routing
-{/* <Header logoutRef={this.logout} /> */}
-        {/* <Route component={(props)=> <Header setLoggedInRef={this.setLoggedIn} logoutRef={this.logout}  {...props}/>} path='/' /> */}
-        
-        
-        {/* <Route component={(props)=> <NoAccess {...props}/>} path='/noaccess'/> */}
-        {/* <Footer/> */}
-        {/* <Route component={(props)=> <Footer/>} path='/' /> */}

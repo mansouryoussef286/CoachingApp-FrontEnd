@@ -1,6 +1,6 @@
 import React from 'react'
 
- const LandingPage = () => {
+const LandingPage = () => {
     return (
         <div>landingPage</div>
     );
