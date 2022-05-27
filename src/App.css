@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+.ok{
+  background-color: black;
+  margin: 10px;
+}
+.Pictitle{
+  color: #282c34;
+}
+.PicInfo{
+  color: #282c34;
+
+
+}

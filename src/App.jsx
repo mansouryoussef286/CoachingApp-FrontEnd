@@ -8,6 +8,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import LandingPage from './components/LandingPage.jsx';
 import { Login } from './components/Login';
 import { NotFound } from './components/NotFound';
+import { Carousell } from './components/landingPageComponents/Carousell';
 
 
 function App() {
@@ -15,8 +16,11 @@ function App() {
         <Router>
             <Routes>
             <Route path="/" element={<LandingPage/>}/>
+            <Route path="/carousel" element={<Carousell/>}/>
+
             <Route path="login" element={<Login/>} />
             <Route path="*" element={<NotFound/>} />
+            
             </Routes>
         </Router>
     );
