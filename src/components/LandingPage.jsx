@@ -1,8 +1,10 @@
 import React from 'react'
+import { AboutGymawy } from './landingPageComponents/AboutGymawy'
 
 const LandingPage = () => {
+    
     return (
-        <div>landingPage</div>
+        <AboutGymawy></AboutGymawy>
     );
 }
 export default LandingPage;
