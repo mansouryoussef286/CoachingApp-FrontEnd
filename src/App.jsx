@@ -11,6 +11,7 @@ import LandingPage from './components/LandingPage.jsx';
 import { Login } from './components/Login';
 import { NotFound } from './components/NotFound';
 import { Carousell } from './components/landingPageComponents/Carousell';
+import { NotAuthorized } from './components/NotAuthorized';
 
 
 function App() {
@@ -19,8 +20,8 @@ function App() {
             <Routes>
             <Route path="/" element={<LandingPage/>}/>
             <Route path="/carousel" element={<Carousell/>}/>
-
             <Route path="login" element={<Login/>} />
+            <Route path="/NotAuthorized" element={<NotAuthorized/>} />
             <Route path="*" element={<NotFound/>} />
             
             </Routes>
