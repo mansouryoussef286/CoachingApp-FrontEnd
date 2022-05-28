@@ -1,6 +1,10 @@
 
 import React ,{useState}from 'react'
+import { useNavigate,Link } from 'react-router-dom';
+
 import { Card } from 'antd';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookF, faTwitter, faGoogle, faInstagram, faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons'
 import { Carousel } from 'primereact/carousel';
 import { Button } from 'primereact/button';
 
@@ -51,7 +55,15 @@ export const Coaches = () => {
             status: 'available'
         },
 
-    ]
+    ];
+
+    //Header for coaches carousel
+    const header=<div className=' justify-content-center align-items-center d-flex flex-column '>
+                    <span style={{color:'#217BF4'}}>Valuable Team</span>
+                    <p style={{color:'#0A093D',fontSize:30}} className='inline'><b>Our Active Coaches</b></p>
+                    <a href='#' className='btn btn-primary mt-2'>See All</a>
+                </div>;
+
     // const productService = new ProductService();
 
 
@@ -60,16 +72,19 @@ export const Coaches = () => {
             <div className="coach-item">
                 <div className="coach-item-content">
                     <div className="mb-3">
-                        <img src={`assets/images/coach.png`} onError={(e) => e.target.src='assets/images/coach.png'} alt='{product.name}' className="coach-image" />
+                        <img src={`assets/images/coach.png`} onError={(e) => e.target.src='assets/images/coach.png'} alt='{product.name}' className="coach-image align-self-center" />
                     </div>
                     <div>
                         <h4 className="mb-1">{coach.name}</h4>
                         <h6 className="mt-0 mb-3">Nutration</h6>
                         <span className={`coach-badge status-avialable`}>available</span>
-                        <div className="car-buttons mt-5">
+                        <div className="car-buttons mt-2">
                             <Button icon="pi pi-search" className="p-button p-button-rounded mr-2" />
                             <Button icon="pi pi-star-fill" className="p-button-success p-button-rounded mr-2" />
-                            <Button icon="pi pi-cog" className="p-button-help p-button-rounded" />
+                            <Button icon="pi pi-Linkedin" className="p-button-help p-button-rounded" />
+
+                            {/* <FontAwesomeIcon icon={faFacebookF} /> */}
+                         <div><a href='#' className='btn btn-primary mt-1'>Profile</a></div>
                         </div>
                     </div>
                 </div>
@@ -79,13 +94,11 @@ export const Coaches = () => {
 
     return (
         <div className='d-flex flex-column'>
-            <div>
-                title
-            </div>
+            
             <div className="carousel-demo">
                 <div className="card">
                     <Carousel value={coaches2}  numVisible={4} numScroll={1} responsiveOptions={responsiveOptions} className="custom-carousel" circular
-                        autoplayInterval={3000} itemTemplate={coachesTemplate} header={<h5>title</h5>} />
+                        autoplayInterval={6000} itemTemplate={coachesTemplate} header={header} />
                 </div>
             </div>
         </div>

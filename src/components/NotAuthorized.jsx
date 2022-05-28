@@ -4,7 +4,7 @@ import { useNavigate,Link } from 'react-router-dom';
 export const NotAuthorized = () => {
     const navigate= useNavigate();
     const clickHandler= (e)=>{
-        navigate("/");
+        navigate.back();
     }
 
     return (

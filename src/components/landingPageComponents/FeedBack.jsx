@@ -28,17 +28,17 @@ export const FeedBack = () => {
     
     return (
         <div className='d-flex flex-lg-nowrap flex-md-nowrap flex-wrap  align-items-center justify-content-center my-5' >
-            <div className='Feedback-section mx-3 w-100'>
-                <div className='w-100 d-flex'>
-                    <Card footer={footer1}  title={subtitle1} className='cards'>
+            <div className='Feedback-section mx-3 w-100 '>
+                <div className='w-100 d-flex flex-lg-nowrap flex-md-nowrap flex-wrap  align-items-center justify-content-center'>
+                    <Card footer={footer1}  title={subtitle1} className='cards my-2'>
                     More than 2 billion we people over countries use socibooks we to stay in touch with friends.
                     </Card>
-                    <Card footer={footer2}  title={subtitle2} className='cards'>
+                    <Card footer={footer2}  title={subtitle2} className='cards my-2 '>
                     More than 2 billion we people over countries use socibooks we to stay in touch with friends.
                     </Card>
                 </div>
             </div>
-            <div className='d-flex flex-wrap justify-content-left align-items-center about-section w-100 mx-3'>
+            <div className='d-flex flex-wrap justify-content-left align-items-center about-section w-100 mx-3 my-2'>
                 <span className='Primary'> Our Achievement</span>
             <h2 className='text-capitalize fw-bold'>
                     We are Connecting You to your desired coach instantly.
