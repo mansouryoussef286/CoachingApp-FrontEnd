@@ -2,7 +2,7 @@ import React from 'react'
 
 export const AboutGymawy = () => {
     return (
-        <div className='d-flex' >
+        <div className='d-flex' id='aboutApp'>
             <div className='about-section m-5'>
                 <h2 className='text-capitalize fw-bold'>
                     why would you use gymawy application?

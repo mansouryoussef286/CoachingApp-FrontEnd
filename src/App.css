@@ -1,61 +1,44 @@
+@import '~antd/dist/antd.css';
 @import "primereact/resources/themes/md-light-indigo/theme.css";  
 @import "primereact/resources/primereact.min.css";                  
 @import "primeicons/primeicons.css";  
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
 @import url('https://fonts.googleapis.com/css?family=Catamaran:400,800');                              
  
+
+
+
+#root {
+    background-color: lightgray;
+}
+
+
 .App {
     text-align: center;
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+
+/* start carousel css */
+
+.carousel-image {
+    height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
+.carousel-overlay {
+    position: absolute;
+    z-index: 10;
+    width: 50%;
+    height: 100vh;
+    padding: 5%;
+    margin-left: 10%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+    align-items: flex-start;
 }
 
-.App-link {
-    color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.ok{
-  background-color: black;
-  margin: 10px;
-}
-.Pictitle{
-  color: #282c34;
-}
-.PicInfo{
-  color: #282c34;
-
-
-}
-
+/* end carousel css */
 
 
 /* start about the app css */
@@ -72,7 +55,6 @@
 
 .about-list {
     list-style: none;
-    /* Remove default bullets */
 }
 
 .about-list li::before {
@@ -88,16 +70,66 @@
 
 /* end about the app css */
 
+
+/* start Header nav bar */
+
+.header-logo {
+    height: 30px;
+}
+
+.navbar-button {
+    margin-right: 1em;
+}
+
+.navbar-custom {
+    animation-name: addColor;
+    animation-duration: 0.5s;
+    background: rgba(117, 117, 117, 0.9);
+}
+
+
+/* 
+.navbar-custom-remove {
+    animation-name: removeColor;
+    animation-duration: 0.5s;
+} */
+
+@keyframes addColor {
+    0% {
+        background: none;
+    }
+    100% {
+        background: rgba(117, 117, 117, 0.9);
+    }
+}
+
+
+/* @keyframes removeColor {
+    0% {
+        background-color: inherit;
+    }
+    100% {
+        background: none;
+    }
+} */
+
+
+/* end Header nav bar */
+
+
 /*  begin Feedback section */
+
 .Feedback-section {
     width: 50%;
 }
-.card2{
+
+.card2 {
     margin-left: 10px;
     height: 80%;
     width: 50%;
 }
-.card1{
+
+.card1 {
     margin-left: 15px;
     height: 100%;
     width: 50%;
@@ -487,5 +519,10 @@
     letter-spacing: 1px;
   }
 /* end Not found component  */
+
+
+
+
+
 
 
