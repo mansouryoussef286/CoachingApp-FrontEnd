@@ -16,7 +16,6 @@ function App() {
         <Router>
             <Routes>
             <Route path="/" element={<LandingPage/>}/>
-            <Route path="/carousel" element={<Carousell/>}/>
 
             <Route path="login" element={<Login/>} />
             <Route path="*" element={<NotFound/>} />
