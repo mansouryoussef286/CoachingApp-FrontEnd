@@ -71,7 +71,7 @@
 }
 
 .navbar-button {
-    margin-right: 1em;
+    margin: 0 1em;
 }
 
 .navbar-custom {
@@ -116,15 +116,9 @@
     width: 50%;
 }
 
-.card2 {
+.cards {
     margin-left: 10px;
-    height: 80%;
-    width: 50%;
-}
-
-.card1 {
-    margin-left: 15px;
-    height: 100%;
+    /* height: 80%; */
     width: 50%;
 }
 
