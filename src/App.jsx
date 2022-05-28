@@ -4,6 +4,8 @@ import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
+import "@fortawesome/fontawesome-free";
+import 'primeicons/primeicons.css';
 // import components
 import LandingPage from './components/LandingPage.jsx';
 import { Login } from './components/Login';

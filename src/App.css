@@ -1,6 +1,13 @@
 @import '~antd/dist/antd.css';
+@import "primereact/resources/themes/md-light-indigo/theme.css";
+@import "primereact/resources/primereact.min.css";
+@import "primeicons/primeicons.css";
 #root {
     background-color: lightgray;
+}
+
+.App {
+    text-align: center;
 }
 
 
@@ -101,3 +108,25 @@
 
 
 /* end Header nav bar */
+
+
+/*  begin Feedback section */
+
+.Feedback-section {
+    width: 50%;
+}
+
+.card2 {
+    margin-left: 10px;
+    height: 80%;
+    width: 50%;
+}
+
+.card1 {
+    margin-left: 15px;
+    height: 100%;
+    width: 50%;
+}
+
+
+/*  End Feedback section */
