@@ -18,9 +18,13 @@ const LandingPage = () => {
                 <AboutGymawy></AboutGymawy>
                 <FeedBack></FeedBack>
                 <Coaches></Coaches>
+
                 <GetOurApp></GetOurApp>
+
                 <JoinOurTeam></JoinOurTeam>
+
                 <Footer></Footer>
+
                 </>
         );
 }
