@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import styles
 import './App.css';
+import './Login.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import "@fortawesome/fontawesome-free";
