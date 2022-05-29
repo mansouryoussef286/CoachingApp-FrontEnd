@@ -9,6 +9,8 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 export const Header = () => {
     let [color, setColor] = useState(false);
 
+    let [isList, setIsList] = useState(false);
+    
     const changeColor = ()=>{
         if(window.scrollY >100){
             setColor(true);
@@ -22,10 +24,22 @@ export const Header = () => {
         // console.log('event listener added');
     },[])
 
+    useEffect(()=>{
+        if(window.location.href.includes("list")){
+            setIsList(true);
+        }
+    },[])
 
+    const ifIsList = ()=>{
+        if(isList){
+            return(
+                <div> controls</div>
+            );
+        }
+    }
     return (
         // <div  className='Header navbar-custom'>
-        <Navbar expand="lg" fixed='top' className={color? 'navbar-custom' :''}>
+        <Navbar expand="lg" fixed={'top'} className={color? 'navbar-custom' :''}>
             <Container >
                 <Navbar.Brand href="#Home">
                     <img src='./assets/images/musclelogo.png' className='header-logo'/>
@@ -61,7 +75,7 @@ export const Header = () => {
                     </div>
                 </Navbar.Collapse>
             </Container>
-            
+            {ifIsList()}
         </Navbar>
         // </div>
     );

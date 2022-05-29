@@ -1,11 +1,12 @@
 @import '~antd/dist/antd.css';
+@import 'css/listOfCoaches.css';
 @import "primereact/resources/themes/md-light-indigo/theme.css";
 @import "primereact/resources/primereact.min.css";
 @import "primeicons/primeicons.css";
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
 @import url('https://fonts.googleapis.com/css?family=Catamaran:400,800');
 #root {
-    background-color: lightgray;
+    /* background-color: lightgray; */
     --main-color: rgb(129, 207, 223);
 }
 
