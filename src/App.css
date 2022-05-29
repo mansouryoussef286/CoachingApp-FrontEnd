@@ -136,7 +136,7 @@
 
 /* begin Coaches component in landing page */
 
-.carousel-demo .coach-item .coach-item-content {
+.carousel-demo .coach-item-content {
     /* each card css */
     border: 1px solid var(--surface-d);
     border-radius: 10px;
