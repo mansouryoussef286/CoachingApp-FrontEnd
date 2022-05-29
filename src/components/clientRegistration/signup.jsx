@@ -67,6 +67,9 @@ export const Signup = () => {
     if(register.ConfPass=="" || register.ConfPass== null)
     conpass="enter confirm password";
 
+    if(register.Pass!=register.ConfPass)
+    conpass="Password and confirm password must be the same";
+
     setError({
     NameError:name,
     EmailError:email,
