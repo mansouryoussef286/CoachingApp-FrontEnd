@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css?family=Catamaran:400,800');
 #root {
     background-color: lightgray;
+    --main-color: rgb(129, 207, 223);
 }
 
 .App {
@@ -54,7 +55,7 @@
 
 .about-list li::before {
     content: "\2022";
-    color: rgb(118, 162, 255);
+    color: var(--main-color);
     font-size: 20px;
     font-weight: bold;
     display: inline-block;
@@ -79,7 +80,8 @@
 .navbar-custom {
     animation-name: addColor;
     animation-duration: 0.5s;
-    background: rgba(117, 117, 117, 0.9);
+    background: var(--main-color);
+    box-shadow: 0px 10px 12px -3px rgba(0, 0, 0, 0.79);
 }
 
 
@@ -94,7 +96,7 @@
         background: none;
     }
     100% {
-        background: rgba(117, 117, 117, 0.9);
+        background: var(--main-color);
     }
 }
 
@@ -120,10 +122,8 @@
 
 .cards {
     margin-left: 10px;
-
     height: 100%;
-    max-width: 100%;
-
+    max-width: 300px;
 }
 
 
@@ -136,21 +136,22 @@
 /* begin Coaches component in landing page */
 
 .carousel-demo .coach-item .coach-item-content {
+    /* each card css */
     border: 1px solid var(--surface-d);
     border-radius: 10px;
     margin: .3rem;
     text-align: center;
     padding: 2rem 0;
-    width: 275px;
+    /* width: 275px; */
     height: 400px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    background-color: #fff;
 }
 
 .carousel-demo .coach-item .coach-image {
     width: 50%;
     border-radius: 50%;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    
 }
 
 .coach-badge.status-avialable {
@@ -158,11 +159,32 @@
     color: #256029;
 }
 
+.carousel-demo .card {
+    /* color of the background of coahes carousel */
+    background-color: lightgray !important;
+}
+
 
 /* end Coaches component in landing page */
 
 
 /* #endregion coaches */
+
+
+/* #region get app  */
+
+.getApp-image {
+    max-width: 600px;
+    max-height: 370px;
+}
+
+.getapp-bg {
+    background: var(--main-color);
+    background: linear-gradient(0deg, rgb(129, 207, 223) 0%, rgba(229, 240, 253, 1) 100%);
+}
+
+
+/* #endregion get app  */
 
 
 /*#region not authorized*/

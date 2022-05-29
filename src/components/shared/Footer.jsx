@@ -8,7 +8,7 @@ export const Footer = () => {
     return (
         <div className='text-center text-lg-start text-light bg-dark'>
             {/* social media */}
-            <section className='d-flex justify-content-center justify-content-lg-between p-4 border-top border-bottom'>
+            <section className='d-flex justify-content-center justify-content-lg-between p-1 border-top border-bottom'>
                 <div className='me-5 d-none d-lg-block'>
                     <span>Get connected with us on social networks:</span>
                 </div>
@@ -35,7 +35,7 @@ export const Footer = () => {
                 </div>
             </section>
             {/* mid section */}
-            <section className=''>
+            {/* <section className=''>
                 <div className='container text-center text-md-start mt-1'>
                 <div className='row mt'>
                     <div className='col-md-3 col-lg-4 col-xl-3 mx-auto mb-1'>
@@ -113,7 +113,7 @@ export const Footer = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
             {/* copyright last section */}
             <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
                 © 2022 Copyright: 

@@ -17,7 +17,7 @@ export const Coaches = () => {
             numScroll: 3
         },
         {
-            breakpoint: '600px',
+            breakpoint: '700px',
             numVisible: 2,
             numScroll: 2
         },
@@ -60,12 +60,11 @@ export const Coaches = () => {
     //Header for coaches carousel
     const header=<div className=' justify-content-center align-items-center d-flex flex-column '>
                     <span style={{color:'#217BF4'}}>Valuable Team</span>
-                    <p style={{color:'#0A093D',fontSize:30}} className='inline'><b>Our Active Coaches</b></p>
-                    <a href='#' className='btn btn-primary mt-2'>See All</a>
+                    <p style={{color:'#0A093D',fontSize:30}} className='inline my-0'><b>Our Active Coaches</b></p>
+                    <a href='#' className='btn btn-primary my-2'>See All</a>
                 </div>;
 
     // const productService = new ProductService();
-
 
     const coachesTemplate = (coach) => {
         return (
@@ -84,7 +83,7 @@ export const Coaches = () => {
                             <Button icon="pi pi-Linkedin" className="p-button-help p-button-rounded" />
 
                             {/* <FontAwesomeIcon icon={faFacebookF} /> */}
-                         <div><a href='#' className='btn btn-primary mt-1'>Profile</a></div>
+                        <div><a href='#' className='btn btn-primary mt-1'>Profile</a></div>
                         </div>
                     </div>
                 </div>
@@ -97,7 +96,7 @@ export const Coaches = () => {
             
             <div className="carousel-demo">
                 <div className="card">
-                    <Carousel value={coaches2}  numVisible={4} numScroll={1} responsiveOptions={responsiveOptions} className="custom-carousel" circular
+                    <Carousel value={coaches2}  numVisible={4} numScroll={1} responsiveOptions={responsiveOptions} circular
                         autoplayInterval={6000} itemTemplate={coachesTemplate} header={header} />
                 </div>
             </div>

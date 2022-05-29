@@ -29,7 +29,7 @@ export const FeedBack = () => {
     return (
         <div className='d-flex flex-lg-nowrap flex-md-nowrap flex-wrap  align-items-center justify-content-center my-5' >
             <div className='Feedback-section mx-3 w-100 '>
-                <div className='w-100 d-flex flex-lg-nowrap flex-md-nowrap flex-wrap  align-items-center justify-content-center'>
+                <div className='w-100 d-flex align-items-stretch flex-lg-nowrap flex-md-nowrap flex-wrap justify-content-center'>
                     <Card footer={footer1}  title={subtitle1} className='cards my-2'>
                     More than 2 billion we people over countries use socibooks we to stay in touch with friends.
                     </Card>

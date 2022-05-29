@@ -50,14 +50,14 @@ export const Header = () => {
                     </Nav>
                     
                     <form className='d-flex'>
-                        <input type="text" name="search" id="" className='form-control' placeholder='search'/>
-                        <a className='btn btn-danger'>
+                        {/* <input type="text" name="search" id="" className='form-control' placeholder='search'/> */}
+                        <a className='btn '>
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </a>
                     </form>
                     <div className='d-flex justify-content-center align-items-center'>
-                        <button className='btn btn-primary  navbar-button'>sign in</button>
-                        <button className='btn btn-primary  navbar-button'>sign up</button>
+                        <button className='btn  navbar-button'>sign in</button>
+                        <button className='btn  navbar-button'>sign up</button>
                     </div>
                 </Navbar.Collapse>
             </Container>
