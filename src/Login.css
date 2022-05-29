@@ -77,7 +77,7 @@ section .cont .formB .inputB span
     font-size: 16px;
     letter-spacing: 1px;
 }
-section .cont .formB .inputB input
+section .cont .formB .inputB input 
 {
     width: 100%;
     padding:10px 20px;
@@ -89,7 +89,9 @@ section .cont .formB .inputB input
     color: #607d8b;
     background: transparent;
     border-radius: 30px;
+    margin-bottom:10px ;
 }
+
 section .cont .formB .inputB input[type="button"]
 {
 background: #03a9f4;
