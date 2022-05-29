@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
 @import url('https://fonts.googleapis.com/css?family=Catamaran:400,800');
 #root {
-    background-color: lightgray;
+    /* background-color: lightgray; */
     --main-color: rgb(129, 207, 223);
 }
 
@@ -391,6 +391,7 @@
 /*#region not found*/
 
 
+
 /* begin Not found component  */
 
 .error-container {
@@ -562,3 +563,4 @@ a.more-link {
 
 
 /*#endregion RegionName*/
+
