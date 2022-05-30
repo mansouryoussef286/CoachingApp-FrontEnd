@@ -29,7 +29,7 @@ export const Signup = () => {
     x[eventObject.target.name]=eventObject.target.value;
     console.log(eventObject.target.name +"  "+eventObject.target.value);
     setregister({
-    Name:x.Name,
+        Name:x.Name,
         Email:x.Email,
         Mobile:x.Mobile,
         gender:x.gender,
@@ -81,8 +81,8 @@ export const Signup = () => {
     ConfPassError:conpass
 
     });
-    console.log(name, email, mobile,gender);
-    console.log(register);
+    // console.log(name, email, mobile,gender);
+    // console.log(register);
   
   }
   return (
@@ -93,10 +93,10 @@ export const Signup = () => {
               <img src="/assets/images/LoginImage.png" alt="smartGymawyy"/>
           </div>
           <div className='cont'>
-              <div className='formB'>
+              <div className='formB signupForm'>
                   <h2>Gymawy</h2>
                   <h2>Sign Up</h2>
-                  <form action="">
+                  <form  action="">
                         <div className='inputB'> 
                                 <span>Name </span>
                                 <input 
