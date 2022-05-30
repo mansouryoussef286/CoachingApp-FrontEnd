@@ -133,9 +133,9 @@ export const CoachSignUpp = () => {
     )
     return (
         <> 
-        <section className='coachSignupContainer mt-2'>
+        <section className='coachSignupContainer '>
             <div className="imgbg">
-                <img src="/assets/images/coach.jpg" alt="smartGymawyy" className='w-100 h-100'/>
+                <img src="/assets/images/coach4.png" alt="smartGymawyy" />
             </div>
             <div className='cont'>
                 <div className='formB'>
