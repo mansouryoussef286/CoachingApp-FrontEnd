@@ -12,7 +12,7 @@ export const Header = () => {
     let [isList, setIsList] = useState(false);
     
     const changeColor = ()=>{
-        if(window.scrollY >100){
+        if(window.scrollY >50){
             setColor(true);
         }else{
             setColor(false);
@@ -33,14 +33,13 @@ export const Header = () => {
     const ifIsList = ()=>{
         if(isList){
             return(
-                <div> controls</div>
+                <div></div>
             );
         }
     }
     return (
-        // <div  className='Header navbar-custom'>
-        <Navbar expand="lg" fixed={'top'} className={color? 'navbar-custom' :''}>
-            <Container >
+        <Navbar expand="lg"  fixed='top' className={color? 'navbar-custom' :''}>
+                <Container >
                 <Navbar.Brand href="#Home">
                     <img src='./assets/images/musclelogo.png' className='header-logo'/>
                 </Navbar.Brand>
@@ -75,8 +74,6 @@ export const Header = () => {
                     </div>
                 </Navbar.Collapse>
             </Container>
-            {ifIsList()}
         </Navbar>
-        // </div>
     );
 }
