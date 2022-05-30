@@ -1,6 +1,67 @@
-import React from 'react'
+import React ,{useState}from 'react'
+
 
 export const Login = () => {
+  const [username,setUsername]=useState('');
+  const [password,setPassword]=useState('');
+  const [message, setMessage] = useState('');
+  const [message2,setMessage2] = useState('');
+  const [message3,setMessage3] = useState('');
+ 
+
+  const onChangeHandler= (e)=>{
+    if(e.target.name==='Username')
+    {
+     setUsername(e.target.value);
+    }
+    else
+    {
+     setPassword(e.target.value);
+    }
+  }
+  const inputValidate=(e)=>{
+    
+      const regExEmail= /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      
+    if(e.target.name==='Username')
+    {
+      if (regExEmail.test(username)===false|| username==='') {
+        setMessage3('Email us not valid');
+        setTimeout(() => {
+          setMessage3('');
+        }, 3000);
+        
+      }
+      else{
+        setMessage3('');
+      }
+    }
+    
+
+  }
+
+  const onLoginHandler=(e)=>{
+    e.preventDefault();
+    if(username === "admin" && password === "123"){
+        
+            setMessage("logged in!")
+        sessionStorage.setItem("role","admin");
+        setTimeout(() => {
+            // this.props.setLoggedInRef();
+            // this.props.history.push('/');
+            setMessage("");
+
+        }, 2000);
+    }
+    else{
+        
+          setMessage2("incorrect credentials");
+        setTimeout(() => {
+              setMessage2('')
+        }, 2000);
+    }
+ }
+  
   return (
         <section>
 
@@ -13,27 +74,30 @@ export const Login = () => {
                   <h2>Login</h2>
                   <form action="">
                         <div className='inputB'> 
-                                <span>Username </span>
-                                <input type="text" id="Usname"name="Usname"placeholder="User Name"/> 
+                                <span>Email </span>
+                                <input type="text" id="Usname"name="Username"placeholder="Email" value={username} onChange={(e)=>{onChangeHandler(e);inputValidate(e);}}/> 
+                                <span className='text-danger mt-1'>{message3} </span>
                         </div>
-                          <div class="inputB">    
-                                <span>Password </span>    
-                                  <input type="password" id="Pass"name="Pass"placeholder="Password"/>                     
+                          <div className="inputB">    
+                            <span>Password </span>    
+                            <input type="password" id="Pass"name="Password"placeholder="Password" value={password} onChange={(e)=>{onChangeHandler(e);}}/>                   
                           </div>
-                          {/* <!-- <div class="remember">
+                          {/* <!-- <div className="remember">
                               <label >
                                   <input type="checkbox" name="remember" >
                                   Remember Me
                               </label> -->
 
                           <!-- </div> -->  */}
-                          <div class="inputB">
+                          <div className="inputB">
                               
-                                  <input type="button" value="Sign In" onclick="slogin()"/>   
+                                  <input type="button" value="Sign In" onClick={onLoginHandler}/>   
                           </div>
-                        <div class="inputB">
+                        <div className="inputB">
                               
-                        <p id="warning"></p>
+                        <h4 className='alert-success '>{message}</h4>
+                      <h4 className='alert-danger '>{message2}</h4>
+
                     </div>
                       
                   </form>
