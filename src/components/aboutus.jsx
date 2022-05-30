@@ -68,25 +68,34 @@ export const About = () => {
             </Container>
             
         </Navbar>
-
-           <div className='d-flex flex-lg-nowrap flex-md-nowrap flex-wrap  align-items-center justify-content-center my-5 ' id='aboutApp2' >
+        <div className='d-flex flex-lg-nowrap flex-md-nowrap flex-wrap  align-items-center justify-content-center my-5' id='aboutApp' >
             <div className='about-section m-5'>
-                <h1  className='text-capitalize fw-bold'>
+                <h1 className='text-capitalize fw-bold'>
                 WE ARE GYM AND FITNESS APPLICATION
                 </h1>
                 <p>
-                    <h4>
+
+                <h4>
                        Helping people live longer, happier and healthier lives
 
                     </h4>
-                </p>
-               
-                <img src="./assets/images/Modern-gym-ar29072020.jpg" class="img-fluid" alt="..."></img>
+                 </p>
+                 <p>
+                     <h4>
+                     We aim to give a system in which everyone is respected and to provide a unique and enjoyable environment in which everyone can feel comfortable. Gymawy enables everyone to work and produce excellence. From the staff to the clients involved in the Application it is all about working for the greater good. Members at Gymawy can each select a trainer, training program and a membership option by choice and personal preferences.
 
+                     </h4>
+                 </p>
+                
             </div>
-            
+            <div className='d-flex flex-wrap justify-content-center align-items-center about-section '>
+                <img src="./assets/images/Modern-gym-ar29072020.jpg" alt=""class="img-fluid" />
+              
+            </div>
         </div>
-        <div className='d-flex flex-lg-nowrap flex-md-nowrap flex-wrap  align-items-center justify-content-center my-5 ' id='aboutApp2' >
+
+
+               <div className='d-flex flex-lg-nowrap flex-md-nowrap flex-wrap  align-items-center justify-content-center my-5 ' id='aboutApp2' >
             <div className='about-section m-5'>
                 <h1  className='text-capitalize fw-bold'>
                 Our Promise To You
@@ -102,7 +111,40 @@ export const About = () => {
             </div>
             
         </div>
-             
+
+        <div className='d-flex flex-lg-nowrap flex-md-nowrap flex-wrap  align-items-center justify-content-center my-5 ' id='aboutApp2' >
+            <div className='about-section m-5'>
+                <h1  className='text-capitalize fw-bold'>
+                OUR CULTURE
+                </h1>
+                <p>
+                    <h4>
+                    We know that building a positive culture is incredibly important. We believe in encouraging, supporting, challenging, learning and growing to be the best! Our flexible working solutions, gym rebates and educational opportunities create a positive work/life balance for all our employees.                    </h4>
+                </p>
+               
+                 <img src="./assets/images/coachclient.jpg"  alt="..."></img>
+
+            </div>
+            
+        </div>
+
+        <div className='d-flex flex-lg-nowrap flex-md-nowrap flex-wrap  align-items-center justify-content-center my-5 ' id='aboutApp2' >
+            <div className='about-section m-5'>
+                <h1  className='text-capitalize fw-bold'>
+                Join The Movement
+                </h1>
+                <p>
+                    <h4>
+                    You would like to improve your fitness level, to surpass your professional athlete goals, or you would like either to continue with your recreational fitness routine or start off as a beginner? This sport facility is the right place for your productive workout and tangible exercising results. At Gymawy any form of discrimination, harassment or prejudice is not tolerated. Here we welcome both male and female members.
+
+                    </h4>
+                </p>
+               
+                <img src="./assets/images/grabDumbell.jpg" class="img-fluid" alt="..."></img>
+
+            </div>
+            
+        </div>
 
     
     </>
