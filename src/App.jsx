@@ -14,6 +14,7 @@ import { NotFound } from './components/NotFound';
 import { Carousell } from './components/landingPageComponents/Carousell';
 import { NotAuthorized } from './components/NotAuthorized';
 import {ClientSingnup} from './components/clientSingnup'
+import {ClientInfo} from './components/clientInfo'
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path="/carousel" element={<Carousell/>}/>
             <Route path="login" element={<Login/>} />
             <Route path="signup" element={<ClientSingnup/>} />
+            <Route path="cleintinfo" element={<ClientInfo/>} />
             <Route path="/NotAuthorized" element={<NotAuthorized/>} />
             <Route path="*" element={<NotFound/>} />
             

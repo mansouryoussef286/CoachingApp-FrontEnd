@@ -1,9 +1,12 @@
 import React,{useState} from 'react'
+import { Link,useNavigate  } from 'react-router-dom';
 
 export const Signup = () => {
+  const navigate = useNavigate();
 
   const [register, setregister] = useState({
     Name:'',
+    Age:'',
     Email:'',
     Mobile:'',
     gender:'',
@@ -14,6 +17,7 @@ export const Signup = () => {
   });
   const [errors, setError] = useState({
     NameError:'',
+    AgeError:'',
     EmailError:'',
     MobileError:'',
     genderError:'',
@@ -30,6 +34,7 @@ export const Signup = () => {
     console.log(eventObject.target.name +"  "+eventObject.target.value);
     setregister({
         Name:x.Name,
+        Age:x.Age,
         Email:x.Email,
         Mobile:x.Mobile,
         gender:x.gender,
@@ -45,13 +50,15 @@ export const Signup = () => {
   const checkRegister =(e)=>
   {
     e.preventDefault();
-    let name='',email='',mobile='',gender='',street='',city='',pass='',conpass='';
+    let name='', age='',email='',mobile='',gender='',street='',city='',pass='',conpass='';
     console.log('register');
     console.log(name, email, mobile,gender);
     console.log(register);
 
     if(register.Name=="" || register.Name== null)
     name="Enter Name";
+    if(register.Age=="" || register.Age== null)
+    age="Enter Age";
     if(register.Email=="" || register.Email== null)
     email="enter Email";
     if(register.Mobile=="" || register.Mobile== null)
@@ -72,6 +79,7 @@ export const Signup = () => {
 
     setError({
     NameError:name,
+    AgeError:age,
     EmailError:email,
     MobileError:mobile,
     genderError:gender,
@@ -83,7 +91,8 @@ export const Signup = () => {
     });
     // console.log(name, email, mobile,gender);
     // console.log(register);
-  
+    if(register.Name!="" &&register.Age!="" && register.Email!=""  && register.City!="" && register.ConfPass!="" && register.Pass!="" && register.street!="" && register.Mobile!="" && register.gender!=""&&register.Pass==register.ConfPass)
+    navigate("/cleintinfo");
   }
   return (
         <section>
@@ -109,6 +118,19 @@ export const Signup = () => {
                                  /> 
                         </div>
                         <p className='registerError'>{errors.NameError}</p>
+
+                        <div className='inputB'> 
+                                <span>Age </span>
+                                <input 
+                                 type="number"
+                                 id="Age"
+                                 name="Age"
+                                 placeholder="Enter Age"
+                                 value={register.Age}
+                                 onChange={handlerInput}
+                                 /> 
+                        </div>
+                        <p className='registerError'>{errors.AgeError}</p>
 
                         <div className='inputB'> 
                                 <span>Email </span>
@@ -196,11 +218,13 @@ export const Signup = () => {
                           
                           <div className="inputB">
                               
-                                  <input type="button" value="Register" onClick={checkRegister}/>   
+                           
+                             <input type="button" value="Register" onClick={checkRegister}/>
+                                  
                           </div>
                         <div className="inputB">
                               
-                        <p id="warning"></p>
+                    
                     </div>
                       
                   </form>
