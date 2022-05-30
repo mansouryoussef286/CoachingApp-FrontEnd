@@ -12,7 +12,8 @@ import { Login } from './components/Login';
 import { NotFound } from './components/NotFound';
 import { Carousell } from './components/landingPageComponents/Carousell';
 import { NotAuthorized } from './components/NotAuthorized';
-import { Coachsingup } from './components/coachsignup/csignup';
+import { CoachSignUp } from './components/CoachSignUp';
+
 
 
 
@@ -24,10 +25,8 @@ function App() {
             <Route path="/carousel" element={<Carousell/>}/>
             <Route path="login" element={<Login/>} />
             <Route path="/NotAuthorized" element={<NotAuthorized/>} />
-            <Route path="/coachsignup" element={<Coachsingup/>} />
-
+            <Route path="/coachsignup" element={<CoachSignUp/>} />
             <Route path="*" element={<NotFound/>} />
-            
             </Routes>
         </Router>
     );
