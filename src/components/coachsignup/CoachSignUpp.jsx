@@ -70,28 +70,28 @@ export const CoachSignUpp = () => {
         console.log(register);
     
         if(register.Name=="" || register.Name== null)
-        name="Enter Name";
+        name="Please enter Name";
         if(register.Email=="" || register.Email== null)
-        email="enter Email";
+        email="Please enter Email";
         if(register.YearsofExperiance=="" || register.YearsofExperiance== null)
-        YearsofExperiance="enter Years";
+        YearsofExperiance="Please enter Years";
         if(register.Mobile=="" || register.Mobile== null)
-        mobile="enter mobile";
+        mobile="Please enter mobile";
         if(register.gender=="" || register.gender== null )
         gender="Choose Gender";
         if(register.street=="" || register.street== null)
-        street="enter sterrt";
+        street="Please enter street";
         if(register.City=="" || register.City== null)
-        city="enter City";
+        city="Please enter City";
 
         if(register.Certificates=="" || register.Certificates== null)
         Certificates="Uplode Certificates";
         if(register.Images=="" || register.Images== null)
         Images="Uplode Images";
         if(register.Pass=="" || register.Pass== null)
-        pass="enter password";
+        pass="Please enter password";
         if(register.ConfPass=="" || register.ConfPass== null)
-        conpass="enter confirm password";
+        conpass="Please enter confirm password";
     
         if(register.Pass!=register.ConfPass)
         conpass="Password and confirm password must be the same";
@@ -115,22 +115,6 @@ export const CoachSignUpp = () => {
     
     }
 
-    const changeColor = ()=>{
-        if(window.scrollY >100){
-            setColor(true);
-        }else{
-            setColor(false);
-        }
-    }
-
-    useEffect(()=>{
-        window.addEventListener('scroll', changeColor);
-        // console.log('event listener added');
-    },[]
-
-    //Navbar
-
-    )
     return (
         <> 
         <section className='coachSignupContainer '>
@@ -139,7 +123,6 @@ export const CoachSignUpp = () => {
             </div>
             <div className='cont'>
                 <div className='formB'>
-                    <h2>Gymawy</h2>
                     <h2>Sign Up</h2>
                     <form className='height=h-100' action="">
                             <div className='inputB'> 
@@ -153,7 +136,7 @@ export const CoachSignUpp = () => {
                                     onChange={handlerInput}
                                     /> 
                             </div>
-                            <p className='registerError'>{errors.NameError}</p>
+                            <span className='registerError'>{errors.NameError}</span>
 
                             <div className='inputB'> 
                                     <span>Email </span>
@@ -166,7 +149,8 @@ export const CoachSignUpp = () => {
                                     onChange={handlerInput}
                                     /> 
                             </div>
-                            <p className='registerError'>{errors.EmailError}</p>
+                            <span className='registerError'>{errors.EmailError}</span>
+                            
                             <div className='inputB'> 
                                     <span>Years of Experiance </span>
                                     <input 
@@ -178,8 +162,7 @@ export const CoachSignUpp = () => {
                                     onChange={handlerInput}
                                     /> 
                             </div>
-                            <p className='registerError'>{errors.YearsofExperianceError}</p>
-
+                            <span className='registerError'>{errors.YearsofExperianceError}</span>
 
                             <div className='inputB'> 
                                     <span>Mobile </span>
@@ -192,15 +175,17 @@ export const CoachSignUpp = () => {
                                     onChange={handlerInput}
                                     /> 
                             </div>
-                            <p className='registerError'>{errors.MobileError}</p>
+                            <span className='registerError'>{errors.MobileError}</span>
 
-                            <select className='gender' name="gender" id="gender"  value={register.gender} onChange={handlerInput}>
-                            <option value="">Choose Gender</option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                            <option value="Others">Others</option>
-                            </select>
-                            <p className='registerError'>{errors.genderError}</p>
+                            <div className="inputB">
+                                <select name="gender" id="gender"  value={register.gender} onChange={handlerInput}>
+                                <option value="">Choose Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Others">Others</option>
+                                </select>
+                            </div>
+                            <span className='registerError'>{errors.genderError}</span>
 
                             <div className='inputB'> 
                                     <span>Address </span>
@@ -210,7 +195,10 @@ export const CoachSignUpp = () => {
                                     value={register.street}
                                     onChange={handlerInput}
                                     /> 
+                            </div>
+                            <span className='registerError'>{errors.streetError}</span>
 
+                            <div className='inputB'> 
                                     <input 
                                     type="text" 
                                     id="City"name="City"
@@ -218,12 +206,10 @@ export const CoachSignUpp = () => {
                                     value={register.City}
                                     onChange={handlerInput}
                                     /> 
-
                             </div>
-                            <p className='registerError'>{errors.streetError}</p>
-                            <p className='registerError'>{errors.CityError}</p>
+                            <span className='registerError'>{errors.CityError}</span>
 
-                            <div className='inputB'> 
+                            {/* <div className='inputB'> 
                                     <span>Certificates </span>
                                     <input 
                                     type="file" 
@@ -234,7 +220,7 @@ export const CoachSignUpp = () => {
                                     onChange={handlerInput}
                                     /> 
                             </div>
-                            <p className='registerError'>{errors.CertificatesError}</p>
+                            <span className='registerError'>{errors.CertificatesError}</span>
 
                             <div className='inputB'> 
                                     <span>Images </span>
@@ -245,9 +231,10 @@ export const CoachSignUpp = () => {
                                     placeholder="Uplode Images"
                                     value={register.Images}
                                     onChange={handlerInput}
+                                    className='btn btn-danger'
                                     /> 
                             </div>
-                            <p className='registerError'>{errors.ImagesError}</p>
+                            <span className='registerError'>{errors.ImagesError}</span> */}
 
                             
                             <div className="inputB">    
@@ -260,7 +247,7 @@ export const CoachSignUpp = () => {
                                     onChange={handlerInput}
                                     />                     
                             </div>
-                            <p className='registerError'>{errors.PassError}</p>
+                            <span className='registerError'>{errors.PassError}</span>
 
 
                             <div className="inputB">    
@@ -274,7 +261,7 @@ export const CoachSignUpp = () => {
                                     onChange={handlerInput}
                                     />                     
                             </div>
-                            <p className='registerError'>{errors.ConfPassError}</p>
+                            <span className='registerError'>{errors.ConfPassError}</span>
 
                             
                             <div className="inputB">
@@ -283,7 +270,7 @@ export const CoachSignUpp = () => {
                             </div>
                             <div className="inputB">
                                 
-                            <p id="warning"></p>
+                            <span id="warning"></span>
                         </div>
                         
                     </form>

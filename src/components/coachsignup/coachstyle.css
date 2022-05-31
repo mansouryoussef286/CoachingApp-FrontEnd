@@ -1,24 +1,15 @@
-.gender {
-    width: 200px;
-    padding: 10px 20px;
-    outline: none;
-    font-weight: 400;
-    border: 1px solid #607d8b;
-    font-size: 16px;
-    letter-spacing: 1px;
-    color: #607d8b;
-    background: transparent;
-    border-radius: 30px;
-    margin-bottom: 10px;
-}
-
 .registerError {
     color: red;
+    min-height: 14px;
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 5px;
 }
 
-* {
+
+/* * {
     --main-color: rgb(129, 207, 223);
-}
+} */
 
 
 /*#region Login*/
@@ -30,7 +21,7 @@
     position: relative;
     width: 100%;
     min-height: 100vh;
-    align-items: center ;
+    align-items: center;
     display: flex;
 }
 
@@ -47,7 +38,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    /* background: linear-gradient(225deg, var(--main-color), #000000); */
+    background: linear-gradient(225deg, var(--main-color), #000000);
     z-index: 1;
     mix-blend-mode: screen;
 }
@@ -71,7 +62,7 @@
 }
 
 .coachSignupContainer .cont .formB {
-    width: 50%;
+    width: 70%;
     height: 100%;
     /* margin to avoid navbar */
     margin-top: 100px;
@@ -90,10 +81,6 @@
     margin-left: 5px;
 }
 
-.coachSignupContainer .cont .formB .inputB {
-    /* margin-bottom: 20px; */
-}
-
 .coachSignupContainer .cont .formB .inputB span {
     font-size: 20px;
     margin-bottom: 5px;
@@ -104,9 +91,10 @@
     letter-spacing: 1px;
 }
 
-.coachSignupContainer .cont .formB .inputB input {
+.coachSignupContainer .cont .formB .inputB input,
+.coachSignupContainer .cont .formB .inputB select {
     width: 100%;
-    padding: 10px 20px;
+    padding: 5px 10px;
     outline: none;
     font-weight: 400;
     border: 1px solid #607d8b;
@@ -116,6 +104,11 @@
     background: transparent;
     border-radius: 30px;
     /* margin-bottom: 10px; */
+}
+
+.coachSignupContainer .cont .formB .inputB select {
+    width: 50%;
+    margin-bottom: 5px;
 }
 
 .coachSignupContainer .cont .formB .inputB input[type="button"] {
@@ -146,14 +139,12 @@
     color: var(--main-color);
 }
 
-
 .coachSignupContainer .cont .formB h3 {
     color: #607d8b;
     text-align: center;
     margin: 80px 0 10px;
     font-weight: 500;
 }
-
 
 .coachSignupContainer .cont .formB .somed {
     display: flex;
@@ -182,7 +173,7 @@
 
 .coachSignupContainer .cont .formB .somed li img {
     transform: scale(0.9);
-} 
+}
 
 @media(max-width:768px) {
     .coachSignupContainer .imgbg {
@@ -227,7 +218,6 @@
         font-weight: 500;
     }
 }
-
 
 .coachSignupContainer .overlay {
     width: 100%;
