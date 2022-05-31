@@ -16,6 +16,9 @@ import { NotAuthorized } from './components/NotAuthorized';
 import{ About }from './components/aboutus';
 import {ClientSingnup} from './components/clientSingnup'
 import {ClientInfo} from './components/clientInfo'
+import { CoachSignUp } from './components/CoachSignUp';
+
+
 
 
 function App() {
@@ -29,9 +32,8 @@ function App() {
             <Route path="cleintinfo" element={<ClientInfo/>} />
             <Route path="/NotAuthorized" element={<NotAuthorized/>} />
             <Route path="aboutus" element={<About/>} />
-
+            <Route path="/coachsignup" element={<CoachSignUp/>} />
             <Route path="*" element={<NotFound/>} />
-            
             </Routes>
         </Router>
     );

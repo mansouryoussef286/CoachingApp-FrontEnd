@@ -37,7 +37,7 @@ export const Header = () => {
 
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#top">Home</Nav.Link>
+                        <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="#aboutApp">About</Nav.Link>
                         <Nav.Link href="/aboutus">Aboutus</Nav.Link>
 
