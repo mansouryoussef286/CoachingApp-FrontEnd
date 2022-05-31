@@ -1,6 +1,9 @@
 import React ,{useState}from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser} from '@fortawesome/free-regular-svg-icons'
+import 'react-toastify/dist/ReactToastify.css';
+import { faUser,faLock} from '@fortawesome/free-regular-svg-icons'
+import { ToastContainer, toast } from 'react-toastify';
+  
 
 
 export const Login = () => {
@@ -9,7 +12,17 @@ export const Login = () => {
   const [message, setMessage] = useState('');
   const [message2,setMessage2] = useState('');
   const [message3,setMessage3] = useState('');
- 
+  
+  
+  const notify = () => toast.error("incorrect credentials", {
+    position: "top-right",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    });
 
   const onChangeHandler= (e)=>{
     if(e.target.name==='Username')
@@ -53,10 +66,10 @@ export const Login = () => {
             // this.props.history.push('/');
             setMessage("");
 
-        }, 2000);
+        }, 3000);
     }
     else{
-        
+          notify();
           setMessage2("incorrect credentials");
         setTimeout(() => {
               setMessage2('')
@@ -66,6 +79,9 @@ export const Login = () => {
   
   return (
         <section>
+        <ToastContainer
+        />
+        
 
           <div className="imgbg">
               <img src="/assets/images/LoginImage.png" alt="smartGymawyy"/>
@@ -82,7 +98,7 @@ export const Login = () => {
                                 <span className='text-danger mt-1'>{message3} </span>
                         </div>
                           <div className="inputB">    
-                            <span>Password </span>    
+                            <span><FontAwesomeIcon icon={faUser}/>	&nbsp; Password </span>    
                             <input type="password" id="Pass"name="Password"placeholder="Password" value={password} onChange={(e)=>{onChangeHandler(e);}}/>                   
                           </div>
                           {/* <!-- <div className="remember">

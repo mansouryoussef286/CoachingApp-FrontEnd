@@ -97,7 +97,7 @@ export const Coaches = () => {
             <div className="carousel-demo">
                 <div className="card">
                     <Carousel value={coaches2}  numVisible={4} numScroll={1} responsiveOptions={responsiveOptions} circular
-                        autoplayInterval={6000} itemTemplate={coachesTemplatee} header={header} />
+                        autoplayInterval={6000} itemTemplate={coachesTemplate} header={header} />
                 </div>
             </div>
         </div>
