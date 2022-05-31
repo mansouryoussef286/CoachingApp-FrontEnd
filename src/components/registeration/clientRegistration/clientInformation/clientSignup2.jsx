@@ -56,14 +56,12 @@ export const ClientSignup2 = () => {
   
   }
   return (
-        <section>
-<br></br>
-
+        <section className='coachSignupContainer'>
           <div className="imgbg">
               <img src="/assets/images/LoginImage.png" alt="smartGymawyy"/>
           </div>
           <div className='cont'>
-              <div className='formB signupForm'>
+              <div className='formB my-3'>
 
                   <h1 style={{color: 'wheat'}}>Welcome Name</h1>
                   <h2>Please Resume Your info</h2>
@@ -97,8 +95,8 @@ export const ClientSignup2 = () => {
                         <div className='inputB'> 
                                 <span>Body Type </span>
                                 
-                              <div className='imagesGroup'>
-                              <div>
+                              <div className='imagesGroup d-flex justify-content-center align-items-center'>
+                              <div className='imageInput'>
                               <img src="./assets/images/grabdumbell.jpg" alt="" className='clientImages'/>
                               <input 
                               type="radio" 
@@ -109,7 +107,7 @@ export const ClientSignup2 = () => {
                                style={{width:'20px',display:'block',marginLeft:'70px',marginTop:'5px'}}
                                />
                               </div>
-                              <div>
+                              <div className='imageInput'>
                               <img src="./assets/images/grabdumbell.jpg" alt="" className='clientImages'/>
                               <input 
                               type="radio" 
@@ -119,7 +117,7 @@ export const ClientSignup2 = () => {
                               onChange={handlerInput}
                                style={{width:'20px',display:'block',marginLeft:'70px',marginTop:'5px'}}
                                />                              </div>
-                              <div>
+                              <div className='imageInput'>
                               <img src="./assets/images/grabdumbell.jpg" alt="" className='clientImages'/>
                               <input 
                               type="radio" 

@@ -1,7 +1,6 @@
 // aboutApp2
 // import React from 'react'
-import { Header } from './shared/Header.jsx'
-import { Footer } from './shared/Footer.jsx'
+import { Header } from './shared/Header'
 import React, { useEffect, useState } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,7 +8,7 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 
 
-export const About = () => {
+export const AboutUs = () => {
     let [color, setColor] = useState(false);
 
     const changeColor = ()=>{

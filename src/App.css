@@ -4,11 +4,16 @@
 @import "primeicons/primeicons.css";
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
 @import url('https://fonts.googleapis.com/css?family=Catamaran:400,800');
-@import 'components/clinetSignup.css';
-@import 'components/clientInfo.css';
+@import 'components/registeration/register.css';
+@import './components/SignInComponents/Login.css';
+@import 'components/registeration/clientInfo.css';
+
+/*sokary*/
+
 #root {
     /* background-color: lightgray; */
     --main-color: rgb(129, 207, 223);
+    --main-color-opacity: rgb(129, 207, 223, 0.5);
 }
 
 .App {

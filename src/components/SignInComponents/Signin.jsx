@@ -1,12 +1,14 @@
 import React ,{useState}from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import 'react-toastify/dist/ReactToastify.css';
-import { faUser,faLock} from '@fortawesome/free-regular-svg-icons'
+import { faUser, faAngry} from '@fortawesome/free-regular-svg-icons'
+import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { ToastContainer, toast } from 'react-toastify';
+import { Header } from '../shared/Header';
   
 
 
-export const Login = () => {
+export const Signin = () => {
   const [username,setUsername]=useState('');
   const [password,setPassword]=useState('');
   const [message, setMessage] = useState('');
@@ -75,9 +77,11 @@ export const Login = () => {
               setMessage2('')
         }, 2000);
     }
- }
+  }
   
   return (
+        <>
+        <Header></Header>
         <section className='loginSection'>
         <ToastContainer
         />
@@ -97,7 +101,7 @@ export const Login = () => {
                                 <span className='text-danger mt-1'>{message3} </span>
                         </div>
                           <div className="inputB">    
-                            <span><FontAwesomeIcon icon={faUser}/>	&nbsp; Password </span>    
+                            <span><FontAwesomeIcon icon={faLock}/>	&nbsp; Password </span>    
                             <input type="password" id="Pass"name="Password"placeholder="Password" value={password} onChange={(e)=>{onChangeHandler(e);}}/>                   
                           </div>
                           {/* <!-- <div className="remember">
@@ -128,5 +132,6 @@ export const Login = () => {
               </div>
           </div>
     </section>
+  </>
   )
 }

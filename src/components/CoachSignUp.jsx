@@ -1,5 +1,5 @@
 import React from 'react'
-import { CoachSignUpp } from './coachsignup/CoachSignUpp';
+import { CoachSignUpp } from './registeration/coachsignup/CoachSignUpp';
 
 import { Header } from './shared/Header';
 

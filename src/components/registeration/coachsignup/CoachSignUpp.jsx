@@ -1,6 +1,5 @@
 // import { Header } from './shared/Header.jsx'
 // import { Footer } from './shared/Footer.jsx'
-import'./coachstyle.css'
 import React, { useEffect, useState } from 'react'
 import { Navbar, Container, NavDropdown,Nav } from 'react-bootstrap';
 
@@ -117,9 +116,9 @@ export const CoachSignUpp = () => {
 
     return (
         <> 
-        <section className='coachSignupContainer '>
+        <section className='coachSignupContainer'>
             <div className="imgbg">
-                <img src="/assets/images/coach4.png" alt="smartGymawyy" />
+                <img src="/assets/images/coachMobile.png" alt="smartGymawyy" />
             </div>
             <div className='cont'>
                 <div className='formB'>
