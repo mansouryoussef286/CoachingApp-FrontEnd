@@ -1,4 +1,6 @@
 import React ,{useState}from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser} from '@fortawesome/free-regular-svg-icons'
 
 
 export const Login = () => {
@@ -74,7 +76,8 @@ export const Login = () => {
                   <h2>Login</h2>
                   <form action="">
                         <div className='inputB'> 
-                                <span>Email </span>
+                           
+                                <span>  <FontAwesomeIcon icon={faUser}/>	&nbsp;Email </span>
                                 <input type="text" id="Usname"name="Username"placeholder="Email" value={username} onChange={(e)=>{onChangeHandler(e);inputValidate(e);}}/> 
                                 <span className='text-danger mt-1'>{message3} </span>
                         </div>
