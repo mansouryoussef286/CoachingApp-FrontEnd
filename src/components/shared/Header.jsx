@@ -37,6 +37,8 @@ export const Header = () => {
                     <Nav className="me-auto">
                         <Nav.Link href="#top">Home</Nav.Link>
                         <Nav.Link href="#aboutApp">About</Nav.Link>
+                        <Nav.Link href="/aboutus">Aboutus</Nav.Link>
+
 
                         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

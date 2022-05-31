@@ -13,6 +13,7 @@ import { Login } from './components/Login';
 import { NotFound } from './components/NotFound';
 import { Carousell } from './components/landingPageComponents/Carousell';
 import { NotAuthorized } from './components/NotAuthorized';
+import{ About }from './components/aboutus';
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
             <Route path="/carousel" element={<Carousell/>}/>
             <Route path="login" element={<Login/>} />
             <Route path="/NotAuthorized" element={<NotAuthorized/>} />
+            <Route path="aboutus" element={<About/>} />
+
             <Route path="*" element={<NotFound/>} />
             
             </Routes>
