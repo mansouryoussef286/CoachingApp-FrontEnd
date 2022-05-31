@@ -78,7 +78,7 @@ export const Login = () => {
  }
   
   return (
-        <section>
+        <section className='loginSection'>
         <ToastContainer
         />
         
