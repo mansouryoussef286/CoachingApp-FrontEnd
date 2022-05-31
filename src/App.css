@@ -1,4 +1,5 @@
 @import '~antd/dist/antd.css';
+@import 'css/ClientProfile.css';
 @import 'css/listOfCoaches.css';
 @import "primereact/resources/themes/md-light-indigo/theme.css";
 @import "primereact/resources/primereact.min.css";

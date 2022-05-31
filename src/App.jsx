@@ -13,10 +13,12 @@ import { NotFound } from './components/NotFound';
 import { Carousell } from './components/landingPageComponents/Carousell';
 import { NotAuthorized } from './components/NotAuthorized';
 import { ListOfCoaches } from './components/ListOfCoaches';
-
-
+import { Header } from './components/shared/Header';
+import { Footer } from './components/shared/Footer';
+import ClientProfile from './components/ClientProfile';
 function App() {
     return (
+        <>
         <Router>
             <Routes>
             <Route path="/" element={<LandingPage/>}/>
@@ -24,10 +26,11 @@ function App() {
             <Route path="login" element={<Login/>} />
             <Route path="list" element={<ListOfCoaches/>} />
             <Route path="NotAuthorized" element={<NotAuthorized/>} />
+            <Route path="Client/*" element={<ClientProfile/>} />
             <Route path="*" element={<NotFound/>} />
-            
             </Routes>
         </Router>
+        </>
     );
 }
 

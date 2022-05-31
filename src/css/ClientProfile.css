@@ -1,0 +1,64 @@
+.ClientProfileImage{
+    width: 10vw;
+    height: 10vw;
+    border: 0.25vw solid white
+}
+
+.ProfileColumn{
+    background: rgb(129,207,223);
+    background: linear-gradient(159deg, rgba(129,207,223,1) 46%, rgba(49,73,78,1) 100%);
+    opacity: 85%;
+    transition: opacity 200ms 200ms;
+}
+
+.ProfileColumn:hover{
+    opacity: 100%;
+}
+
+.ProfileFont{
+    font-weight: bold;
+    font-size:1.7vw;
+}
+
+.LinkFont{
+    font-size:1.4vw;
+}
+
+.NoBullets{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ClientProfileLink{
+    text-align: left;
+    color: black;
+    height:100%;
+    width:10vw;
+    white-space: pre;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: border 200ms, 200ms;
+}
+
+.ClientProfileLink:hover{
+    border-top:4px solid white;
+    border-left:4px solid white;
+    border-bottom:4px solid white;
+    color: white;
+}
+
+.NoUnderLine{
+    text-decoration: none;
+}
+
+.ClientItemContainer{
+    border-radius: 20px;
+    height: 95vh;
+    background: linear-gradient(159deg, rgba(129,207,223,1) 46%, rgba(49,73,78,1) 100%);
+}
+
+.MarginLink{
+    margin-top: 8.5vh;
+    margin-bottom: 8.5vh;
+}
