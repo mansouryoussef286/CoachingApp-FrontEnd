@@ -96,14 +96,11 @@ export const Signup = () => {
   }
   return (
           <section className='loginSection'>
-          <br></br>
-
             <div className="imgbg">
                 <img src="/assets/images/LoginImage.png" alt="smartGymawyy"/>
             </div>
             <div className='cont'>
                 <div className='formB signupForm'>
-                    <h2>Gymawy</h2>
                     <h2>Sign Up</h2>
                     <form  action="">
                           <div className='inputB'> 

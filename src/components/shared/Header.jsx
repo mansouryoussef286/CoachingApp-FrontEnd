@@ -61,7 +61,7 @@ export const Header = () => {
                     </form>
                     <div className='d-flex justify-content-center align-items-center'>
 
-                        <button className='btn  navbar-button' >sign in</button>
+                        <button className='btn  navbar-button' onClick={()=>{navigate("/login")}}>sign in</button>
                         <button className='btn  navbar-button' onClick={()=>{navigate("/signup")}}>sign up</button>
                     </div>
                 </Navbar.Collapse>

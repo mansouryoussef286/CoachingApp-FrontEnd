@@ -6,9 +6,8 @@
 @import url('https://fonts.googleapis.com/css?family=Catamaran:400,800');
 @import 'components/clinetSignup.css';
 @import 'components/clientInfo.css';
-
 #root {
-    background-color: lightgray;
+    /* background-color: lightgray; */
     --main-color: rgb(129, 207, 223);
 }
 
@@ -394,7 +393,6 @@
 /*#region not found*/
 
 
-
 /* begin Not found component  */
 
 .error-container {
@@ -566,4 +564,3 @@ a.more-link {
 
 
 /*#endregion RegionName*/
-

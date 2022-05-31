@@ -88,11 +88,10 @@ export const Login = () => {
           </div>
           <div className='cont'>
               <div className='formB'>
-                  <h2>Gymawy</h2>
-                  <h2>Login</h2>
+                  {/* <h2>Gymawy</h2> */}
+                  <h2>Sign in</h2>
                   <form action="">
                         <div className='inputB'> 
-                           
                                 <span>  <FontAwesomeIcon icon={faUser}/>	&nbsp;Email </span>
                                 <input type="text" id="Usname"name="Username"placeholder="Email" value={username} onChange={(e)=>{onChangeHandler(e);inputValidate(e);}}/> 
                                 <span className='text-danger mt-1'>{message3} </span>

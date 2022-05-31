@@ -11,12 +11,13 @@
 .loginSection {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
+    align-items: center;
 }
 
 .loginSection .imgbg {
-    position: relative;
+    /* position: relative; */
     width: 50%;
     height: 100%;
 }
@@ -26,7 +27,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 50%;
     height: 100%;
     background: linear-gradient(225deg, var(--main-color), #0f4f94);
     z-index: 1;
@@ -34,9 +35,9 @@
 }
 
 .loginSection .imgbg img {
-    position: absolute;
+    /* position: absolute;
     top: 0;
-    left: 0;
+    left: 0; */
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -197,6 +198,9 @@
         text-align: center;
         margin: 20 px0 10px;
         font-weight: 500;
+    }
+    .loginSection .imgbg::before {
+        width: 100%;
     }
 }
 
