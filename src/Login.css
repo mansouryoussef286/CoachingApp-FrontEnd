@@ -92,6 +92,7 @@
     color: #607d8b;
     background: transparent;
     border-radius: 30px;
+    margin-bottom: 10px;
 }
 
 .loginSection .cont .formB .inputB input[type="button"] {

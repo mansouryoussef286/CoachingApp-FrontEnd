@@ -1,0 +1,22 @@
+.gender {
+    width: 200px;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #607d8b;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #607d8b;
+    background: transparent;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+.registerError {
+    color: red;
+}
+
+.signupForm {
+    width: 50%;
+    height: 100%;
+}
