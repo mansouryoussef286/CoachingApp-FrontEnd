@@ -59,7 +59,7 @@ export const Signup = () => {
     name="Please enter Name";
     if(register.Email=="" || register.Email== null)
     email="Please enter Email";
-    if(register.age=="" || register.age== null)
+    if(register.age=="" || register.Age== null)
     age="Please enter Age";
     if(register.Mobile=="" || register.Mobile== null)
     mobile="Please enter mobile";
@@ -93,7 +93,7 @@ export const Signup = () => {
     // console.log(name, email, mobile,gender);
     // console.log(register);
     if(register.Name!="" &&register.Age!="" && register.Email!=""  && register.City!="" && register.ConfPass!="" && register.Pass!="" && register.street!="" && register.Mobile!="" && register.gender!=""&&register.Pass==register.ConfPass)
-    navigate("/cleintinfo");
+    navigate("/clientinfo");
   }
   return (
     <> 

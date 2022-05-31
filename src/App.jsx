@@ -8,7 +8,7 @@ import "@fortawesome/fontawesome-free";
 import 'primeicons/primeicons.css';
 // import components
 import LandingPage from './components/LandingPage.jsx';
-import { AboutUs } from './components/AboutUs';
+import { AboutUs } from './components/Aboutus';
 import {ClientSingnup} from './components/ClientSignUp'
 import { CoachSignUp } from './components/CoachSignUp';
 import {Signin} from './components/SignInComponents/Signin'
