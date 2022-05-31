@@ -95,142 +95,142 @@ export const Signup = () => {
     navigate("/cleintinfo");
   }
   return (
-        <section>
-<br></br>
+          <section className='loginSection'>
+          <br></br>
 
-          <div className="imgbg">
-              <img src="/assets/images/LoginImage.png" alt="smartGymawyy"/>
-          </div>
-          <div className='cont'>
-              <div className='formB signupForm'>
-                  <h2>Gymawy</h2>
-                  <h2>Sign Up</h2>
-                  <form  action="">
-                        <div className='inputB'> 
-                                <span>Name </span>
-                                <input 
-                                 type="text"
-                                 id="Name"
-                                 name="Name"
-                                 placeholder="Enter Name"
-                                 value={register.Name}
-                                 onChange={handlerInput}
-                                 /> 
-                        </div>
-                        <p className='registerError'>{errors.NameError}</p>
-
-                        <div className='inputB'> 
-                                <span>Age </span>
-                                <input 
-                                 type="number"
-                                 id="Age"
-                                 name="Age"
-                                 placeholder="Enter Age"
-                                 value={register.Age}
-                                 onChange={handlerInput}
-                                 /> 
-                        </div>
-                        <p className='registerError'>{errors.AgeError}</p>
-
-                        <div className='inputB'> 
-                                <span>Email </span>
-                                <input 
-                                type="email" 
-                                id="Email"
-                                name="Email"
-                                placeholder="Enter Email"
-                                value={register.Email}
-                                onChange={handlerInput}
-                                /> 
-                        </div>
-                        <p className='registerError'>{errors.EmailError}</p>
-
-                        <div className='inputB'> 
-                                <span>Mobile </span>
-                                <input
-                                 type="number"
-                                  id="Mobile"
-                                  name="Mobile"
-                                  placeholder="Enter Mobile Number"
-                                  value={register.Mobile}
+            <div className="imgbg">
+                <img src="/assets/images/LoginImage.png" alt="smartGymawyy"/>
+            </div>
+            <div className='cont'>
+                <div className='formB signupForm'>
+                    <h2>Gymawy</h2>
+                    <h2>Sign Up</h2>
+                    <form  action="">
+                          <div className='inputB'> 
+                                  <span>Name </span>
+                                  <input 
+                                  type="text"
+                                  id="Name"
+                                  name="Name"
+                                  placeholder="Enter Name"
+                                  value={register.Name}
                                   onChange={handlerInput}
                                   /> 
-                        </div>
-                        <p className='registerError'>{errors.MobileError}</p>
+                          </div>
+                          <p className='registerError'>{errors.NameError}</p>
 
-                        <select className='gender' name="gender" id="gender"  value={register.gender} onChange={handlerInput}>
-                           <option value="">Choose Gender</option>
-                           <option value="Male">Male</option>
-                           <option value="Female">Female</option>
-                           <option value="Others">Others</option>
-                         </select>
-                         <p className='registerError'>{errors.genderError}</p>
-
-                        <div className='inputB'> 
-                                <span>Address </span>
-                                <input type="text"
-                                 id="street"
-                                 name="street"placeholder="1234 Main St"
-                                 value={register.street}
-                                 onChange={handlerInput}
-                                 /> 
-   
-                                <input 
-                                type="text" 
-                                id="City"name="City"
-                                placeholder="Enter City"
-                                value={register.City}
-                                onChange={handlerInput}
-                                /> 
-
-                        </div>
-                        <p className='registerError'>{errors.streetError}</p>
-                        <p className='registerError'>{errors.CityError}</p>
-
-                       
-                        
-                          <div className="inputB">    
-                                <span>Password </span>    
+                          <div className='inputB'> 
+                                  <span>Age </span>
                                   <input 
-                                  type="password" 
-                                  id="Pass"name="Pass"
-                                  placeholder="Password"
-                                  value={register.Pass}
+                                  type="number"
+                                  id="Age"
+                                  name="Age"
+                                  placeholder="Enter Age"
+                                  value={register.Age}
                                   onChange={handlerInput}
-                                  />                     
+                                  /> 
                           </div>
-                          <p className='registerError'>{errors.PassError}</p>
+                          <p className='registerError'>{errors.AgeError}</p>
 
+                          <div className='inputB'> 
+                                  <span>Email </span>
+                                  <input 
+                                  type="email" 
+                                  id="Email"
+                                  name="Email"
+                                  placeholder="Enter Email"
+                                  value={register.Email}
+                                  onChange={handlerInput}
+                                  /> 
+                          </div>
+                          <p className='registerError'>{errors.EmailError}</p>
 
-                          <div className="inputB">    
-                                <span>Confirm Password </span>    
+                          <div className='inputB'> 
+                                  <span>Mobile </span>
                                   <input
-                                   type="password" 
-                                   id="ConfPass"
-                                   name="ConfPass"
-                                   placeholder="Password"
-                                   value={register.ConfPass}
-                                   onChange={handlerInput}
-                                   />                     
+                                  type="number"
+                                    id="Mobile"
+                                    name="Mobile"
+                                    placeholder="Enter Mobile Number"
+                                    value={register.Mobile}
+                                    onChange={handlerInput}
+                                    /> 
                           </div>
-                          <p className='registerError'>{errors.ConfPassError}</p>
+                          <p className='registerError'>{errors.MobileError}</p>
 
-                          
-                          <div className="inputB">
-                              
-                           
-                             <input type="button" value="Register" onClick={checkRegister}/>
-                                  
+                          <select className='gender' name="gender" id="gender"  value={register.gender} onChange={handlerInput}>
+                            <option value="">Choose Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Others">Others</option>
+                          </select>
+                          <p className='registerError'>{errors.genderError}</p>
+
+                          <div className='inputB'> 
+                                  <span>Address </span>
+                                  <input type="text"
+                                  id="street"
+                                  name="street"placeholder="1234 Main St"
+                                  value={register.street}
+                                  onChange={handlerInput}
+                                  /> 
+    
+                                  <input 
+                                  type="text" 
+                                  id="City"name="City"
+                                  placeholder="Enter City"
+                                  value={register.City}
+                                  onChange={handlerInput}
+                                  /> 
+
                           </div>
-                        <div className="inputB">
-                              
-                    
-                    </div>
+                          <p className='registerError'>{errors.streetError}</p>
+                          <p className='registerError'>{errors.CityError}</p>
+
+                        
+                          
+                            <div className="inputB">    
+                                  <span>Password </span>    
+                                    <input 
+                                    type="password" 
+                                    id="Pass"name="Pass"
+                                    placeholder="Password"
+                                    value={register.Pass}
+                                    onChange={handlerInput}
+                                    />                     
+                            </div>
+                            <p className='registerError'>{errors.PassError}</p>
+
+
+                            <div className="inputB">    
+                                  <span>Confirm Password </span>    
+                                    <input
+                                    type="password" 
+                                    id="ConfPass"
+                                    name="ConfPass"
+                                    placeholder="Password"
+                                    value={register.ConfPass}
+                                    onChange={handlerInput}
+                                    />                     
+                            </div>
+                            <p className='registerError'>{errors.ConfPassError}</p>
+
+                            
+                            <div className="inputB">
+                                
+                            
+                              <input type="button" value="Register" onClick={checkRegister}/>
+                                    
+                            </div>
+                          <div className="inputB">
+                                
                       
-                  </form>
-                  
-              </div>
-          </div>
-    </section>
+                      </div>
+                        
+                    </form>
+                    
+                </div>
+            </div>
+      </section>
   )
 }
