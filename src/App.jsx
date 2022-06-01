@@ -2,19 +2,28 @@ import React from 'react';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import styles
 import './App.css';
-import './Login.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import "@fortawesome/fontawesome-free";
 import 'primeicons/primeicons.css';
 // import components
 import LandingPage from './components/LandingPage.jsx';
-import { Login } from './components/Login';
-import { NotFound } from './components/NotFound';
+// import { Signin } from './components/SignInComponents/Signin';
+// import { NotFound } from './components/NotFound';
 import { Carousell } from './components/landingPageComponents/Carousell';
-import { NotAuthorized } from './components/NotAuthorized';
-import{ About }from './components/aboutus';
+// import { NotAuthorized } from './components/NotAuthorized';
+// import{ About }from './components/aboutus';
 import{ Contact }from './components/contactus';
+
+import { AboutUs } from './components/aboutus';
+import {ClientSingnup} from './components/ClientSignUp'
+import { CoachSignUp } from './components/CoachSignUp';
+import {Signin} from './components/SignInComponents/Signin'
+
+import { NotFound } from './components/shared/NotFound';
+import { NotAuthorized } from './components/shared/NotAuthorized';
+
+import {ClientInfo} from './components/registeration/clientRegistration/clientInfo'
 
 
 
@@ -23,15 +32,17 @@ function App() {
         <Router>
             <Routes>
             <Route path="/" element={<LandingPage/>}/>
-            <Route path="/carousel" element={<Carousell/>}/>
-            <Route path="login" element={<Login/>} />
+            <Route path="Signin" element={<Signin/>} />
+            <Route path="signup" element={<ClientSingnup/>} />
+            <Route path="clientinfo" element={<ClientInfo/>} />
             <Route path="/NotAuthorized" element={<NotAuthorized/>} />
-            <Route path="aboutus" element={<About/>} />
+            {/* <Route path="aboutus" element={<About/>} /> */}
             <Route path="contactus" element={<Contact/>} />
 
 
+            <Route path="aboutus" element={<AboutUs/>} />
+            <Route path="/coachsignup" element={<CoachSignUp/>} />
             <Route path="*" element={<NotFound/>} />
-            
             </Routes>
         </Router>
     );

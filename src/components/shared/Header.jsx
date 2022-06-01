@@ -3,10 +3,12 @@ import { Navbar, Container, NavDropdown,Nav } from 'react-bootstrap';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from "react-router-dom";
 
 
 
 export const Header = () => {
+    const navigate = useNavigate();
     let [color, setColor] = useState(false);
 
     const changeColor = ()=>{
@@ -35,7 +37,7 @@ export const Header = () => {
 
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#top">Home</Nav.Link>
+                        <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="#aboutApp">About</Nav.Link>
                         <Nav.Link href="/aboutus">Aboutus</Nav.Link>
                         <Nav.Link href="/contactus">Contactus</Nav.Link>
@@ -60,8 +62,9 @@ export const Header = () => {
                         </a>
                     </form>
                     <div className='d-flex justify-content-center align-items-center'>
-                        <button className='btn  navbar-button'>sign in</button>
-                        <button className='btn  navbar-button'>sign up</button>
+
+                        <button className='btn  navbar-button' onClick={()=>{navigate("/signin")}}>sign in</button>
+                        <button className='btn  navbar-button' onClick={()=>{navigate("/signup")}}>sign up</button>
                     </div>
                 </Navbar.Collapse>
             </Container>
