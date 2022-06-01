@@ -33,28 +33,10 @@ export const AboutUs = () => {
                         We aim to give a system in which everyone is respected and to provide a unique and enjoyable environment in which everyone can feel comfortable. Gymawy enables everyone to work and produce excellence. From the staff to the clients involved in the Application it is all about working for the greater good. Members at Gymawy can each select a trainer, training program and a membership option by choice and personal preferences.
 
                         </h7>
-              
-                     
+
                      </p>
-              <p>
-
-                <h4>
-                    Helping people live longer, happier and healthier lives
-
-                    </h4>
-                </p>
-                <p>
-                    <h4>
-                    We aim to give a system in which everyone is respected and to provide a unique and enjoyable environment in which everyone can feel comfortable. Gymawy enables everyone to work and produce excellence. From the staff to the clients involved in the Application it is all about working for the greater good. Members at Gymawy can each select a trainer, training program and a membership option by choice and personal preferences.
-
-                    </h4>
-                </p>
-                
             </div>
-            <div className='d-flex flex-wrap justify-content-center align-items-center about-section '>
-                <img src="./assets/images/Modern-gym-ar29072020.jpg" alt=""class="img-fluid" />
-            
-            </div>
+          
                  <div className='d-flex flex-wrap justify-content-center align-items-center about-section '>
                  <img src="./assets/images/aboutus1.png" class="w-75" alt="..."></img>
                  </div>
