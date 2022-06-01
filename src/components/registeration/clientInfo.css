@@ -1,0 +1,14 @@
+.clientImages {
+    width: 100%;
+    border-radius: 30%;
+}
+
+.imagesGroup {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imageInput {
+    width: 30%;
+    margin: auto;
+}

@@ -8,10 +8,18 @@ import "@fortawesome/fontawesome-free";
 import 'primeicons/primeicons.css';
 // import components
 import LandingPage from './components/LandingPage.jsx';
-import { Login } from './components/Login';
-import { NotFound } from './components/NotFound';
-import { Carousell } from './components/landingPageComponents/Carousell';
-import { NotAuthorized } from './components/NotAuthorized';
+import { AboutUs } from './components/aboutus';
+import{ Contact }from './components/contactus';
+
+import { Signin } from './components/SignInComponents/Signin'
+import { ClientSingnup } from './components/ClientSignUp'
+import {ClientInfo} from './components/registeration/clientRegistration/clientInfo'
+import { CoachSignUp } from './components/CoachSignUp';
+
+import { NotFound } from './components/shared/NotFound';
+import { NotAuthorized } from './components/shared/NotAuthorized';
+
+
 
 
 function App() {
@@ -19,11 +27,17 @@ function App() {
         <Router>
             <Routes>
             <Route path="/" element={<LandingPage/>}/>
-            <Route path="/carousel" element={<Carousell/>}/>
-            <Route path="login" element={<Login/>} />
-            <Route path="/NotAuthorized" element={<NotAuthorized/>} />
+
+            <Route path="aboutus" element={<AboutUs/>} />
+            <Route path="contactus" element={<Contact/>} />
+
+            <Route path="Signin" element={<Signin/>} />
+            <Route path="clientinfo" element={<ClientInfo/>} />
+            <Route path="signup" element={<ClientSingnup/>} />
+            <Route path="coachsignup" element={<CoachSignUp/>} />
+
+            <Route path="NotAuthorized" element={<NotAuthorized/>} />
             <Route path="*" element={<NotFound/>} />
-            
             </Routes>
         </Router>
     );
