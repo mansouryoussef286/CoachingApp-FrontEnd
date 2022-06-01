@@ -18,6 +18,7 @@ import { CoachSignUp } from './components/CoachSignUp';
 
 import { NotFound } from './components/shared/NotFound';
 import { NotAuthorized } from './components/shared/NotAuthorized';
+import { ClientProfile } from './components/ClientProfile';
 
 
 
@@ -35,6 +36,8 @@ function App() {
             <Route path="clientinfo" element={<ClientInfo/>} />
             <Route path="signup" element={<ClientSingnup/>} />
             <Route path="coachsignup" element={<CoachSignUp/>} />
+
+            <Route path="ClientProfile" element={<ClientProfile/>} />
 
             <Route path="NotAuthorized" element={<NotAuthorized/>} />
             <Route path="*" element={<NotFound/>} />

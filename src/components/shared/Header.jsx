@@ -62,6 +62,7 @@ export const Header = () => {
                     </form>
                     <div className='d-flex justify-content-center align-items-center'>
 
+                        <button className='btn  navbar-button' onClick={()=>{navigate("/ClientProfile")}}>profile</button>
                         <button className='btn  navbar-button' onClick={()=>{navigate("/signin")}}>sign in</button>
                         <button className='btn  navbar-button' onClick={()=>{navigate("/signup")}}>sign up</button>
                     </div>
