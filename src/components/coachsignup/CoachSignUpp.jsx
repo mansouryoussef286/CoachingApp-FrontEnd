@@ -275,6 +275,7 @@ export const CoachSignUpp = () => {
                                     />                     
                             </div>
                             <p className='registerError'>{errors.ConfPassError}</p>
+                            
 
                             
                             <div className="inputB">
