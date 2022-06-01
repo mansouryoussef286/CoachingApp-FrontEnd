@@ -1,12 +1,12 @@
+import { Header } from './shared/Header.jsx'
+import { Footer } from './shared/Footer.jsx'
 import React, { useEffect, useState } from 'react'
 import { Navbar, Container, NavDropdown,Nav } from 'react-bootstrap';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
-
-
-export const Header = () => {
+export const Contact = () => {
     let [color, setColor] = useState(false);
 
     const changeColor = ()=>{
@@ -24,8 +24,8 @@ export const Header = () => {
 
 
     return (
-        // <div  className='Header navbar-custom'>
-        <Navbar expand="lg" fixed='top' className={color? 'navbar-custom' :''}>
+
+    <Navbar expand="lg" fixed='top' className={color? 'navbar-custom' :''}>
             <Container >
                 <Navbar.Brand href="#Home">
                     <img src='./assets/images/musclelogo.png' className='header-logo'/>
@@ -35,10 +35,11 @@ export const Header = () => {
 
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#top">Home</Nav.Link>
-                        <Nav.Link href="#aboutApp">About</Nav.Link>
+                        <Nav.Link href="/">Home</Nav.Link>
+                        {/* <Nav.Link href="#aboutApp">About</Nav.Link> */}
                         <Nav.Link href="/aboutus">Aboutus</Nav.Link>
                         <Nav.Link href="/contactus">Contactus</Nav.Link>
+
 
 
 
@@ -67,6 +68,6 @@ export const Header = () => {
             </Container>
             
         </Navbar>
-        // </div>
-    );
-}
+          );
+        }
+        
