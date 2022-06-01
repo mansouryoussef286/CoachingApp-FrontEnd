@@ -1,36 +1,6 @@
 import { Header } from './shared/Header.jsx'
 import { Footer } from './shared/Footer.jsx'
-// import React, { useEffect, useState } from 'react'
-// import { Navbar, Container, NavDropdown,Nav } from 'react-bootstrap';
 
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-
-// export const Contact = () => {
-//     let [color, setColor] = useState(false);
-
-//     const changeColor = ()=>{
-//         if(window.scrollY >100){
-//             setColor(true);
-//         }else{
-//             setColor(false);
-//         }
-//     }
-
-//     useEffect(()=>{
-//         window.addEventListener('scroll', changeColor);
-//         // console.log('event listener added');
-//     },[])
-
-
-//     return (
-
-//         <Header></Header>
-
-//           );
-//         }
-//         // =============================================================================// import { Header } from './shared/Header.jsx'
-// import { Footer } from './shared/Footer.jsx'
 import React, { useEffect, useState } from 'react'
 import { Navbar, Container, NavDropdown,Nav } from 'react-bootstrap';
 
