@@ -169,7 +169,7 @@
 
 .carousel-demo .card {
     /* color of the background of coahes carousel */
-    background-color: lightgray !important;
+    background-color: inherit !important;
 }
 
 

@@ -1,76 +1,74 @@
 @import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 .sideNav {
     background-color: black;
+    position: fixed;
+}
+
+.p-card {
+    overflow: auto;
+}
+
+.sidebarDiv {
+    background-color: black;
 }
 
 .profile {
-    margin-left: 64px;
-    padding: 1em;
+    padding-left: 64px;
+    /* height: 100vh; */
+    /* padding: 1em; */
+    background-color: var(--main-color);
 }
 
 
 /* #region client card */
 
-.cardd {
-    margin: 20px;
-    background-color: red !important;
-}
-
-.ListOfCoaches-page {
-    background-color: aliceblue;
-}
-
-.CoachesContainer {
-    padding-top: 159px;
-    display: flex;
-    flex-wrap: wrap;
-    /* height: 200vh; */
-    z-index: 2;
-}
-
-.cardbox {
+.Main-Profile-Card {
     position: relative;
-    max-width: 400px;
+    max-width: 300px;
     min-width: 300px;
-    height: 400px;
+    /* height: 100vh; */
     overflow: auto;
     box-shadow: 0px 0px 10px 4px rgba(80, 80, 80, 0.73) !important;
     z-index: 2;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     /* margin: 10px; */
     border-radius: 20px !important;
+    margin: 1em 1em;
+    font-size: 12px;
+    max-height: 600px;
 }
 
-.coverImage {
+.Main-Profile-Card .coverImage {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     /* z-index: 1; */
-    height: 80px;
+    height: 150px;
 }
 
-.coachImageDiv {
+.Main-Profile-Card .ImageDiv {
     border-radius: 50%;
     background-color: azure;
-    height: 75px;
-    width: 75px;
+    height: 200px;
+    width: 200px;
     z-index: 1;
 }
 
-.coachCardFooter {
+.NameDiv {
+    font-size: 24px;
     font-weight: bold;
 }
 
-.coachCardAbout {
-    font-size: 12px;
+.Main-Profile-Card .CardFooter {
+    font-weight: bold;
 }
 
-.coachCardRating {
+.Main-Profile-Card .CardRating {
     display: flex;
 }
 
-.coachCardContextMenu {
+.Main-Profile-Card .CardContextMenu {
     position: absolute !important;
     /* width: 100%; */
     top: 0 !important;
@@ -78,19 +76,39 @@
     z-index: 3;
 }
 
-.coachCardContextMenu .threedots {
+.Main-Profile-Card .CardContextMenu .threedots {
     color: white;
     font-size: 30px;
 }
 
-.textdiv {
+
+/* .textdiv {
     margin-top: 59px;
     position: fixed;
     width: 100%;
     background-color: white;
     box-shadow: 0px 10px 5px -10px rgba(0, 0, 0, 0.5);
     z-index: 3;
-}
+} */
 
 
 /* #endregion client card */
+
+
+/* #region workout card */
+
+.workout-Card {
+    position: relative;
+    min-width: 300px;
+    overflow: auto;
+    box-shadow: 0px 0px 10px 4px rgba(80, 80, 80, 0.73) !important;
+    z-index: 2;
+    border-radius: 20px !important;
+    margin: 1em 1em;
+    font-size: 12px;
+    /* max-height: 600px; */
+    width: 100%;
+}
+
+
+/* #endregion workout card */
