@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { Rating } from 'primereact/rating';
@@ -10,10 +10,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 export const CardComponent = (props) => {
 
+    const[classes, setClasses] = useState("cardbox");
+    const[classes2, setClasses2] = useState("");
+    useEffect(()=>{
+        if(props.classes != null){
+            let newClasses = `${classes} ${props.classes}`;
+            console.log(newClasses);
+            setClasses(newClasses);
+        }
+        if(props.CardwithDotsclasses != null){
+            console.log(props.CardwithDotsclasses);
+            setClasses2(props.CardwithDotsclasses);
+        }
+    },[])
     
-    console.log(props.body);
+    console.log(props.children);
     return (
-        <div style={{ position: 'relative' }}>
+        <div className={classes2} style={{ position: 'relative' }}>
             <Dropdown autoClose='outside' drop='up' rootCloseEvent='click' className='coachCardContextMenu'>
                 <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
                     <FontAwesomeIcon icon={faEllipsis} className='threedots' />
@@ -26,8 +39,8 @@ export const CardComponent = (props) => {
                     <Dropdown.Item eventKey="2">add to favourites</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
-            <Card className='cardbox'>
-                {/* {props.body()} */}
+            <Card className={classes}>
+                {props.children}
             </Card>
         </div>
     );

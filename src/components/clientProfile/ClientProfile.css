@@ -11,6 +11,11 @@
 
 /* #region client card */
 
+.cardd {
+    margin: 20px;
+    background-color: red !important;
+}
+
 .ListOfCoaches-page {
     background-color: aliceblue;
 }
