@@ -109,6 +109,32 @@
     /* max-height: 600px; */
     width: 100%;
 }
+.food
+{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.meal
+{
+    margin: 30px;
+    text-align: center;
+}
+.meal h3
+{
+    text-decoration: underline;
+    color: burlywood;
+    margin-bottom: 40px;
+  
+}
+.meal img
+{
+    border-radius: 60%;
+    margin-bottom: 20px;
+    width:'220px'
+}
+
 
 
 /* #endregion workout card */
