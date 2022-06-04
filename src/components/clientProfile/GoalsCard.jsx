@@ -40,7 +40,7 @@ export const GoalsCard = () => {
                 </div>
                 
                 <div className='d-flex flex-wrap justify-content-center align-items-center about-section '>
-                    <img src="./assets/images/goal6.png" class="w-100" alt="..."></img>
+                    <img src="./assets/images/goal6.png" class="w-100" ></img>
                 </div>
             </div>
 
