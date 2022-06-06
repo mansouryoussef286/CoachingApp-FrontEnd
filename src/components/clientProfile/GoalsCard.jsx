@@ -30,9 +30,10 @@ export const GoalsCard = () => {
                         <li> Drink more water</li>
                         <li> Live less sedentary</li>
                         <li> Start a Walking Program</li>
-                        <li> Boost Your Cardio Endurance</li>
-                        <li> Learn a New Skill</li>
                         <li>Build a Stronger Core</li>
+                        <li> Learn a New Skill</li>
+                        <li> Boost Your Cardio Endurance</li>
+
 
 
                         
