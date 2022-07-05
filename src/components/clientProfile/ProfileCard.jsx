@@ -4,6 +4,7 @@ import { CardComponent } from './CardComponent';
 
 import { Dialog } from 'primereact/dialog';
 
+import {DialogEdit} from '../DialogEdit'
 export const ProfileCard = () => {
     let [client, setClient] = useState(
         {
@@ -83,11 +84,8 @@ export const ProfileCard = () => {
                 </div>
                 <div className="text-center py-2">
                     <button className='btn btn-secondary' label="Show" icon="pi pi-external-link" onClick={() => onClick('displayBasic')}>edit profile</button>
-                    <Dialog header="Header" visible={displayBasic} style={{ width: '50vw' }} footer={renderFooter('displayBasic')} onHide={() => onHide('displayBasic')}>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <Dialog  visible={displayBasic} style={{ width: '35vw' }}  onHide={() => onHide('displayBasic')}>
+                        <DialogEdit data={client}/>
                     </Dialog>
                 </div>
             </CardComponent>
