@@ -11,12 +11,13 @@ export const ProfileCard = () => {
             email: 'ahmedelsokary@gmail.com',
             age: '24',
             gender: 'male',
-            rate: 4.5,
-            ratings: 200,
-            about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
-            yearsOfExperience: 5,
-            specialities: ["body building"],
-            clients: 300
+            address:{
+                Country:'Egypt',
+                city: 'alexandria'
+            },
+            weight:78,
+            height:185,
+            mobile: '01148284808',
         }
     );
 
@@ -34,28 +35,21 @@ export const ProfileCard = () => {
                     </div>
                     <div>
                         <br />
-                        {client.specialities[0]}, {client.age}
+                        {client.age}
                         <br />
                         {client.gender}
                         <br />
                         {client.email}
-                        <div className="CardRating d-flex justify-content-start align-items-center">
-                            <Rating className='CardRating' value={client.rate} readOnly stars={5} cancel={false} />
-                            <span className='text-secondary'>{client.ratings} ratings</span>
-                        </div>
-                        {/* <h6 className='CoachRatings'>2K Ratings</h6> */}
-                    </div>
-                </div>
-                
-                <div>
-                    <hr className='p-0 m-1' />
-                    <div className=''>
-                        {client.about}
-                    </div>
-                    <hr className='p-0 m-1' />
-                    <div className=" text-lowercase CardFooter d-flex align-items-center justify-content-around">
-                        <span>years of experience: {client.yearsOfExperience}</span>&nbsp;
-                        <span> client.s: {client.s}</span>
+                        <br />
+                        {client.gender}
+                        <br />
+                        {client.mobile}
+                        <br />
+                        {client.address.city}<span>,</span>{client.address.Country}
+                        <br />
+                        {client.weight} <span>Kg</span>
+                        <br />
+                        {client.height} <span>Cm</span>
                     </div>
                 </div>
             </CardComponent>
