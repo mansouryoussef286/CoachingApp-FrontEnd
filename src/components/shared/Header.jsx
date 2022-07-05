@@ -11,8 +11,10 @@ export const Header = () => {
     const navigate = useNavigate();
     let [color, setColor] = useState(false);
 
+    let [isList, setIsList] = useState(false);
+    
     const changeColor = ()=>{
-        if(window.scrollY >100){
+        if(window.scrollY >50){
             setColor(true);
         }else{
             setColor(false);
@@ -24,11 +26,22 @@ export const Header = () => {
         // console.log('event listener added');
     },[])
 
+    useEffect(()=>{
+        if(window.location.href.includes("list")){
+            setIsList(true);
+        }
+    },[])
 
+    const ifIsList = ()=>{
+        if(isList){
+            return(
+                <div></div>
+            );
+        }
+    }
     return (
-        // <div  className='Header navbar-custom'>
-        <Navbar expand="lg" fixed='top' className={color? 'navbar-custom' :''}>
-            <Container >
+        <Navbar expand="lg"  fixed='top' className={color? 'navbar-custom' :''}>
+                <Container >
                 <Navbar.Brand href="#Home">
                     <img src='./assets/images/musclelogo.png' className='header-logo'/>
                 </Navbar.Brand>
@@ -68,8 +81,6 @@ export const Header = () => {
                     </div>
                 </Navbar.Collapse>
             </Container>
-            
         </Navbar>
-        // </div>
     );
 }

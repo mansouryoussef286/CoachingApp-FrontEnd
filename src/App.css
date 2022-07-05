@@ -1,4 +1,5 @@
 @import '~antd/dist/antd.css';
+@import 'css/listOfCoaches.css';
 @import "primereact/resources/themes/md-light-indigo/theme.css";
 @import "primereact/resources/primereact.min.css";
 @import "primeicons/primeicons.css";
@@ -87,9 +88,9 @@
 
 .navbar-custom {
     animation-name: addColor;
-    animation-duration: 0.5s;
+    animation-duration: .5s;
     background: var(--main-color);
-    box-shadow: 0px 10px 12px -3px rgba(0, 0, 0, 0.79);
+    box-shadow: 0px 10px 7px -10px rgba(0, 0, 0, 0.79);
 }
 
 
@@ -143,7 +144,7 @@
 
 /* begin Coaches component in landing page */
 
-.carousel-demo .coach-item .coach-item-content {
+.carousel-demo .coach-item-content {
     /* each card css */
     border: 1px solid var(--surface-d);
     border-radius: 10px;
