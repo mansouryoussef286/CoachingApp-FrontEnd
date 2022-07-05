@@ -15,7 +15,7 @@ export const WorkoutCard = () => {
                 <div className="site-calendar-demo-card">
                     <Calendar  fullscreen={false} onChange={onPanelChange} className='site-calendar-demo-card ' />
                 </div>
-                <div className='workout-text-div '>
+                <div className='workout-text-div text-center'>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias expedita, <br/>
                     unde ipsam eos nihil itaque laudantium illo praesentium explicabo in.<br/>
                     kbkbkbkbu <br/>

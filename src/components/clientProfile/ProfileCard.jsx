@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
-import { Rating } from 'primereact/rating';
 import { CardComponent } from './CardComponent';
+
+import { Dialog } from 'primereact/dialog';
 
 export const ProfileCard = () => {
     let [client, setClient] = useState(
@@ -11,15 +12,43 @@ export const ProfileCard = () => {
             email: 'ahmedelsokary@gmail.com',
             age: '24',
             gender: 'male',
-            address:{
-                Country:'Egypt',
+            address: {
+                Country: 'Egypt',
                 city: 'alexandria'
             },
-            weight:78,
-            height:185,
+            weight: 78,
+            height: 185,
             mobile: '01148284808',
         }
     );
+
+    const [displayBasic, setDisplayBasic] = useState(false);
+    const [position, setPosition] = useState('center');
+
+    const dialogFuncMap = {
+        'displayBasic': setDisplayBasic,
+    }
+
+    const onClick = (name, position) => {
+        dialogFuncMap[`${name}`](true);
+
+        if (position) {
+            setPosition(position);
+        }
+    }
+
+    const onHide = (name) => {
+        dialogFuncMap[`${name}`](false);
+    }
+
+    const renderFooter = (name) => {
+        return (
+            <div>
+                <button label="No" icon="pi pi-times" onClick={() => onHide(name)} className="p-button-text">yes`</button>
+                <button label="Yes" icon="pi pi-check" onClick={() => onHide(name)} autoFocus >no</button>
+            </div>
+        );
+    }
 
     return (
         <>
@@ -51,6 +80,15 @@ export const ProfileCard = () => {
                         <br />
                         {client.height} <span>Cm</span>
                     </div>
+                </div>
+                <div className="text-center py-2">
+                    <button className='btn btn-secondary' label="Show" icon="pi pi-external-link" onClick={() => onClick('displayBasic')}>edit profile</button>
+                    <Dialog header="Header" visible={displayBasic} style={{ width: '50vw' }} footer={renderFooter('displayBasic')} onHide={() => onHide('displayBasic')}>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </Dialog>
                 </div>
             </CardComponent>
         </>

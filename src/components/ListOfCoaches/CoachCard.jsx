@@ -1,4 +1,4 @@
-import React,{ useState }  from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { Rating } from 'primereact/rating';
@@ -10,147 +10,147 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 
 export const CoachCard = () => {
-    let [coaches, setCoaches]= useState([
+    let [coaches, setCoaches] = useState([
         {
             id: 123,
-            name:'ahmed elsokary',
-            clients:'ahmedelsokary@gmail.com',
-            age:'24',
-            gender:'male',
+            name: 'ahmed elsokary',
+            clients: 'ahmedelsokary@gmail.com',
+            age: '24',
+            gender: 'male',
             rate: 4.5,
-            ratings:200,
-            about:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
+            ratings: 200,
+            about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
             yearsOfExperience: 5,
-            specialities:["body building"],
+            specialities: ["body building"],
             clients: 300
         },
         {
             id: 123,
-            name:'ahmed elsokary',
-            clients:'ahmedelsokary@gmail.com',
-            age:'24',
-            gender:'male',
+            name: 'ahmed elsokary',
+            clients: 'ahmedelsokary@gmail.com',
+            age: '24',
+            gender: 'male',
             rate: 4.5,
-            ratings:200,
-            about:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
+            ratings: 200,
+            about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
             yearsOfExperience: 5,
-            specialities:["body building"],
+            specialities: ["body building"],
             clients: 300
         },
         {
             id: 123,
-            name:'ahmed elsokary',
-            clients:'ahmedelsokary@gmail.com',
-            age:'24',
-            gender:'male',
+            name: 'ahmed elsokary',
+            clients: 'ahmedelsokary@gmail.com',
+            age: '24',
+            gender: 'male',
             rate: 4.5,
-            ratings:200,
-            about:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
+            ratings: 200,
+            about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
             yearsOfExperience: 5,
-            specialities:["body building"],
+            specialities: ["body building"],
             clients: 300
         },
         {
             id: 123,
-            name:'ahmed elsokary',
-            clients:'ahmedelsokary@gmail.com',
-            age:'24',
-            gender:'male',
+            name: 'ahmed elsokary',
+            clients: 'ahmedelsokary@gmail.com',
+            age: '24',
+            gender: 'male',
             rate: 4.5,
-            ratings:200,
-            about:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
+            ratings: 200,
+            about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
             yearsOfExperience: 5,
-            specialities:["body building"],
+            specialities: ["body building"],
             clients: 300
         },
         {
             id: 123,
-            name:'ahmed elsokary',
-            clients:'ahmedelsokary@gmail.com',
-            age:'24',
-            gender:'male',
+            name: 'ahmed elsokary',
+            clients: 'ahmedelsokary@gmail.com',
+            age: '24',
+            gender: 'male',
             rate: 4.5,
-            ratings:200,
-            about:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
+            ratings: 200,
+            about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
             yearsOfExperience: 5,
-            specialities:["body building"],
+            specialities: ["body building"],
             clients: 300
-        },{
+        }, {
             id: 123,
-            name:'ahmed elsokary',
-            clients:'ahmedelsokary@gmail.com',
-            age:'24',
-            gender:'male',
+            name: 'ahmed elsokary',
+            clients: 'ahmedelsokary@gmail.com',
+            age: '24',
+            gender: 'male',
             rate: 4.5,
-            ratings:200,
-            about:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
+            ratings: 200,
+            about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
             yearsOfExperience: 5,
-            specialities:["body building"],
+            specialities: ["body building"],
             clients: 300
         },
         {
             id: 123,
-            name:'ahmed elsokary',
-            clients:'ahmedelsokary@gmail.com',
-            age:'24',
-            gender:'male',
+            name: 'ahmed elsokary',
+            clients: 'ahmedelsokary@gmail.com',
+            age: '24',
+            gender: 'male',
             rate: 4.5,
-            ratings:200,
-            about:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
+            ratings: 200,
+            about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
             yearsOfExperience: 5,
-            specialities:["body building"],
+            specialities: ["body building"],
             clients: 300
         },
         {
             id: 123,
-            name:'ahmed elsokary',
-            clients:'ahmedelsokary@gmail.com',
-            age:'24',
-            gender:'male',
+            name: 'ahmed elsokary',
+            clients: 'ahmedelsokary@gmail.com',
+            age: '24',
+            gender: 'male',
             rate: 4.5,
-            ratings:200,
-            about:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
+            ratings: 200,
+            about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
             yearsOfExperience: 5,
-            specialities:["body building"],
+            specialities: ["body building"],
             clients: 300
         },
         {
             id: 123,
-            name:'ahmed elsokary',
-            clients:'ahmedelsokary@gmail.com',
-            age:'24',
-            gender:'male',
+            name: 'ahmed elsokary',
+            clients: 'ahmedelsokary@gmail.com',
+            age: '24',
+            gender: 'male',
             rate: 4.5,
-            ratings:200,
-            about:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
+            ratings: 200,
+            about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
             yearsOfExperience: 5,
-            specialities:["body building"],
+            specialities: ["body building"],
             clients: 300
         },
         {
             id: 123,
-            name:'ahmed elsokary',
-            clients:'ahmedelsokary@gmail.com',
-            age:'24',
-            gender:'male',
+            name: 'ahmed elsokary',
+            clients: 'ahmedelsokary@gmail.com',
+            age: '24',
+            gender: 'male',
             rate: 4.5,
-            ratings:200,
-            about:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
+            ratings: 200,
+            about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
             yearsOfExperience: 5,
-            specialities:["body building"],
+            specialities: ["body building"],
             clients: 300
         },
-        
+
     ]);
 
-    const printCoachCards = (coaches)=>{
-        return(
-            coaches.map((item, index)=>{
-                return(
-                    <div style={{position: 'relative'}} key={index}>
+    const printCoachCards = (coaches) => {
+        return (
+            coaches.map((item, index) => {
+                return (
+                    <div style={{ position: 'relative' }} key={index}>
                         <Dropdown autoClose='outside' drop='up' rootCloseEvent='click' className='coachCardContextMenu'>
                             <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
-                                <FontAwesomeIcon icon={faEllipsis} className='threedots'/>
+                                <FontAwesomeIcon icon={faEllipsis} className='threedots' />
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu align={'end'} rootCloseEvent='mousedown' as={CustomMenu}>
@@ -167,15 +167,15 @@ export const CoachCard = () => {
 
                             <div className='d-flex flex-column coachCardAbout'>
                                 <div className="coachImageDiv">
-                                    <img className='w-100 h-100' alt="Card" src="assets/images/coach.png" onError={(e) => e.target.src='https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} />
+                                    <img className='w-100 h-100' alt="Card" src="assets/images/coach.png" onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} />
                                 </div>
                                 <div>
                                     {item.name}, {item.age}
-                                    <br/>
+                                    <br />
                                     {item.specialities[0]}
-                                    <br/>
+                                    <br />
                                     {item.gender}
-                                    <br/>
+                                    <br />
                                     {item.email}
                                     <div className="coachCardRating d-flex justify-content-start align-items-center">
                                         <Rating className='coachCardRating' value={item.rate} readOnly stars={5} cancel={false} />
@@ -184,17 +184,20 @@ export const CoachCard = () => {
                                     {/* <h6 className='CoachRatings'>2K Ratings</h6> */}
                                 </div>
                             </div>
-                            
+
                             <div>
-                                <hr className='p-0 m-1'/>
+                                <hr className='p-0 m-1' />
                                 <div className='coachCardAbout'>
                                     {item.about}
                                 </div>
-                                <hr className='p-0 m-1'/>
+                                <hr className='p-0 m-1' />
                                 <div className="coachCardAbout text-lowercase coachCardFooter d-flex align-items-center justify-content-around">
                                     <span>years of experience: {item.yearsOfExperience}</span>&nbsp;
                                     <span>clients: {item.clients}</span>
                                 </div>
+                            </div>
+                            <div className="text-center py-2">
+                                <button className='btn btn-danger'>subscribe</button>
                             </div>
                         </Card>
                     </div>
@@ -205,12 +208,12 @@ export const CoachCard = () => {
 
     return (
         <>
-        <div className=''>
-            <div className='textdiv px-5'><h3>coaches: </h3></div>
-            <div className='CoachesContainer d-flex flex-wrap justify-content-around align-items-center'>
-                {printCoachCards(coaches)}
+            <div className=''>
+                <div className='textdiv px-5'><h3>coaches: </h3></div>
+                <div className='CoachesContainer d-flex flex-wrap justify-content-around align-items-center'>
+                    {printCoachCards(coaches)}
+                </div>
             </div>
-        </div>
         </>
     );
 }
@@ -220,14 +223,14 @@ export const CoachCard = () => {
 // Dropdown needs access to the DOM node in order to position the Menu
 const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
     <a
-    href=""
-    ref={ref}
-    onClick={(e) => {
-        e.preventDefault();
-        onClick(e);
-    }}
+        href=""
+        ref={ref}
+        onClick={(e) => {
+            e.preventDefault();
+            onClick(e);
+        }}
     >
-    {children}
+        {children}
     </a>
 ));
 
@@ -235,23 +238,23 @@ const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
 // Dropdown needs access to the DOM of the Menu to measure it
 const CustomMenu = React.forwardRef(
     ({ children, style, className, 'aria-labelledby': labeledBy }, ref) => {
-    const [value, setValue] = useState('');
+        const [value, setValue] = useState('');
 
-    return (
-        <div
-        // ref={ref}
-        style={style}
-        className={className}
-        aria-labelledby={labeledBy}
-        >
-        <ul className="list-unstyled">
-            {React.Children.toArray(children).filter(
-            (child) =>
-                !value || child.props.children.toLowerCase().startsWith(value),
-            )}
-        </ul>
-        </div>
-    );
+        return (
+            <div
+                // ref={ref}
+                style={style}
+                className={className}
+                aria-labelledby={labeledBy}
+            >
+                <ul className="list-unstyled">
+                    {React.Children.toArray(children).filter(
+                        (child) =>
+                            !value || child.props.children.toLowerCase().startsWith(value),
+                    )}
+                </ul>
+            </div>
+        );
     },
 );
 //#endregion
