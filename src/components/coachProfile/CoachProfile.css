@@ -1,0 +1,147 @@
+@import '@trendmicro/react-sidenav/dist/react-sidenav.css';
+.sideNav {
+    background-color: black;
+    position: fixed;
+}
+
+.p-card {
+    overflow: auto;
+}
+
+.sidebarDiv {
+    background-color: black;
+}
+
+.profile {
+    padding-left: 64px;
+    /* height: 100vh; */
+    /* padding: 1em; */
+    background-color: var(--main-color);
+}
+
+
+/* #region client card */
+
+.Main-Profile-Card {
+    position: relative;
+    max-width: 300px;
+    min-width: 300px;
+    /* height: 100vh; */
+    overflow: auto;
+    box-shadow: 0px 0px 10px 4px rgba(80, 80, 80, 0.73) !important;
+    z-index: 2;
+    /* margin-bottom: 20px; */
+    /* margin: 10px; */
+    border-radius: 20px !important;
+    margin: 1em 1em;
+    font-size: 12px;
+    max-height: 600px;
+}
+
+.Main-Profile-Card .coverImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* z-index: 1; */
+    height: 150px;
+}
+
+.Main-Profile-Card .ImageDiv {
+    border-radius: 50%;
+    background-color: azure;
+    height: 200px;
+    width: 200px;
+    z-index: 1;
+}
+
+.NameDiv {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.Main-Profile-Card .CardFooter {
+    font-weight: bold;
+}
+
+.Main-Profile-Card .CardRating {
+    display: flex;
+}
+
+.Main-Profile-Card .CardContextMenu {
+    position: absolute !important;
+    /* width: 100%; */
+    top: 0 !important;
+    right: 5% !important;
+    z-index: 3;
+}
+
+.Main-Profile-Card .CardContextMenu .threedots {
+    color: white;
+    font-size: 30px;
+}
+
+
+/* .textdiv {
+    margin-top: 59px;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 10px 5px -10px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+} */
+
+
+/* #endregion client card */
+
+
+/* #region workout card */
+
+.workout-Card {
+    position: relative;
+    min-width: 300px;
+    overflow: auto;
+    box-shadow: 0px 0px 10px 4px rgba(80, 80, 80, 0.73) !important;
+    z-index: 2;
+    border-radius: 20px !important;
+    margin: 1em 1em;
+    font-size: 12px;
+    /* max-height: 600px; */
+    width: 100%;
+}
+
+.food {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.meal {
+    margin: 30px;
+    text-align: center;
+}
+
+.meal h3 {
+    text-decoration: underline;
+    color: burlywood;
+    margin-bottom: 40px;
+}
+
+.meal img {
+    border-radius: 60%;
+    margin-bottom: 20px;
+    width: '220px'
+}
+
+
+/* #endregion workout card */
+
+.site-calendar-demo-card {
+    width: 300px;
+    border: 1px solid #f0f0f0;
+    border-radius: 2px;
+}
+
+.workout-text-div {
+    width: 50%
+}

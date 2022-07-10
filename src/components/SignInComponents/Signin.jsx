@@ -5,9 +5,9 @@ import { faUser, faAngry } from '@fortawesome/free-regular-svg-icons'
 import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { ToastContainer, toast } from 'react-toastify';
 import { Header } from '../shared/Header';
+import { useFetchpost } from '../../useFetchpost';
 
-
-
+import axios from 'axios';
 export const Signin = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -15,6 +15,19 @@ export const Signin = () => {
   const [message2, setMessage2] = useState('');
   const [message3, setMessage3] = useState('');
 
+  // const { data, loading, error, status, refetch } = useFetchpost("https://easyfit.azurewebsites.net/api/Account/Login",{
+  //   userName: "1",
+  //   password: "1"
+  // });
+  // if (loading) return (<h1>loading...</h1>);
+  // if (error) return (<h1>error...</h1>);
+  // console.log(data);
+  // console.log(status);
+
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(null);
+  const [error, setError] = useState(null);
+  const [status, setStatus] = useState(null);
 
   const notify = () => toast.error("incorrect credentials", {
     position: "top-right",
@@ -54,35 +67,61 @@ export const Signin = () => {
 
   }
 
-  const onLoginHandler = (e) => {
+  const onLoginHandler = async (e) => {
     e.preventDefault();
-    if (username === "admin" && password === "123") {
+    // api call
+    // refetch({
+    //   userName: username,
+    //   password: password
+    // });
 
-      setMessage("logged in!")
-      sessionStorage.setItem("role", "admin");
-      setTimeout(() => {
-        // this.props.setLoggedInRef();
-        // this.props.history.push('/');
-        setMessage("");
 
-      }, 3000);
-    }
-    else {
-      notify();
-      setMessage2("incorrect credentials");
-      setTimeout(() => {
-        setMessage2('')
-      }, 2000);
-    }
+    axios.post("https://easyfit.azurewebsites.net/api/Account/Login", {
+      userName: username,
+      password: password
+    }).then((response) => {
+      setData(response.data);
+      setStatus(response.status);
+      // console.log(data);
+      // console.log(status);
+      console.log(response);
+      if (status == 200) {
+
+        setMessage("logged in!")
+        // sessionStorage.setItem("role", "admin");
+        setTimeout(() => {
+          // this.props.setLoggedInRef();
+          // this.props.history.push('/');
+          setMessage("");
+
+        }, 3000);
+      }
+
+    })
+      .catch((err) => {
+        console.log(err);
+        setData(null);
+        setStatus(null);
+        notify();
+        setMessage2("incorrect credentials");
+        setTimeout(() => {
+          setMessage2('')
+        }, 2000);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+
+
   }
 
   return (
     <>
       <Header></Header>
       <section className='loginSection'>
-        <ToastContainer/>
+        <ToastContainer />
         <div className="imgbg mgbg d-flex justify-content-center">
-          <img src="/assets/images/LoginImage.png" alt="smartGymawyy" class="w-75"/>
+          <img src="/assets/images/LoginImage.png" alt="smartGymawyy" class="w-75" />
         </div>
         <div className='cont'>
           <div className='formB'>
