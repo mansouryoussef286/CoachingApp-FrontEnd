@@ -15,13 +15,19 @@ export const Signin = () => {
   const [message2, setMessage2] = useState('');
   const [message3, setMessage3] = useState('');
 
-  const { data, loading, error, refetch } = useFetchpost("https://easyfit.azurewebsites.net/api/Account/Login",{
-    userName: "yousif",
-    password: "Lol00101001@"
-  });
-  if (loading) return (<h1>loading...</h1>);
-  if (error) return (<h1>error...</h1>);
-  console.log(data);
+  // const { data, loading, error, status, refetch } = useFetchpost("https://easyfit.azurewebsites.net/api/Account/Login",{
+  //   userName: "1",
+  //   password: "1"
+  // });
+  // if (loading) return (<h1>loading...</h1>);
+  // if (error) return (<h1>error...</h1>);
+  // console.log(data);
+  // console.log(status);
+
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(null);
+  const [error, setError] = useState(null);
+  const [status, setStatus] = useState(null);
 
   const notify = () => toast.error("incorrect credentials", {
     position: "top-right",
@@ -64,49 +70,49 @@ export const Signin = () => {
   const onLoginHandler = async (e) => {
     e.preventDefault();
     // api call
-    // axios.post("https://easyfit.azurewebsites.net/api/Account/Login",{
-    //     userName: "yousif",
-    //     password: "Lol00101001@"
-    //   }).then((response) => {
-    //   console.log(response.data);
-    // })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
+    // refetch({
+    //   userName: username,
+    //   password: password
+    // });
 
-      // let user = {
-      //       userName: "yousif",
-      //       password: "Lol00101001@"
-      //     };
-      
-      // let response = await fetch("https://easyfit.azurewebsites.net/api/Account/Login", {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json;charset=utf-8'
-      //   },
-      //   body: JSON.stringify(user)
-      // });
-      
-      // let result = await response.json();
-      // alert(result.message);
-    if (username === "admin" && password === "123") {
 
-      setMessage("logged in!")
-      sessionStorage.setItem("role", "admin");
-      setTimeout(() => {
-        // this.props.setLoggedInRef();
-        // this.props.history.push('/');
-        setMessage("");
+    axios.post("https://easyfit.azurewebsites.net/api/Account/Login", {
+      userName: username,
+      password: password
+    }).then((response) => {
+      setData(response.data);
+      setStatus(response.status);
+      // console.log(data);
+      // console.log(status);
+      console.log(response);
+      if (status == 200) {
 
-      }, 3000);
-    }
-    else {
-      notify();
-      setMessage2("incorrect credentials");
-      setTimeout(() => {
-        setMessage2('')
-      }, 2000);
-    }
+        setMessage("logged in!")
+        // sessionStorage.setItem("role", "admin");
+        setTimeout(() => {
+          // this.props.setLoggedInRef();
+          // this.props.history.push('/');
+          setMessage("");
+
+        }, 3000);
+      }
+
+    })
+      .catch((err) => {
+        console.log(err);
+        setData(null);
+        setStatus(null);
+        notify();
+        setMessage2("incorrect credentials");
+        setTimeout(() => {
+          setMessage2('')
+        }, 2000);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+
+
   }
 
   return (
