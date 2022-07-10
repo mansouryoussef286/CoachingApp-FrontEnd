@@ -9,143 +9,19 @@ import { Dropdown } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 
-export const CoachCard = () => {
-    let [coaches, setCoaches] = useState([
-        {
-            id: 123,
-            name: 'ahmed elsokary',
-            clients: 'ahmedelsokary@gmail.com',
-            age: '24',
-            gender: 'male',
-            rate: 4.5,
-            ratings: 200,
-            about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
-            yearsOfExperience: 5,
-            specialities: ["body building"],
-            clients: 300
-        },
-        {
-            id: 123,
-            name: 'ahmed elsokary',
-            clients: 'ahmedelsokary@gmail.com',
-            age: '24',
-            gender: 'male',
-            rate: 4.5,
-            ratings: 200,
-            about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
-            yearsOfExperience: 5,
-            specialities: ["body building"],
-            clients: 300
-        },
-        {
-            id: 123,
-            name: 'ahmed elsokary',
-            clients: 'ahmedelsokary@gmail.com',
-            age: '24',
-            gender: 'male',
-            rate: 4.5,
-            ratings: 200,
-            about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
-            yearsOfExperience: 5,
-            specialities: ["body building"],
-            clients: 300
-        },
-        {
-            id: 123,
-            name: 'ahmed elsokary',
-            clients: 'ahmedelsokary@gmail.com',
-            age: '24',
-            gender: 'male',
-            rate: 4.5,
-            ratings: 200,
-            about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
-            yearsOfExperience: 5,
-            specialities: ["body building"],
-            clients: 300
-        },
-        {
-            id: 123,
-            name: 'ahmed elsokary',
-            clients: 'ahmedelsokary@gmail.com',
-            age: '24',
-            gender: 'male',
-            rate: 4.5,
-            ratings: 200,
-            about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
-            yearsOfExperience: 5,
-            specialities: ["body building"],
-            clients: 300
-        }, {
-            id: 123,
-            name: 'ahmed elsokary',
-            clients: 'ahmedelsokary@gmail.com',
-            age: '24',
-            gender: 'male',
-            rate: 4.5,
-            ratings: 200,
-            about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
-            yearsOfExperience: 5,
-            specialities: ["body building"],
-            clients: 300
-        },
-        {
-            id: 123,
-            name: 'ahmed elsokary',
-            clients: 'ahmedelsokary@gmail.com',
-            age: '24',
-            gender: 'male',
-            rate: 4.5,
-            ratings: 200,
-            about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
-            yearsOfExperience: 5,
-            specialities: ["body building"],
-            clients: 300
-        },
-        {
-            id: 123,
-            name: 'ahmed elsokary',
-            clients: 'ahmedelsokary@gmail.com',
-            age: '24',
-            gender: 'male',
-            rate: 4.5,
-            ratings: 200,
-            about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
-            yearsOfExperience: 5,
-            specialities: ["body building"],
-            clients: 300
-        },
-        {
-            id: 123,
-            name: 'ahmed elsokary',
-            clients: 'ahmedelsokary@gmail.com',
-            age: '24',
-            gender: 'male',
-            rate: 4.5,
-            ratings: 200,
-            about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
-            yearsOfExperience: 5,
-            specialities: ["body building"],
-            clients: 300
-        },
-        {
-            id: 123,
-            name: 'ahmed elsokary',
-            clients: 'ahmedelsokary@gmail.com',
-            age: '24',
-            gender: 'male',
-            rate: 4.5,
-            ratings: 200,
-            about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
-            yearsOfExperience: 5,
-            specialities: ["body building"],
-            clients: 300
-        },
+import { useFetch } from '../../useFetch';
 
-    ]);
+export const CoachCard = () => {
+    const { data, loading, error, refetch } = useFetch("https://easyfit.azurewebsites.net/api/Coach");
+
+    if (loading) return (<h1>loading...</h1>);
+    if (error) return (<h1>error...</h1>);
+
+    console.log(data);
 
     const printCoachCards = (coaches) => {
         return (
-            coaches.map((item, index) => {
+            coaches?.map((item, index) => {
                 return (
                     <div style={{ position: 'relative' }} key={index}>
                         <Dropdown autoClose='outside' drop='up' rootCloseEvent='click' className='coachCardContextMenu'>
@@ -170,9 +46,7 @@ export const CoachCard = () => {
                                     <img className='w-100 h-100' alt="Card" src="assets/images/coach.png" onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} />
                                 </div>
                                 <div>
-                                    {item.name}, {item.age}
-                                    <br />
-                                    {item.specialities[0]}
+                                    {item.firstName} {item.lastName}, {item.age}
                                     <br />
                                     {item.gender}
                                     <br />
@@ -205,13 +79,12 @@ export const CoachCard = () => {
             })
         )
     }
-
     return (
         <>
             <div className=''>
                 <div className='textdiv px-5'><h3>coaches: </h3></div>
                 <div className='CoachesContainer d-flex flex-wrap justify-content-around align-items-center'>
-                    {printCoachCards(coaches)}
+                    {printCoachCards(data)}
                 </div>
             </div>
         </>
@@ -257,4 +130,137 @@ const CustomMenu = React.forwardRef(
         );
     },
 );
+
+//   let [coachess, setCoachess] = useState([
+//     {
+//         id: 123,
+//         name: 'ahmed elsokary',
+//         clients: 'ahmedelsokary@gmail.com',
+//         age: '24',
+//         gender: 'male',
+//         rate: 4.5,
+//         ratings: 200,
+//         about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
+//         yearsOfExperience: 5,
+//         specialities: ["body building"],
+//         clients: 300
+//     },
+//     {
+//         id: 123,
+//         name: 'ahmed elsokary',
+//         clients: 'ahmedelsokary@gmail.com',
+//         age: '24',
+//         gender: 'male',
+//         rate: 4.5,
+//         ratings: 200,
+//         about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
+//         yearsOfExperience: 5,
+//         specialities: ["body building"],
+//         clients: 300
+//     },
+//     {
+//         id: 123,
+//         name: 'ahmed elsokary',
+//         clients: 'ahmedelsokary@gmail.com',
+//         age: '24',
+//         gender: 'male',
+//         rate: 4.5,
+//         ratings: 200,
+//         about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
+//         yearsOfExperience: 5,
+//         specialities: ["body building"],
+//         clients: 300
+//     },
+//     {
+//         id: 123,
+//         name: 'ahmed elsokary',
+//         clients: 'ahmedelsokary@gmail.com',
+//         age: '24',
+//         gender: 'male',
+//         rate: 4.5,
+//         ratings: 200,
+//         about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
+//         yearsOfExperience: 5,
+//         specialities: ["body building"],
+//         clients: 300
+//     },
+//     {
+//         id: 123,
+//         name: 'ahmed elsokary',
+//         clients: 'ahmedelsokary@gmail.com',
+//         age: '24',
+//         gender: 'male',
+//         rate: 4.5,
+//         ratings: 200,
+//         about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
+//         yearsOfExperience: 5,
+//         specialities: ["body building"],
+//         clients: 300
+//     }, {
+//         id: 123,
+//         name: 'ahmed elsokary',
+//         clients: 'ahmedelsokary@gmail.com',
+//         age: '24',
+//         gender: 'male',
+//         rate: 4.5,
+//         ratings: 200,
+//         about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
+//         yearsOfExperience: 5,
+//         specialities: ["body building"],
+//         clients: 300
+//     },
+//     {
+//         id: 123,
+//         name: 'ahmed elsokary',
+//         clients: 'ahmedelsokary@gmail.com',
+//         age: '24',
+//         gender: 'male',
+//         rate: 4.5,
+//         ratings: 200,
+//         about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
+//         yearsOfExperience: 5,
+//         specialities: ["body building"],
+//         clients: 300
+//     },
+//     {
+//         id: 123,
+//         name: 'ahmed elsokary',
+//         clients: 'ahmedelsokary@gmail.com',
+//         age: '24',
+//         gender: 'male',
+//         rate: 4.5,
+//         ratings: 200,
+//         about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
+//         yearsOfExperience: 5,
+//         specialities: ["body building"],
+//         clients: 300
+//     },
+//     {
+//         id: 123,
+//         name: 'ahmed elsokary',
+//         clients: 'ahmedelsokary@gmail.com',
+//         age: '24',
+//         gender: 'male',
+//         rate: 4.5,
+//         ratings: 200,
+//         about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
+//         yearsOfExperience: 5,
+//         specialities: ["body building"],
+//         clients: 300
+//     },
+//     {
+//         id: 123,
+//         name: 'ahmed elsokary',
+//         clients: 'ahmedelsokary@gmail.com',
+//         age: '24',
+//         gender: 'male',
+//         rate: 4.5,
+//         ratings: 200,
+//         about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ipsa quibusdam reiciendis. Veritatis nulla ut, asperiores debitis qui pariatur aut!',
+//         yearsOfExperience: 5,
+//         specialities: ["body building"],
+//         clients: 300
+//     },
+
+// ]);
 //#endregion

@@ -19,7 +19,7 @@ import { CoachSignUp } from './components/CoachSignUp';
 import { NotFound } from './components/shared/NotFound';
 import { NotAuthorized } from './components/shared/NotAuthorized';
 import { ClientProfile } from './components/ClientProfile';
-
+import { CoachProfile } from './components/CoachProfile';
 
 import { Carousell } from './components/landingPageComponents/Carousell';
 import { ListOfCoaches } from './components/ListOfCoaches';
@@ -40,6 +40,7 @@ function App() {
             <Route path="coachsignup" element={<CoachSignUp/>} />
 
             <Route path="ClientProfile" element={<ClientProfile/>} />
+            <Route path="CoachProfile" element={<CoachProfile/>} />
 
             <Route path="carousel" element={<Carousell/>}/>
             {/* <Route path="login" element={<Login/>} /> */}

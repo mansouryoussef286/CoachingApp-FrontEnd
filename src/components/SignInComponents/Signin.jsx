@@ -5,9 +5,9 @@ import { faUser, faAngry } from '@fortawesome/free-regular-svg-icons'
 import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { ToastContainer, toast } from 'react-toastify';
 import { Header } from '../shared/Header';
+import { useFetchpost } from '../../useFetchpost';
 
-
-
+import axios from 'axios';
 export const Signin = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -15,6 +15,13 @@ export const Signin = () => {
   const [message2, setMessage2] = useState('');
   const [message3, setMessage3] = useState('');
 
+  const { data, loading, error, refetch } = useFetchpost("https://easyfit.azurewebsites.net/api/Account/Login",{
+    userName: "yousif",
+    password: "Lol00101001@"
+  });
+  if (loading) return (<h1>loading...</h1>);
+  if (error) return (<h1>error...</h1>);
+  console.log(data);
 
   const notify = () => toast.error("incorrect credentials", {
     position: "top-right",
@@ -54,8 +61,34 @@ export const Signin = () => {
 
   }
 
-  const onLoginHandler = (e) => {
+  const onLoginHandler = async (e) => {
     e.preventDefault();
+    // api call
+    // axios.post("https://easyfit.azurewebsites.net/api/Account/Login",{
+    //     userName: "yousif",
+    //     password: "Lol00101001@"
+    //   }).then((response) => {
+    //   console.log(response.data);
+    // })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+
+      // let user = {
+      //       userName: "yousif",
+      //       password: "Lol00101001@"
+      //     };
+      
+      // let response = await fetch("https://easyfit.azurewebsites.net/api/Account/Login", {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json;charset=utf-8'
+      //   },
+      //   body: JSON.stringify(user)
+      // });
+      
+      // let result = await response.json();
+      // alert(result.message);
     if (username === "admin" && password === "123") {
 
       setMessage("logged in!")
@@ -80,9 +113,9 @@ export const Signin = () => {
     <>
       <Header></Header>
       <section className='loginSection'>
-        <ToastContainer/>
+        <ToastContainer />
         <div className="imgbg mgbg d-flex justify-content-center">
-          <img src="/assets/images/LoginImage.png" alt="smartGymawyy" class="w-75"/>
+          <img src="/assets/images/LoginImage.png" alt="smartGymawyy" class="w-75" />
         </div>
         <div className='cont'>
           <div className='formB'>
