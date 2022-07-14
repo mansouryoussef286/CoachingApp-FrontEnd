@@ -75,12 +75,12 @@ export const Signin = () => {
     //   userName: username,
     //   password: password
     // });
-
-
-    axios.post("https://easyfit.azurewebsites.net/api/Account/Login", {
+ 
+    // { withCredentials: true }
+    axios.post("https://localhost:7109/api/Account/Login", {
       userName: username,
       password: password
-    },{ withCredentials: true }).then((response) => {
+    },).then((response) => {
       setData(response.data);
       setStatus(response.status);
       // console.log(data);

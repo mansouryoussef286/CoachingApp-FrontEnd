@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Spinner from 'react-bootstrap/Spinner';
 
 import { Rating } from 'primereact/rating';
 import { Card } from 'primereact/card';
@@ -12,10 +13,13 @@ import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 import { useFetch } from '../../useFetch';
 
 export const CoachCard = () => {
-    const { data, loading, error, refetch } = useFetch("https://easyfit.azurewebsites.net/api/Coach");
+    const { data, loading, error, refetch } = useFetch("https://localhost:7109/api/Coach");
 
-    if (loading) return (<h1>loading...</h1>);
+    if (loading) return (<div className='center-div'> <Spinner animation="grow" /></div>);
+    if (data==null) return (<div className='center-div'> <Spinner animation="grow" /></div>);
+
     if (error) return (<h1>error...</h1>);
+    
 
     console.log(data);
 
