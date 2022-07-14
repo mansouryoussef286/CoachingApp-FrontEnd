@@ -216,3 +216,11 @@
 
 
 /*#endregion Login*/
+
+.hoverForm {
+    width: 100% !important;
+}
+
+.dialoghieght {
+    min-height: auto;
+}

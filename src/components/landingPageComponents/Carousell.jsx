@@ -21,10 +21,10 @@ export const Carousell = () => {
       <Carousel className='w-100 ok' >
         <Carousel.Item interval={10000}>
           <img
-            className="d-block w-100"
-            src="https://cutewallpaper.org/21/plain-background-hd/Plain-Light-Blue-Background-1920x1080-Drkenfreedmanblog.xyz.png"
-            alt="Third slide"
-            style={{height: '100vh'}}
+            className="d-block w-50"
+            src="./assets/images/OnlinePersonalTrainer1.png"
+            alt="first slide"
+            style={{height: '100vh', opacity: 0.3, float: 'right'}}
           />
           <Carousel.Caption>
             <h3 className='Pictitle'></h3>
@@ -33,15 +33,47 @@ export const Carousell = () => {
         </Carousel.Item>
         <Carousel.Item interval={10000}>
           <img
-            className="d-block w-100"
-            src="https://cdn.wallpapersafari.com/5/73/oHC9by.jpg"
+            className="d-block w-50"
+            src="./assets/images/OnlinePersonalTrainer2.png"
             alt="Second slide"
-            style={{height: '100vh'}}
+            style={{height: '100vh', opacity: 0.3, float: 'right'}}
           />
           <Carousel.Caption>
             <h3 className='Pictitle'></h3>
             <p  className='PicInfo'></p>
           </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item interval={10000}>
+          <img
+            className="d-block w-50"
+            src="./assets/images/OnlinePersonalTrainer3.png"
+            alt="Second slide"
+            style={{height: '100vh', opacity: 0.3, float: 'right'}}
+          />
+          <Carousel.Caption>
+            <h3 className='Pictitle'></h3>
+            <p  className='PicInfo'></p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item interval={10000}>
+          <img
+            className="d-block w-50"
+            src="./assets/images/OnlinePersonalTrainer4.png"
+            alt="Second slide"
+            style={{height: '100vh', opacity: 0.3, float: 'right'}}
+          />
+          <Carousel.Caption>
+            <h3 className='Pictitle'></h3>
+            <p  className='PicInfo'></p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item interval={10000}>
+          <img
+            className="d-block w-50"
+            src="./assets/images/OnlinePersonalTrainer5.png"
+            alt="Second slide"
+            style={{height: '100vh', opacity: 0.3, float: 'right'}}
+          />
         </Carousel.Item>
       </Carousel>
     </div>
