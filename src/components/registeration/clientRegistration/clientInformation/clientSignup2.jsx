@@ -1,7 +1,10 @@
 import React,{useState} from 'react'
 import axios from 'axios';
+import { Link,useNavigate} from 'react-router-dom';
+
 
 export const ClientSignup2 = (props) => {
+  const navigate = useNavigate();
  // console.log(props.data);
  let data1=props.data;
   const [register, setregister] = useState({
@@ -71,7 +74,7 @@ export const ClientSignup2 = (props) => {
       console.log(register.Height);
       console.log(register.Weight);
 
-      axios.post("https://easyfit.azurewebsites.net/api/Account/ClientRegister", {
+      axios.post("https://localhost:7109/api/Account/ClientRegister", {
         "id": 0,
         "userId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
         "age": data1.Age,
@@ -81,14 +84,17 @@ export const ClientSignup2 = (props) => {
         "gender": true,
         "city": data1.City,
         "country": data1.street,
-        "height": register.Height,
-        "weight": register.Weight,
+        "height": parseInt(register.Height) ,
+        "weight": parseInt(register.Weight) ,
         "image": "string",
         "userName":  data1.Name,
         "passWord": data1.Pass,
         "email": data1.Email
       })
       .then((response) => {
+        if(response.status==200)
+        navigate("/Signin");
+        
         console.log(response);
       })
         .catch((err) => {
