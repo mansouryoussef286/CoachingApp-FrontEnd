@@ -1,6 +1,12 @@
 import React,{useState} from 'react'
+import axios from 'axios';
+import { Link,useNavigate} from 'react-router-dom';
 
-export const ClientSignup2 = () => {
+
+export const ClientSignup2 = (props) => {
+  const navigate = useNavigate();
+ // console.log(props.data);
+ let data1=props.data;
   const [register, setregister] = useState({
     Height:'',
     Weight:'',
@@ -18,7 +24,7 @@ export const ClientSignup2 = () => {
   {
     let x=register;
     x[eventObject.target.name]=eventObject.target.value;
-    console.log(eventObject.target.name +"  "+eventObject.target.value +" here");
+   // console.log(eventObject.target.name +"  "+eventObject.target.value +" here");
     setregister({
         Height:x.Height,
         Weight:x.Weight,
@@ -32,9 +38,9 @@ export const ClientSignup2 = () => {
   {
     e.preventDefault();
     let height='',weight='',bodyType='';
-    console.log('register');
-    console.log(height, weight, bodyType);
-    console.log(register);
+    // console.log('register');
+    // console.log(height, weight, bodyType);
+    // console.log(register);
 
     if(register.Height=="" || register.Height== null)
     height="Enter Height";
@@ -51,8 +57,68 @@ export const ClientSignup2 = () => {
     BodyTypeError:bodyType,
 
     });
-    // console.log(name, email, mobile,gender);
-    // console.log(register);
+
+    if(register.Weight!="" &&register.BodyType!=""&&register.Height!="")
+    {
+      //navigate("/clientinfo",{state:register});
+      console.log("helllllllllllllllllllo");
+      console.log(data1.Age);
+      console.log(data1.Name);
+      console.log(data1.Email);
+      console.log(data1.Mobile);
+      console.log(data1.gender);
+      console.log(data1.City);
+      console.log(data1.Pass);
+      console.log(data1.street);
+      console.log(register.BodyType);
+      console.log(register.Height);
+      console.log(register.Weight);
+
+      axios.post("https://localhost:7109/api/Account/ClientRegister", {
+        "id": 0,
+        "userId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "age": data1.Age,
+        "lastName": "string",
+        "firstName": data1.Name,
+        "mobileNum": data1.Mobile,
+        "gender": true,
+        "city": data1.City,
+        "country": data1.street,
+        "height": parseInt(register.Height) ,
+        "weight": parseInt(register.Weight) ,
+        "image": "string",
+        "userName":  data1.Name,
+        "passWord": data1.Pass,
+        "email": data1.Email
+      })
+      .then((response) => {
+        if(response.status==200)
+        navigate("/Signin");
+        
+        console.log(response);
+      })
+        .catch((err) => {
+          console.log(err);
+          
+        })
+        // .finally(() => {
+        //   setLoading(false);
+        // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+    
   
   }
   return (

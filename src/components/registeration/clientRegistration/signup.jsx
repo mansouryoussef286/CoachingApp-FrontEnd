@@ -31,7 +31,7 @@ export const Signup = () => {
   {
     let x=register;
     x[eventObject.target.name]=eventObject.target.value;
-    console.log(eventObject.target.name +"  "+eventObject.target.value);
+    //console.log(eventObject.target.name +"  "+eventObject.target.value);
     setregister({
         Name:x.Name,
         Age:x.Age,
@@ -51,9 +51,9 @@ export const Signup = () => {
   {
     e.preventDefault();
     let name='', age='',email='',mobile='',gender='',street='',city='',pass='',conpass='';
-    console.log('register');
-    console.log(name, email, mobile,gender);
-    console.log(register);
+//     console.log('register');
+//     console.log(name, email, mobile,gender);
+//     console.log(register);
 
     if(register.Name=="" || register.Name== null)
     name="Please enter Name";
@@ -93,9 +93,9 @@ export const Signup = () => {
     // console.log(name, email, mobile,gender);
     // console.log(register);
     if(register.Name!="" &&register.Age!="" && register.Email!=""  && register.City!="" && register.ConfPass!="" && register.Pass!="" && register.street!="" && register.Mobile!="" && register.gender!=""&&register.Pass==register.ConfPass)
-    navigate("/clientinfo");
+    navigate("/clientinfo",{state:register});
   }
-  return (
+  return ( 
     <> 
     <section className='coachSignupContainer '>
         <div className="imgbg">
@@ -172,7 +172,7 @@ export const Signup = () => {
                                 <span>Address </span>
                                 <input type="text"
                                 id="street"
-                                name="street"placeholder="1234 Main St"
+                                name="street"placeholder="Enter Country"
                                 value={register.street}
                                 onChange={handlerInput}
                                 /> 

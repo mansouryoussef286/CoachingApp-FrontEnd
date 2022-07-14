@@ -6,8 +6,9 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { ToastContainer, toast } from 'react-toastify';
 import { Header } from '../shared/Header';
 import { useFetchpost } from '../../useFetchpost';
-
 import axios from 'axios';
+
+
 export const Signin = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -79,7 +80,7 @@ export const Signin = () => {
     axios.post("https://easyfit.azurewebsites.net/api/Account/Login", {
       userName: username,
       password: password
-    }).then((response) => {
+    },{ withCredentials: true }).then((response) => {
       setData(response.data);
       setStatus(response.status);
       // console.log(data);
