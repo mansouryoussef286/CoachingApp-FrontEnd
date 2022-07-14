@@ -5,7 +5,7 @@ export const Subscribers = () => {
     return (
         <CardComponent classes='workout-Card ' >
             <h3>
-                subscribers
+                New subscribers
             </h3>
             <table class="table table-striped">
                 <thead>

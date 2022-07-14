@@ -56,7 +56,7 @@ export const CoachCard = () => {
                                     <br />
                                     {item.email}
                                     <div className="coachCardRating d-flex justify-content-start align-items-center">
-                                        <Rating className='coachCardRating' value={item.rate} readOnly stars={5} cancel={false} />
+                                        <Rating className='coachCardRating' value={item.rating} readOnly stars={5} cancel={false} />
                                         <span className='text-secondary'>{item.ratings} ratings</span>
                                     </div>
                                     {/* <h6 className='CoachRatings'>2K Ratings</h6> */}

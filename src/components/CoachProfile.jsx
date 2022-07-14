@@ -17,8 +17,8 @@ export const CoachProfile = () => {
                 <ProfileCard></ProfileCard>
                 <div className='w-100 px-3 d-flex flex-column  align-items-center'>
                     <Subscribers></Subscribers>
-                    <WorkoutCard></WorkoutCard>
-                    <ExcersiceCard></ExcersiceCard>
+                    <WorkoutCard id='workouts'></WorkoutCard>
+                    <ExcersiceCard id='excercises'></ExcersiceCard>
                     <AssignWorkouts></AssignWorkouts>
                 </div>
             </div>

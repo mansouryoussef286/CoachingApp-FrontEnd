@@ -4,7 +4,7 @@ import { CardComponent } from './CardComponent';
 
 import { Dialog } from 'primereact/dialog';
 
-import {DialogEdit} from '../DialogEdit'
+import { DialogEdit } from './DialogEdit'
 export const ProfileCard = () => {
     let [client, setClient] = useState(
         {
@@ -23,11 +23,14 @@ export const ProfileCard = () => {
         }
     );
 
+
     const [displayBasic, setDisplayBasic] = useState(false);
     const [position, setPosition] = useState('center');
+    const [displayResponsive, setDisplayResponsive] = useState(false);
 
     const dialogFuncMap = {
         'displayBasic': setDisplayBasic,
+        'displayResponsive': setDisplayResponsive
     }
 
     const onClick = (name, position) => {
@@ -83,9 +86,10 @@ export const ProfileCard = () => {
                     </div>
                 </div>
                 <div className="text-center py-2">
-                    <button className='btn btn-secondary' label="Show" icon="pi pi-external-link" onClick={() => onClick('displayBasic')}>edit profile</button>
-                    <Dialog  visible={displayBasic} style={{ width: '35vw' }}  onHide={() => onHide('displayBasic')}>
-                        <DialogEdit data={client}/>
+                    <button className='btn btn-secondary' label="Show" icon="pi pi-external-link" onClick={() => onClick('displayResponsive')}>edit profile</button>
+                    {/* <Dialog visible={displayBasic} style={{ width: '35vw' }} onHide={() => onHide('displayBasic')}> */}
+                    <Dialog visible={displayResponsive} onHide={() => onHide('displayResponsive')} breakpoints={{ '960px': '75vw' }} style={{ width: '50vw' }} >
+                        <DialogEdit data={client} />
                     </Dialog>
                 </div>
             </CardComponent>

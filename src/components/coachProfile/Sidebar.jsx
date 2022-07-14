@@ -1,27 +1,30 @@
 import React from 'react'
-
+import { useNavigate } from "react-router-dom";
 import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
 
+
 export const Sidebar = () => {
+    const navigate = useNavigate();
+
     return (
         <SideNav
             onSelect={(selected) => {
-                // Add your code here
-                // selected is the text of the selected item
+                const to = '/' + selected;
+                    navigate(to);
             }}
             className="sideNav"
         >
             <SideNav.Toggle />
             <SideNav.Nav defaultSelected="profile">
-                <NavItem eventKey="home">
+                <NavItem eventKey="" onClick={()=>{navigate("/CoachProfile")}}>
                     <NavIcon>
                         <i class="fa-solid fa-home" style={{ fontSize: '1.75em' }}></i>
                     </NavIcon>
-                    <NavText>
+                    <NavText >
                         home
                     </NavText>
                 </NavItem>
-                <NavItem eventKey="profile">
+                <NavItem eventKey="CoachProfile">
                     <NavIcon>
                         <i class="fa-solid fa-user" style={{ fontSize: '1.75em' }}></i>
                     </NavIcon>
@@ -37,7 +40,7 @@ export const Sidebar = () => {
                         Subscriptions
                     </NavText>
                 </NavItem>
-                <NavItem eventKey="WorkOuts">
+                <NavItem eventKey="workouts">
                     <NavIcon>
                         <i class="fa-solid fa-dumbbell" style={{ fontSize: '1.75em' }}></i>
                     </NavIcon>

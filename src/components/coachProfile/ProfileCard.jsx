@@ -4,6 +4,7 @@ import { CardComponent } from './CardComponent';
 
 import { Dialog } from 'primereact/dialog';
 
+import { DialogEdit } from './DialogEdit'
 export const ProfileCard = () => {
     let [client, setClient] = useState(
         {
@@ -22,11 +23,14 @@ export const ProfileCard = () => {
         }
     );
 
+
     const [displayBasic, setDisplayBasic] = useState(false);
     const [position, setPosition] = useState('center');
+    const [displayResponsive, setDisplayResponsive] = useState(false);
 
     const dialogFuncMap = {
         'displayBasic': setDisplayBasic,
+        'displayResponsive': setDisplayResponsive
     }
 
     const onClick = (name, position) => {
@@ -41,14 +45,6 @@ export const ProfileCard = () => {
         dialogFuncMap[`${name}`](false);
     }
 
-    const renderFooter = (name) => {
-        return (
-            <div>
-                <button label="No" icon="pi pi-times" onClick={() => onHide(name)} className="p-button-text">yes`</button>
-                <button label="Yes" icon="pi pi-check" onClick={() => onHide(name)} autoFocus >no</button>
-            </div>
-        );
-    }
 
     return (
         <>
@@ -63,7 +59,6 @@ export const ProfileCard = () => {
                         {client.name}
                     </div>
                     <div>
-                        COACHHHHH
                         <br />
                         {client.age}
                         <br />
@@ -83,12 +78,10 @@ export const ProfileCard = () => {
                     </div>
                 </div>
                 <div className="text-center py-2">
-                    <button className='btn btn-secondary' label="Show" icon="pi pi-external-link" onClick={() => onClick('displayBasic')}>edit profile</button>
-                    <Dialog header="Header" visible={displayBasic} style={{ width: '50vw' }} footer={renderFooter('displayBasic')} onHide={() => onHide('displayBasic')}>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <button className='btn btn-secondary' label="Show" icon="pi pi-external-link" onClick={() => onClick('displayResponsive')}>edit profile</button>
+                    {/* <Dialog visible={displayBasic} style={{ width: '35vw' }} onHide={() => onHide('displayBasic')}> */}
+                    <Dialog visible={displayResponsive} onHide={() => onHide('displayResponsive')} breakpoints={{ '960px': '75vw' }} style={{ width: '50vw' }} >
+                        <DialogEdit data={client} />
                     </Dialog>
                 </div>
             </CardComponent>
