@@ -1,6 +1,7 @@
 
 import React ,{useState}from 'react'
 import { useNavigate,Link } from 'react-router-dom';
+import Spinner from 'react-bootstrap/Spinner';
 
 import { Card } from 'antd';
 import { Rating } from 'primereact/rating';
@@ -9,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faTwitter, faGoogle, faInstagram, faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons'
 import { Carousel } from 'primereact/carousel';
 import { Button } from 'primereact/button';
+import { useFetch } from '../../useFetch';
 
 export const Coaches = () => {
     const [coaches, setCoaches] = useState([]);
@@ -29,6 +31,14 @@ export const Coaches = () => {
             numScroll: 1
         }
     ];
+    const { data, loading, error, refetch } = useFetch("https://localhost:7109/api/Coach");
+
+    if (loading) return (<div> <Spinner animation="grow" /></div>);
+    if (data==null) return (<h1>loading...</h1>);
+
+    if (error) return (<h1>error...</h1>);
+
+    console.log(data);
 
     let coaches2 = [
         {
@@ -270,7 +280,7 @@ export const Coaches = () => {
                         <img src={`assets/images/coach.png`} onError={(e) => e.target.src='assets/images/coach.png'} alt='{product.name}' className="coach-image align-self-center" />
                     </div>
                     <div>
-                        <h4 className="mb-1">{coach.name}</h4>
+                        <h4 className="mb-1">{coach.firstName} {coach.lastName} </h4>
                         <h6 className="mt-0 mb-3">Nutration</h6>
                         <span className={`coach-badge status-avialable`}>available</span>
                         <div className="car-buttons mt-2">
@@ -291,7 +301,7 @@ export const Coaches = () => {
             
             <div className="carousel-demo">
                 <div className="card">
-                    <Carousel value={coaches2}  numVisible={4} numScroll={1} responsiveOptions={responsiveOptions} circular
+                    <Carousel value={data}  numVisible={4} numScroll={1} responsiveOptions={responsiveOptions} circular
                         autoplayInterval={6000} itemTemplate={coachesTemplate} header={header}/>
                 </div>
             </div>
