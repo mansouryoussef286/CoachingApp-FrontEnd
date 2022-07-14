@@ -6,8 +6,9 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { ToastContainer, toast } from 'react-toastify';
 import { Header } from '../shared/Header';
 import { useFetchpost } from '../../useFetchpost';
-
 import axios from 'axios';
+
+axios.defaults.headers.common['credentials'] = 'include';
 export const Signin = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
