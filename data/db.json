@@ -1,0 +1,18 @@
+{
+    "workouts": [{
+            "id": 1
+        },
+        {
+            "id": 2
+        }
+    ],
+    "subscriptions": {
+        "sub": [],
+        "subs": []
+    },
+    "workoutsets": [{
+        "id": 2,
+        "name": "my set",
+        "coachID": 6
+    }]
+}
