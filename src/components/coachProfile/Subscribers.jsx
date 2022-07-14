@@ -2,6 +2,9 @@ import React from 'react'
 import { CardComponent } from './CardComponent'
 
 export const Subscribers = () => {
+
+    
+
     return (
         <CardComponent classes='workout-Card ' >
             <h3>
