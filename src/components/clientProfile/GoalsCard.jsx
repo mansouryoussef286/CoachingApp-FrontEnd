@@ -7,7 +7,7 @@ import Spinner from 'react-bootstrap/Spinner';
 
 export const GoalsCard = () => {
     
-    const { data, loading, error, refetch } = useFetch("http://localhost:3000/wSubClient");
+    const { data, loading, error, refetch } = useFetch("https://easyfit.azurewebsites.net/api/WSubscription/WorkoutSubsClient");
     if (loading) return (<div className='center-div'> <Spinner animation="grow" /></div>);
     if (data==null) return (<div className='center-div'> <Spinner animation="grow" /></div>);
 
