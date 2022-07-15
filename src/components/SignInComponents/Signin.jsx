@@ -57,7 +57,7 @@ export const Signin = () => {
 
     if (e.target.name === 'Username') {
       if (regExEmail.test(username) === false || username === '') {
-        setMessage3('Username us not valid');
+        // setMessage3('Username us not valid');
         setTimeout(() => {
           setMessage3('');
         }, 3000);
