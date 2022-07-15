@@ -1,8 +1,12 @@
 import React from 'react'
 // import { Carousel } from 'antd';
 import { Carousel } from 'react-bootstrap';
+import { Link,useNavigate} from 'react-router-dom';
+
 
 export const Carousell = () => {
+  const navigate = useNavigate();
+
   return (
     <>
     <div>
@@ -22,7 +26,9 @@ export const Carousell = () => {
         </ol>
         
         <div>
-          <button className='btn btn-primary m-3'>Learn More</button>
+          <button className='btn btn-primary m-3'onClick={()=> navigate("/aboutus")}>Learn More </button>
+            
+          
           <button className='btn btn-outline-primary m-3'>Invite Friends</button>
         </div>
       </div>
