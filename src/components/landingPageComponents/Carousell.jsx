@@ -29,7 +29,8 @@ export const Carousell = () => {
           <button className='btn btn-primary m-3'onClick={()=> navigate("/aboutus")}>Learn More </button>
             
           
-          <button className='btn btn-outline-primary m-3'>Invite Friends</button>
+          <button className='btn btn-outline-primary m-3'onClick={ ()=>{ navigator.clipboard.writeText('https://coachingg.herokuapp.com');
+        alert('https://coachingg.herokuapp.com')}}>Invite Friends</button>
         </div>
       </div>
       <Carousel className='w-100 ok' >
