@@ -10,9 +10,8 @@ export const FeedBack = () => {
   const navigate = useNavigate();
 
     // first card
-    const footer1 = <span style={{color:'blue'}}>
-            Join Our Commuinty → 
-        </span>;
+    const footer1 =<button className='btn btn-primary m-3'onClick={()=> navigate("/Signin")}>Join Our Community </button>
+
 
     const subtitle1=<span>
         <i className="pi pi-star" style={{'fontSize': '20px'}}></i>
