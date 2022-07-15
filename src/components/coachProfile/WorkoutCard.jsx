@@ -5,6 +5,7 @@ import { DialogAddWorkout } from './DialogAddWorkout';
 import { DialogEditWorkout } from './DialogEditWorkout';
 import { useFetch } from '../../useFetch';
 import Spinner from 'react-bootstrap/Spinner';
+import axios from 'axios';
 
 export const WorkoutCard = () => {
 
@@ -32,6 +33,7 @@ export const WorkoutCard = () => {
     }
 
     const { data, loading, error, refetch } = useFetch('https://easyfit.azurewebsites.net/api/Workout/Coach');
+    // const { data, loading, error, refetch } = useFetch('http://localhost:8888/workouts');
 
     if (loading) return (<div className='center-div'> <Spinner animation="grow" /></div>);
     if (data == null) return (<div className='center-div'> <Spinner animation="grow" /></div>);
@@ -40,6 +42,14 @@ export const WorkoutCard = () => {
 
 
     // console.log(data);
+
+
+    const deleteExcercise = (id) => {
+        axios.delete(`https://easyfit.azurewebsites.net/api/Workout/${id}`).then(() => {
+            refetch();
+            alert("deleted!");
+            }).catch(err=> alert("you cannot delete a workout containing excercises"));
+    }
 
     const printWorkouts = (workouts) => {
         return (workouts.map((workout) => {
@@ -50,7 +60,7 @@ export const WorkoutCard = () => {
                 <td>{workout.notes}</td>
                 <td>
                     <button className='btn btn-warning' label="Show" icon="pi pi-external-link" onClick={() => onClick('displayResponsive2')}>edit</button>
-                    <button className='btn btn-danger' onClick={()=>{console.log(workout.id);}}>delete</button>
+                    <button className='btn btn-danger' onClick={() => { deleteExcercise(workout.id) }}>delete</button>
                     <Dialog visible={displayResponsive2} onHide={() => onHide('displayResponsive2')} breakpoints={{ '960px': '75vw' }} style={{ width: '80vw' }} >
                         <DialogEditWorkout />
                     </Dialog>
@@ -64,7 +74,7 @@ export const WorkoutCard = () => {
             <h3 >Workouts</h3>
             <button className='btn btn-success' label="Show" icon="pi pi-external-link" onClick={() => onClick('displayResponsive')}>Add workout</button>
             <Dialog visible={displayResponsive} onHide={() => onHide('displayResponsive')} breakpoints={{ '960px': '75vw' }} style={{ width: '50vw' }} >
-                <DialogAddWorkout />
+                <DialogAddWorkout close={onHide} refetch={refetch}/>
             </Dialog>
             <table class="table table-striped" id='WorkOuts'>
                 <thead>

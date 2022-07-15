@@ -22,7 +22,7 @@ export const ProfileCard = () => {
     const [displayResponsive, setDisplayResponsive] = useState(false);
 
     
-    const { data, loading, error, refetch } = useFetch("http://localhost:3000/clientProfile");
+    const { data, loading, error, refetch } = useFetch("https://easyfit.azurewebsites.net/api/Client/GetProfile/ClientProfile");
     if (loading) return (<div className='center-div'> <Spinner animation="grow" /></div>);
     if (data==null) return (<div className='center-div'> <Spinner animation="grow" /></div>);
 
