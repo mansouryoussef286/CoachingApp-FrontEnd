@@ -2979,5 +2979,54 @@
             },
             "sub": null
         }
+    ],
+    "clientProfile":[
+        {
+            "result": {
+              "id": 1,
+              "userId": "2ffea414-98f3-40ea-26c5-08da4d75279c",
+              "age": 20,
+              "lastName": "string                                            ",
+              "firstName": "yousif                                            ",
+              "mobileNum": "01113311203",
+              "gender": true,
+              "city": "alexandria",
+              "country": "Egypt",
+              "height": 100,
+              "weight": 50,
+              "image": null,
+              "user": {
+                "coach": null,
+                "id": "2ffea414-98f3-40ea-26c5-08da4d75279c",
+                "userName": "Yousif",
+                "normalizedUserName": "YOUSIF",
+                "email": "usegbbr@example.com",
+                "normalizedEmail": "USEGBBR@EXAMPLE.COM",
+                "emailConfirmed": false,
+                "passwordHash": "AQAAAAEAACcQAAAAEKXLTl23LLclR7ZDnNV+8A8MFm6GxCS8EjD7Y3fwPk+Ho3b1nBnQ8UakmuC+4sZnDQ==",
+                "securityStamp": "USLYSTVOOXIMKZ6EHUE3FS5LBXGOOQ4C",
+                "concurrencyStamp": "4eb55b26-f491-48b5-a0fa-47c44acb97ad",
+                "phoneNumber": null,
+                "phoneNumberConfirmed": false,
+                "twoFactorEnabled": false,
+                "lockoutEnd": null,
+                "lockoutEnabled": true,
+                "accessFailedCount": 0
+              },
+              "client_Meal_NSubs": [],
+              "client_NSubs": [],
+              "client_WSubs": [],
+              "client_Workout_WSubs": []
+            },
+            "id": 1,
+            "exception": null,
+            "status": 5,
+            "isCanceled": false,
+            "isCompleted": true,
+            "isCompletedSuccessfully": true,
+            "creationOptions": 0,
+            "asyncState": null,
+            "isFaulted": false
+          }
     ]
 }
