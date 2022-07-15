@@ -116,7 +116,7 @@ export const Footer = () => {
             {/* copyright last section */}
             <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
                 © 2022 Copyright: 
-                <a className='text-reset fw-bold mx-1' href='https://mdbootstrap.com/'>
+                <a className='text-reset fw-bold mx-1' href='https://iti.gov.eg/iti/home'>
                     ITI PD track 42
                 </a>
             </div>

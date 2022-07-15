@@ -4,6 +4,10 @@ import React, { useEffect, useState } from 'react'
 
 
 export const Contact = () => {
+    const [Name, setName] = useState('');
+    const [Email, setEmail] = useState('');
+    const [Message, setMessage] = useState('');
+
     const [register, setregister] = useState({
         Name: '',
         Email: '',
@@ -49,6 +53,9 @@ export const Contact = () => {
         });
         console.log(name, email);
         console.log(register);
+setregister({ Name: '',
+            Email: '',
+            Message: ''})
 
     }
 
@@ -69,6 +76,7 @@ export const Contact = () => {
                                         placeholder="Enter Name"
                                         value={register.Name}
                                         onChange={handlerInput}
+                                        // onChange={ handlerInput}
                                     />
                                 </div>
                                 <span className='registerError'>{errors.NameError}</span>
@@ -82,6 +90,8 @@ export const Contact = () => {
                                         placeholder="Enter Email"
                                         value={register.Email}
                                         onChange={handlerInput}
+                                        // onChange={event => setEmail(event.target.value)}
+
                                     />
                                 </div>
                                 <span className='registerError'>{errors.EmailError}</span>
@@ -96,6 +106,8 @@ export const Contact = () => {
                                         value={register.Message}
                                         rows='5'
                                         onChange={handlerInput}
+                                        // onChange={event => setMessage(event.target.value)}
+
                                     ></textarea>
                                 </div>
                                 <span className='registerError'>{errors.MessageError}</span>

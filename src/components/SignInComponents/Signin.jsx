@@ -82,7 +82,7 @@ export const Signin = () => {
     //add this part in case of locaal testing
     //,{ withCredentials: true }
 
-    axios.post("https://localhost:7109/api/Account/Login", {
+    axios.post("https://easyfit.azurewebsites.net/api/Account/Login", {
       userName: username,
       password: password
     }).then((response) => {
@@ -91,7 +91,7 @@ export const Signin = () => {
       // console.log(data);
       // console.log(status);
       console.log(response);
-      if (status == 200) {
+      if (response.status == 200) {
         if(response.data.role=="Client")
         {
           console.log("client");
@@ -155,6 +155,10 @@ export const Signin = () => {
               <div className="inputB">
 
                 <input type="button" value="Sign In" onClick={onLoginHandler} />
+                <hr></hr>
+                <input type="button" value="Create New Account As Client" onClick={()=> navigate("/signup")} />
+                <input type="button" value="Create New Account As Coach" onClick={()=> navigate("/coachsignup")} />
+
               </div>
               <div className="inputB">
 
