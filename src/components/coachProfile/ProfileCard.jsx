@@ -51,7 +51,7 @@ export const ProfileCard = () => {
             <CardComponent classes='Main-Profile-Card'>
                 <img className="coverImage" src="https://cutewallpaper.org/21/plain-background-hd/Plain-Light-Blue-Background-1920x1080-Drkenfreedmanblog.xyz.png" alt="" />
 
-                <div className='d-flex flex-column mt-3 '>
+                <div className='d-flex flex-column mt-3 ' id='CoachProfile'>
                     <div className="ImageDiv align-self-center">
                         <img className='w-100 h-100' alt="Card" src="assets/images/coach.png" onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} />
                     </div>

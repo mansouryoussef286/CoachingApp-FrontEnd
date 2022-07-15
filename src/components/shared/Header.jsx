@@ -42,7 +42,7 @@ export const Header = () => {
     return (
         <Navbar expand="lg"  fixed='top' className={color? 'navbar-custom' :''}>
                 <Container >
-                <Navbar.Brand href="#Home">
+                <Navbar.Brand href="/">
                     <img src='./assets/images/musclelogo.png' className='header-logo'/>
                 </Navbar.Brand>
 
@@ -51,8 +51,8 @@ export const Header = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/aboutus">Aboutus</Nav.Link>
-                        <Nav.Link href="/contactus">Contactus</Nav.Link>
+                        <Nav.Link href="/aboutus">About Us</Nav.Link>
+                        <Nav.Link href="/contactus">Contact Us</Nav.Link>
 
 
 
@@ -67,12 +67,7 @@ export const Header = () => {
                         {/* <Nav.Link href="#bottom" className='btn btn-primary'>sign in</Nav.Link> */}
                     </Nav>
                     
-                    <form className='d-flex'>
-                        {/* <input type="text" name="search" id="" className='form-control' placeholder='search'/> */}
-                        <a className='btn '>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} />
-                        </a>
-                    </form>
+                    
                     <div className='d-flex justify-content-center align-items-center'>
 
                     <button className='btn  navbar-button' onClick={()=>{navigate("/CoachProfile")}}> coach profile</button>

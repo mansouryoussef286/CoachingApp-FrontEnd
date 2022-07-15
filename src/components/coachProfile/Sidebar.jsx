@@ -9,8 +9,15 @@ export const Sidebar = () => {
     return (
         <SideNav
             onSelect={(selected) => {
-                const to = '/' + selected;
+                if (selected=="")
+                {
+
+                    const to = '/' + selected;
                     navigate(to);
+                }
+                else{
+                    window.location.hash=`#${selected}`
+                }
             }}
             className="sideNav"
         >
@@ -45,10 +52,30 @@ export const Sidebar = () => {
                         <i class="fa-solid fa-dumbbell" style={{ fontSize: '1.75em' }}></i>
                     </NavIcon>
                     <NavText>
-                        WorkOuts
+                        WorkOut
+                    </NavText>
+                    <NavItem eventKey="WorkOuts">
+                        <NavText>
+                            WorkOuts
+                        </NavText>
+                    </NavItem>
+                    <NavItem eventKey="Exercies">
+                        <NavText>
+                            Exercies
+                        </NavText>
+                    </NavItem>
+                </NavItem>
+                <NavItem eventKey="Assign">
+                    <NavIcon>
+                    <i class="fa-solid fa-check-double" style={{ fontSize: '1.75em' }}></i>
+
+                        
+                    </NavIcon>
+                    <NavText>
+                        Assigment
                     </NavText>
                 </NavItem>
-                <NavItem eventKey="nutrition">
+                {/* <NavItem eventKey="nutrition">
                     <NavIcon>
                         <i class="fa-solid fa-bowl-food" style={{ fontSize: '1.75em' }}></i>
                     </NavIcon>
@@ -73,7 +100,7 @@ export const Sidebar = () => {
                             Bar Chart
                         </NavText>
                     </NavItem>
-                </NavItem>
+                </NavItem> */}
             </SideNav.Nav>
         </SideNav>
     )

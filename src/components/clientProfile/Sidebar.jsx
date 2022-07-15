@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
 import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
+import AnchorLink from 'antd/lib/anchor/AnchorLink';
 
 
 export const Sidebar = () => {
@@ -9,8 +10,15 @@ export const Sidebar = () => {
     return (
         <SideNav
             onSelect={(selected) => {
-                const to = '/' + selected;
+                if (selected=="")
+                {
+
+                    const to = '/' + selected;
                     navigate(to);
+                }
+                else{
+                    window.location.hash=`#${selected}`
+                }
             }}
             className="sideNav"
         >
@@ -32,7 +40,7 @@ export const Sidebar = () => {
                         Profile
                     </NavText>
                 </NavItem>
-                <NavItem eventKey="Subscriptions">
+                <NavItem eventKey="aboutApp">
                     <NavIcon>
                         <i class="fa-solid fa-check-double" style={{ fontSize: '1.75em' }}></i>
                     </NavIcon>
@@ -48,15 +56,15 @@ export const Sidebar = () => {
                         WorkOuts
                     </NavText>
                 </NavItem>
-                <NavItem eventKey="nutrition">
+                <NavItem eventKey="Nutration">
                     <NavIcon>
                         <i class="fa-solid fa-bowl-food" style={{ fontSize: '1.75em' }}></i>
                     </NavIcon>
                     <NavText>
-                        nutrition
+                        Nutrition
                     </NavText>
                 </NavItem>
-                <NavItem eventKey="charts">
+                {/* <NavItem eventKey="charts">
                     <NavIcon>
                         <i className="fa fa-fw fa-line-chart" style={{ fontSize: '1.75em' }} />
                     </NavIcon>
@@ -73,7 +81,7 @@ export const Sidebar = () => {
                             Bar Chart
                         </NavText>
                     </NavItem>
-                </NavItem>
+                </NavItem> */}
             </SideNav.Nav>
         </SideNav>
     )

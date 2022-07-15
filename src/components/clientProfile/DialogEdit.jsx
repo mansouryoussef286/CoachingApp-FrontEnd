@@ -90,7 +90,7 @@ export const DialogEdit = (props) => {
         }
         return (
                 <>
-                        <section className='coachSignupContainer '>
+                        <section className='coachSignupContainer ' >
                                 <div className='cont hoverForm'>
                                         <div className='formB my-1'>
                                                 <h2>Edit profile</h2>

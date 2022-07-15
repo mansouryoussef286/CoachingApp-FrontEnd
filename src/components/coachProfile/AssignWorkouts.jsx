@@ -32,7 +32,7 @@ export const AssignWorkouts = () => {
     return (
         <CardComponent classes='workout-Card text-primary' >
             <h3>Assign Workouts to clients</h3>
-            <table class="table table-striped">
+            <table class="table table-striped" id='Assign'>
                 <thead>
                     <tr>
                         <th scope="col">#</th>
