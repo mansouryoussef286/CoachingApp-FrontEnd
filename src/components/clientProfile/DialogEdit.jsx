@@ -1,18 +1,25 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
 
 export const DialogEdit = (props) => {
         const navigate = useNavigate();
 
+        
+
         const [register, setregister] = useState({
-                Name: props.data.name,
-                Age: props.data.age,
-                Email: props.data.email,
-                Mobile: props.data.mobile,
-                street: props.data.address.street,
-                City: props.data.address.city,
+                firstName: props.data.firstName,
+                age: props.data.age,
+                mobileNum: props.data.mobileNum,
+                country: props.data.country,
+                city: props.data.city,
                 height: props.data.height,
-                weight: props.data.weight
+                weight: props.data.weight,
+                userName: "test",
+                passWord: "test",
+                email: "user@example.com",
+                lastName:"test"
         });
         const [errors, setError] = useState({
                 NameError: '',
@@ -31,12 +38,12 @@ export const DialogEdit = (props) => {
                 x[eventObject.target.name] = eventObject.target.value;
                 console.log(eventObject.target.name + "  " + eventObject.target.value);
                 setregister({
-                        Name: x.Name,
-                        Age: x.Age,
+                        firstName: x.firstName,
+                        age: x.age,
                         Email: x.Email,
-                        Mobile: x.Mobile,
-                        street: x.street,
-                        City: x.City,
+                        mobileNum: x.mobileNum,
+                        country: x.country,
+                        city: x.city,
                         height: x.height,
                         weight: x.weight
                         //  [eventObject.target.name]:eventObject.target.value
@@ -102,13 +109,13 @@ export const DialogEdit = (props) => {
                                                                         id="Name"
                                                                         name="Name"
                                                                         placeholder="Enter Name"
-                                                                        value={register.Name}
+                                                                        value={register.firstName}
                                                                         onChange={handlerInput}
                                                                 />
                                                         </div>
                                                         <span className='registerError'>{errors.NameError}</span>
 
-                                                        <div className='inputB'>
+                                                        {/* <div className='inputB'>
                                                                 <span>Email </span>
                                                                 <input
                                                                         readOnly
@@ -120,7 +127,7 @@ export const DialogEdit = (props) => {
                                                                         onChange={handlerInput}
                                                                 />
                                                         </div>
-                                                        <span className='registerError'>{errors.EmailError}</span>
+                                                        <span className='registerError'>{errors.EmailError}</span> */}
 
                                                         <div className='inputB'>
                                                                 <span>Age </span>
@@ -129,7 +136,7 @@ export const DialogEdit = (props) => {
                                                                         id="Age"
                                                                         name="Age"
                                                                         placeholder="Enter Age"
-                                                                        value={register.Age}
+                                                                        value={register.age}
                                                                         onChange={handlerInput}
                                                                 />
                                                         </div>
@@ -142,7 +149,7 @@ export const DialogEdit = (props) => {
                                                                         id="Mobile"
                                                                         name="Mobile"
                                                                         placeholder="Enter Mobile Number"
-                                                                        value={register.Mobile}
+                                                                        value={register.mobileNum}
                                                                         onChange={handlerInput}
                                                                 />
                                                         </div>
@@ -154,7 +161,7 @@ export const DialogEdit = (props) => {
                                                                 <input type="text"
                                                                         id="street"
                                                                         name="street" placeholder="1234 Main St"
-                                                                        value={register.street}
+                                                                        value={register.country}
                                                                         onChange={handlerInput}
                                                                 />
                                                         </div>
@@ -165,7 +172,7 @@ export const DialogEdit = (props) => {
                                                                         type="text"
                                                                         id="City" name="City"
                                                                         placeholder="Enter City"
-                                                                        value={register.City}
+                                                                        value={register.city}
                                                                         onChange={handlerInput}
                                                                 />
                                                         </div>
@@ -203,7 +210,12 @@ export const DialogEdit = (props) => {
                                                         <div className="inputB">
 
                                                                 {/* <input type="button" value="Edit" onClick={checkRegister}/>    */}
-                                                                <input type="button" value="Edit" />
+                                                                <input type="button" value="Edit" onClick={()=>{
+                                                                        console.log(register);
+                                                                        axios.put(`https://localhost:7109/api/Client/UpdateClient/${props.data.id}`,register)
+                                                                        .then((data)=>{console.log(data);})
+                                                                        .catch((err)=>console.log(err))
+                                                                }}/>
                                                         </div>
                                                         <div className="inputB">
 
