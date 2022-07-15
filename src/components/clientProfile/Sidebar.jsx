@@ -2,6 +2,8 @@ import React from 'react'
 import { useNavigate } from "react-router-dom";
 import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
 import AnchorLink from 'antd/lib/anchor/AnchorLink';
+import axios from 'axios';
+
 
 
 export const Sidebar = () => {
@@ -16,6 +18,18 @@ export const Sidebar = () => {
                     const to = '/' + selected;
                     navigate(to);
                 }
+                else if (selected=='Logout')
+                {
+                    axios.get("https://easyfit.azurewebsites.net/api/Account/LogOut",).then((response) => {
+                        if(response.status==200)
+                          navigate("/");
+
+    
+
+                }).catch((err) => {
+                    console.log(err);
+                })
+             }
                 else{
                     window.location.hash=`#${selected}`
                 }
@@ -62,6 +76,16 @@ export const Sidebar = () => {
                     </NavIcon>
                     <NavText>
                         Nutrition
+                    </NavText>
+                </NavItem>
+                <NavItem eventKey="Logout">
+                    <NavIcon>
+                    
+
+                    <i class="fa-solid fa-arrow-right-from-bracket" style={{ fontSize: '1.75em' }}></i>
+                    </NavIcon>
+                    <NavText>
+                        Logout
                     </NavText>
                 </NavItem>
                 {/* <NavItem eventKey="charts">
