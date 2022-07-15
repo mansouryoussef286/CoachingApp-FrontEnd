@@ -7,9 +7,12 @@ import { ToastContainer, toast } from 'react-toastify';
 import { Header } from '../shared/Header';
 import { useFetchpost } from '../../useFetchpost';
 import axios from 'axios';
+import { Link,useNavigate} from 'react-router-dom';
 
 
 export const Signin = () => {
+  const navigate = useNavigate();
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
@@ -76,26 +79,30 @@ export const Signin = () => {
     //   password: password
     // });
 
+    //add this part in case of locaal testing
+    //,{ withCredentials: true }
 
-    axios.post("https://easyfit.azurewebsites.net/api/Account/Login", {
+    axios.post("https://localhost:7109/api/Account/Login", {
       userName: username,
       password: password
-    },{ withCredentials: true }).then((response) => {
+    }).then((response) => {
       setData(response.data);
       setStatus(response.status);
       // console.log(data);
       // console.log(status);
       console.log(response);
       if (status == 200) {
+        if(response.data.role=="Client")
+        {
+          console.log("client");
+          navigate("/ClientProfile");
+        }
+        else if(response.data.role=="Coach")
+        {
+          console.log("coach");
+          navigate("/CoachProfile");
+        }
 
-        setMessage("logged in!")
-        // sessionStorage.setItem("role", "admin");
-        setTimeout(() => {
-          // this.props.setLoggedInRef();
-          // this.props.history.push('/');
-          setMessage("");
-
-        }, 3000);
       }
 
     })
