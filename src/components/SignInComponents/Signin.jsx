@@ -82,7 +82,7 @@ export const Signin = () => {
     //add this part in case of locaal testing
     //,{ withCredentials: true }
 
-    axios.post("https://localhost:7109/api/Account/Login", {
+    axios.post("https://easyfit.azurewebsites.net/api/Account/Login", {
       userName: username,
       password: password
     }).then((response) => {
