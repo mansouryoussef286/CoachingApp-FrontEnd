@@ -91,7 +91,7 @@ export const Signin = () => {
       // console.log(data);
       // console.log(status);
       console.log(response);
-      if (status == 200) {
+      if (response.status == 200) {
         if(response.data.role=="Client")
         {
           console.log("client");
