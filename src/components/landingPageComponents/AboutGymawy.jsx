@@ -7,9 +7,12 @@ export const AboutGymawy = () => {
                 <h2 className='text-capitalize fw-bold'>
                     why would you use gymawy application?
                 </h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nobis eius atque qui, dolor, assumenda cumque iste ducimus sed beatae sequi temporibus officia illum. Iusto animi mollitia accusantium aliquid enim.
-                </p>
+                    <p>
+                        Helping people live longer, happier and healthier lives
+                    </p>
+                    <p>
+                        We aim to give a system in which everyone is respected and to provide a unique and enjoyable environment in which everyone can feel comfortable. Gymawy enables everyone to work and produce excellence. From the staff to the clients involved in the Application it is all about working for the greater good. Members at Gymawy can each select a trainer, training program and a membership option by choice and personal preferences.
+                    </p>
                 <ul className='about-list'>
                     <li>client / coach connecting</li>
                     <li>easy subscriptions</li>

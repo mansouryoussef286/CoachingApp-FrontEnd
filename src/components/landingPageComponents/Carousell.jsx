@@ -1,8 +1,12 @@
 import React from 'react'
 // import { Carousel } from 'antd';
 import { Carousel } from 'react-bootstrap';
+import { Link,useNavigate} from 'react-router-dom';
+
 
 export const Carousell = () => {
+  const navigate = useNavigate();
+
   return (
     <>
     <div>
@@ -11,10 +15,20 @@ export const Carousell = () => {
           your solution for a healthy transfromation
         </h1>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus velit neque ullam rem corporis provident nam dolore officiis maxime eaque.
+        A balanced diet supplies the nutrients your body needs to work well. Without balanced nutrition, your body is more prone to disease, infection, and fatigue.
         </p>
+        <p>
+        The dietary guidelines also advise limiting foods and beverages higher in added sugars, saturated fat, and sodium and limiting alcoholic beverages. The recommended limits are:        </p>
+        <ol>
+          <li>Added sugars: Less than 10% of your calories per day.</li>
+          <li>Saturated fat: Less than 10% of your calories per day.</li>
+          {/* <li>Sodium: Less than 2,300 milligrams per day (and even less for children younger than age 14).</li> */}
+        </ol>
+        
         <div>
-          <button className='btn btn-primary m-3'>Learn More</button>
+          <button className='btn btn-primary m-3'onClick={()=> navigate("/aboutus")}>Learn More </button>
+            
+          
           <button className='btn btn-outline-primary m-3'>Invite Friends</button>
         </div>
       </div>

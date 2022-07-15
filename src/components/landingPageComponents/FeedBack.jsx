@@ -1,11 +1,14 @@
 import React from 'react'
 import { Card } from 'primereact/card';
 import "@fortawesome/fontawesome-free/css/all.css"
+import { Link,useNavigate} from 'react-router-dom';
 
 
 
 
 export const FeedBack = () => {
+  const navigate = useNavigate();
+
     // first card
     const footer1 = <span style={{color:'blue'}}>
             Join Our Commuinty → 
@@ -48,7 +51,8 @@ export const FeedBack = () => {
                     Eveniet, voluptas nemo quo laudantium maiores repudiandae!
                 </p>
                 <p className='w-50'>
-                <a href="#" className='btn btn-primary w-50 d-block'>Discover Me →</a>
+                <button className='btn btn-primary m-3'onClick={()=> navigate("/List")}>Discover Me </button>
+
                 </p>
             </div>
         </div>
