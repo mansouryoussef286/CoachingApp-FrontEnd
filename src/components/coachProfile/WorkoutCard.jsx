@@ -66,7 +66,7 @@ export const WorkoutCard = () => {
             <Dialog visible={displayResponsive} onHide={() => onHide('displayResponsive')} breakpoints={{ '960px': '75vw' }} style={{ width: '50vw' }} >
                 <DialogAddWorkout />
             </Dialog>
-            <table class="table table-striped">
+            <table class="table table-striped" id='WorkOuts'>
                 <thead>
                     <tr>
                         <th scope="col">#</th>

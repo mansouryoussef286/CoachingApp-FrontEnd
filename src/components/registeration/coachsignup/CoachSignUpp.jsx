@@ -5,8 +5,13 @@ import { Navbar, Container, NavDropdown,Nav } from 'react-bootstrap';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import axios from 'axios';
+import { Link,useNavigate} from 'react-router-dom';
+
 
 export const CoachSignUpp = () => {
+        const navigate = useNavigate();
+
     let [color, setColor] = useState(false);
     const [register, setregister] = useState({
         Name:'',
@@ -16,7 +21,6 @@ export const CoachSignUpp = () => {
         gender:'',
         street:'',
         City:'',
-
         Certificates:'',
         Images:'',
         Pass:'',
@@ -111,6 +115,37 @@ export const CoachSignUpp = () => {
         });
         console.log(name, email, mobile,gender);            //////////////////========
         console.log(register);
+
+        // console.log("hellllllllllllllllllllllllo");
+        console.log(register.Name);
+        console.log(register.Pass);
+        console.log(register.Email);
+
+
+//call api
+
+        axios.post("https://localhost:7109/api/Account/CoachRegister", {
+
+        
+                "id": 0,
+                "userId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+                "userName": register.Name, 
+                "passWord": register.Pass,
+                "email": register.Email
+              })
+              .then((response) => {
+                if(response.status==200)
+                navigate("/Signin");
+                
+                console.log(response);
+              })
+                .catch((err) => {
+                  console.log(err);
+                  
+                })
+                // .finally(() => {
+                //   setLoading(false);
+                // });
     
     }
 

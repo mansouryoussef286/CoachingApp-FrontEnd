@@ -11,7 +11,7 @@ export const WorkoutCard = () => {
 
     return (
         <CardComponent classes='workout-Card text-primary' >
-            <div className='d-flex align-items-start justify-content-between'>
+            <div className='d-flex align-items-start justify-content-between' id='workouts'>
                 <div className="site-calendar-demo-card">
                     <Calendar  fullscreen={false} onChange={onPanelChange} className='site-calendar-demo-card ' />
                 </div>

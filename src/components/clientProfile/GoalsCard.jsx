@@ -17,7 +17,7 @@ export const GoalsCard = () => {
             <div className="imgbg d-flex justify-content-center">
                     <img src="./assets/images/goal.png" class="w-25" alt="..."></img>
             </div> */}
-            <div className='d-flex flex-lg-nowrap flex-md-nowrap flex-wrap  align-items-center justify-content-center' id='aboutApp' style={{ height: 'auto' }}>
+            <div className='d-flex flex-lg-nowrap flex-md-nowrap flex-wrap  align-items-center justify-content-center' id='aboutApp' style={{ height: 'auto' }} >
                 <select value={""} style={{ width: '130px' }} class="form-select" aria-label="Default select example">
                     <option >Select subscription</option>
                     <option >sub One</option>

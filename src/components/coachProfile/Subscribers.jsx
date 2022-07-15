@@ -48,7 +48,7 @@ export const Subscribers = () => {
             <h3>
                 New subscribers
             </h3>
-            <table class="table table-striped">
+            <table class="table table-striped" id='Subscriptions'>
                 <thead>
                     <tr>
                         <th scope="col">#</th>

@@ -8,8 +8,8 @@ export const NutritionCard = () => {
   }
 
   return (
-    <CardComponent classes='workout-Card' >
-      <div className='d-flex flex-column h-100'>
+    <CardComponent classes='workout-Card'  >
+      <div className='d-flex flex-column h-100' id='Nutration'>
         <select value={""} onChange={handleChange} style={{ width: '130px' }} class="form-select" aria-label="Default select example">
           <option >Select day</option>
           <option >Day One</option>

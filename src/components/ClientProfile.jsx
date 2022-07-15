@@ -41,7 +41,7 @@ export const ClientProfile = () => {
                 <div className='w-100 px-3 d-flex flex-column  align-items-center'>
                     <GoalsCard></GoalsCard>
                     <WorkoutCard></WorkoutCard>
-                    <NutritionCard></NutritionCard>
+                    <NutritionCard ></NutritionCard>
                 </div>
             </div>
         </>
