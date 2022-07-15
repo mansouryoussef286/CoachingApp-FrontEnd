@@ -155,6 +155,10 @@ export const Signin = () => {
               <div className="inputB">
 
                 <input type="button" value="Sign In" onClick={onLoginHandler} />
+                <hr></hr>
+                <input type="button" value="Create New Account As Client" onClick={()=> navigate("/signup")} />
+                <input type="button" value="Create New Account As Coach" onClick={()=> navigate("/coachsignup")} />
+
               </div>
               <div className="inputB">
 
