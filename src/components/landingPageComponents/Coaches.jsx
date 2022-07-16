@@ -31,7 +31,7 @@ export const Coaches = () => {
             numScroll: 1
         }
     ];
-    const { data, loading, error, refetch } = useFetch("https://localhost:7109/api/Coach");
+    const { data, loading, error, refetch } = useFetch("https://easyfit.azurewebsites.net/api/Coach");
 
     if (loading) return (<div> <Spinner animation="grow" /></div>);
     if (data==null) return (<h1>loading...</h1>);

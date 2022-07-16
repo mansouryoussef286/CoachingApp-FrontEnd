@@ -31,5 +31,11 @@ export const useFetch = (url) => {
                 setLoading(false);
             });
     }
-    return { data, loading, error, refetch };
+    const useAuth=()=>{
+        var cookies= document.cookie.split(';').map(cook=> cook.split('=')).reduce((acc,[key,value])=>({...acc,[key.trim()]:value}),{});
+        console.log(cookies);
+        return cookies;
+    
+    }
+    return { data, loading, error, refetch,useAuth };
 }
