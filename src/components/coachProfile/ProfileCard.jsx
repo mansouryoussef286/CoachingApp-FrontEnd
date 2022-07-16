@@ -35,10 +35,10 @@ export const ProfileCard = () => {
     if (loading) return (<div className='center-div'> <Spinner animation="grow" /></div>);
     if (data==null) return (<div className='center-div'> <Spinner animation="grow" /></div>);
     else{
-        console.log("dataaaaa"+data);
 
 
-       info =data.result;
+
+       info =data;
 
  
        console.log("infoo"+info);
