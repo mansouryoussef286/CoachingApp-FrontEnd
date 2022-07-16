@@ -35,10 +35,10 @@ export const ProfileCard = () => {
     if (loading) return (<div className='center-div'> <Spinner animation="grow" /></div>);
     if (data==null) return (<div className='center-div'> <Spinner animation="grow" /></div>);
     else{
-        console.log("dataaaaa"+data);
 
 
-       info =data.result;
+
+       info =data;
 
  
        console.log("infoo"+info);
@@ -101,10 +101,7 @@ export const ProfileCard = () => {
                         {info.mobileNum}
                         <br />
                         {info.city}<span>,</span>{info.country}
-                        <br />
-                        {info.weight} <span>Kg</span>
-                        <br />
-                        {info.height} <span>Cm</span>
+                      
                     </div>
 
 

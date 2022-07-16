@@ -185,7 +185,7 @@ export const DialogEdit = (props) => {
 
 
 
-                                                        <div className="inputB">
+                                                        {/* <div className="inputB">
                                                                 <span>height </span>
                                                                 <input
                                                                         type="number"
@@ -208,7 +208,7 @@ export const DialogEdit = (props) => {
                                                                         value={register.weight}
                                                                         onChange={handlerInput}
                                                                 />
-                                                        </div>
+                                                        </div> */}
                                                         <span className='registerError'>{errors.ConfPassError}</span>
 
 
