@@ -15,6 +15,7 @@ export const CoachSignUpp = () => {
     let [color, setColor] = useState(false);
     const [register, setregister] = useState({
         Name:'',
+        Age: '',
         Email:'',
         YearsofExperiance:'',
         Mobile:'',
@@ -28,6 +29,7 @@ export const CoachSignUpp = () => {
     });
     const [errors, setError] = useState({
         NameError:'',
+        AgeError: '',
         EmailError:'',
         YearsofExperianceError:'',
         MobileError:'',
@@ -54,6 +56,7 @@ export const CoachSignUpp = () => {
             gender:x.gender,
             street:x.street,
             City:x.City,
+            Age: x.Age,
 
             Certificates:x.Certificates,
             Images:x.Images,
@@ -67,7 +70,7 @@ export const CoachSignUpp = () => {
     const checkRegister =(e)=>
     {
         e.preventDefault();
-        let name='',email='',YearsofExperiance='',mobile='',gender='',street='',city='',Certificates='',Images='',pass='',conpass='';
+        let name='',email='',YearsofExperiance='',mobile='',gender='',street='',city='',Certificates='',Images='',pass='',conpass='' ,age = '';
         console.log('register');
         console.log(name, email, mobile,gender);        ////////////==============
         console.log(register);
@@ -86,7 +89,8 @@ export const CoachSignUpp = () => {
         street="Please enter street";
         if(register.City=="" || register.City== null)
         city="Please enter City";
-
+        if (register.age == "" || register.Age == null)
+        age = "Please enter Age";
         if(register.Certificates=="" || register.Certificates== null)
         Certificates="Uplode Certificates";
         if(register.Images=="" || register.Images== null)
@@ -101,6 +105,7 @@ export const CoachSignUpp = () => {
     
         setError({
         NameError:name,
+        AgeError: age,
         EmailError:email,
         YearsofExperianceError:YearsofExperiance,
         MobileError:mobile,
@@ -179,7 +184,17 @@ export const CoachSignUpp = () => {
                                     /> 
                             </div>
                             <span className='registerError'>{errors.NameError}</span>
-
+                            <div className='inputB'>
+                                                                <span>Age </span>
+                                                                <input
+                                                                        type="number"
+                                                                        id="Age"
+                                                                        name="Age"
+                                                                        placeholder="Enter Age"
+                                                                        value={register.Age}
+                                                                        onChange={handlerInput}
+                                                                />
+                                                        </div>
                             <div className='inputB'> 
                                     <span>Email </span>
                                     <input 
