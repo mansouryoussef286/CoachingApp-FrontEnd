@@ -11,24 +11,49 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 
 import { useFetch } from '../../useFetch';
+import axios from 'axios';
+import {useNavigate} from 'react-router-dom';
+
 
 export const CoachCard = () => {
     const { data, loading, error, refetch,useAuth } = useFetch("https://easyfit.azurewebsites.net/api/Coach");
-    const [cookie,setCookie]=useState({})
-    useEffect(() => {
-        var cookies= document.cookie.split(';').map(cook=> cook.split('=')).reduce((acc,[key,value])=>({...acc,[key.trim()]:value}),{});
-        console.log(cookies);
-        setCookie(cookies);
-        console.log('hello'+cookie);
+    const [cookie,setCookie]=useState("null");
+    var cookies=null;
+    const navigate = useNavigate();
+    const checkCookie=(ID)=>{
+        cookies= document.cookie.split(';').map(cook=> cook.split('=')).reduce((acc,[key,value])=>({...acc,[key.trim()]:value}),{});
+        const date = new Date();
+        const today = [
+            date.getFullYear(),
+            date.getMonth() + 1,
+            date.getDate()
+        ].join('-');
+       if(cookies.role=='Client')
+       {
+        axios.post("https://easyfit.azurewebsites.net/api/WSubscription/NewSubRequest",{
+            "subId": 1,
+            "date": today,
+            "coachId": ID
 
-            }
-    , []);
+        }).then((response) => {          navigate("/");
+    })
+        .catch((err)=>{console.log(err)})
+       }
+       else if (cookies.role=='Coach'||cookies.role==null)
+       {
+        alert("Can not Sub signin as client");
+        navigate("/");
+       }
+    }
+
+    console.log('hello'+cookie);
     if (loading) return (<div className='center-div'> <Spinner animation="grow" /></div>);
     if (data==null) return (<div className='center-div'> <Spinner animation="grow" /></div>);
 
     if (error) return (<h1>error...</h1>);
 
     console.log(data);
+    
 
 
     const printCoachCards = (coaches) => {
@@ -83,7 +108,7 @@ export const CoachCard = () => {
                                 </div>
                             </div>
                             <div className="text-center py-2">
-                                <button className='btn btn-danger'>subscribe</button>
+                                <button className='btn btn-danger'onClick={()=>{checkCookie(item.id)}}>subscribe</button>
                             </div>
                         </Card>
                     </div>
