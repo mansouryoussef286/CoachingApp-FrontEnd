@@ -212,7 +212,7 @@ export const DialogEdit = (props) => {
                                                                 {/* <input type="button" value="Edit" onClick={checkRegister}/>    */}
                                                                 <input type="button" value="Edit" onClick={()=>{
                                                                         console.log(register);
-                                                                        axios.put(`https://localhost:7109/api/Client/UpdateClient/${props.data.id}`,register)
+                                                                        axios.put(`https://easyfit.azurewebsites.net/api/Client/UpdateClient/${props.data.id}`,register)
                                                                         .then((data)=>{console.log(data);})
                                                                         .catch((err)=>console.log(err))
                                                                 }}/>
