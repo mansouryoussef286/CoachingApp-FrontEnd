@@ -25,7 +25,7 @@ console.log(workoutID);
                 <td>{exercies.excercise.description}</td>
                 <td>{exercies.excercise.link}</td>
                 <td>{exercies.sets}</td>
-                <td>{exercies.reps}</td
+                <td>{exercies.reps}</td>
                 <td><input type="checkbox"/></td>
                 
             </tr>)
