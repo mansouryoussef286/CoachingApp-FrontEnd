@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Spinner from 'react-bootstrap/Spinner';
 
@@ -12,48 +12,47 @@ import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 
 import { useFetch } from '../../useFetch';
 import axios from 'axios';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 export const CoachCard = () => {
-    const { data, loading, error, refetch,useAuth } = useFetch("https://easyfit.azurewebsites.net/api/Coach");
-    const [cookie,setCookie]=useState("null");
-    var cookies=null;
+    const { data, loading, error, refetch, useAuth } = useFetch("https://easyfit.azurewebsites.net/api/Coach");
+    const [cookie, setCookie] = useState("null");
+    var cookies = null;
     const navigate = useNavigate();
-    const checkCookie=(ID)=>{
-        cookies= document.cookie.split(';').map(cook=> cook.split('=')).reduce((acc,[key,value])=>({...acc,[key.trim()]:value}),{});
+    const checkCookie = (ID) => {
+        cookies = document.cookie.split(';').map(cook => cook.split('=')).reduce((acc, [key, value]) => ({ ...acc, [key.trim()]: value }), {});
         const date = new Date();
         const today = [
             date.getFullYear(),
             date.getMonth() + 1,
             date.getDate()
         ].join('-');
-       if(cookies.role=='Client')
-       {
-        axios.post("https://easyfit.azurewebsites.net/api/WSubscription/NewSubRequest",{
-            "subId": 1,
-            "date": today,
-            "coachId": ID
+        if (cookies.role == 'Client') {
+            axios.post("https://easyfit.azurewebsites.net/api/WSubscription/NewSubRequest", {
+                "subId": 1,
+                "date": today,
+                "coachId": ID
 
-        }).then((response) => {          navigate("/");
-    })
-        .catch((err)=>{console.log(err)})
-       }
-       else if (cookies.role=='Coach'||cookies.role==null)
-       {
-        alert("Can not Sub signin as client");
-        navigate("/");
-       }
+            }).then((response) => {
+                navigate("/");
+            })
+                .catch((err) => { console.log(err) })
+        }
+        else if (cookies.role == 'Coach' || cookies.role == null) {
+            alert("Can not Sub signin as client");
+            navigate("/");
+        }
     }
 
-    console.log('hello'+cookie);
+    console.log('hello' + cookie);
     if (loading) return (<div className='center-div'> <Spinner animation="grow" /></div>);
-    if (data==null) return (<div className='center-div'> <Spinner animation="grow" /></div>);
+    if (data == null) return (<div className='center-div'> <Spinner animation="grow" /></div>);
 
     if (error) return (<h1>error...</h1>);
 
     console.log(data);
-    
+
 
 
     const printCoachCards = (coaches) => {
@@ -83,11 +82,13 @@ export const CoachCard = () => {
                                     <img className='w-100 h-100' alt="Card" src="assets/images/coach.png" onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} />
                                 </div>
                                 <div>
-                                    {item.firstName} {item.lastName}, {item.age}
+                                   Name: {item.firstName} {item.lastName} 
+                                    <br/>
+                                   Age: {item.age}
                                     <br />
-                                    {item.gender}
+                                   Contact: {item.mobileNum}
                                     <br />
-                                    {item.email}
+                                   Years OF Experine: {item.yearsExperience}
                                     <div className="coachCardRating d-flex justify-content-start align-items-center">
                                         <Rating className='coachCardRating' value={item.rating} readOnly stars={5} cancel={false} />
                                         <span className='text-secondary'>{item.ratings} ratings</span>
@@ -108,7 +109,7 @@ export const CoachCard = () => {
                                 </div>
                             </div>
                             <div className="text-center py-2">
-                                <button className='btn btn-danger'onClick={()=>{checkCookie(item.id)}}>subscribe</button>
+                                <button className='btn btn-danger' onClick={() => { checkCookie(item.id) }}>subscribe</button>
                             </div>
                         </Card>
                     </div>

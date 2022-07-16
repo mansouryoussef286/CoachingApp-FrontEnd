@@ -8,8 +8,8 @@ import "@fortawesome/fontawesome-free";
 import 'primeicons/primeicons.css';
 // import components
 import LandingPage from './components/LandingPage.jsx';
-import { AboutUs } from './components/aboutus';
-import{ Contact }from './components/contactus';
+import { AboutUs } from './components/Aboutus';
+import{ Contact }from './components/Contactus';
 
 import { Signin } from './components/SignInComponents/Signin'
 import { ClientSingnup } from './components/ClientSignUp'
@@ -33,8 +33,7 @@ function App() {
             <Routes>
             <Route path="/" element={<LandingPage/>}/>
 
-            <Route path="aboutus" element={<AboutUs/>} />
-            <Route path="contactus" element={<Contact/>} />
+            
 
             <Route path="Signin" element={<Signin/>} />
             <Route path="clientinfo" element={<ClientInfo/>} />
@@ -46,6 +45,9 @@ function App() {
             {/* <Route element={<ProtectedRoute/>}>
             </Route> */}
 
+            <Route path="aboutus" element={<AboutUs/>} />
+            <Route path="contactus" element={<Contact/>} />
+            
             <Route path="carousel" element={<Carousell/>}/>
             {/* <Route path="login" element={<Login/>} /> */}
             <Route path="list" element={<ListOfCoaches/>} />
