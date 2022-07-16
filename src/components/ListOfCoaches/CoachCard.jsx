@@ -19,6 +19,7 @@ export const CoachCard = () => {
     const { data, loading, error, refetch,useAuth } = useFetch("https://easyfit.azurewebsites.net/api/Coach");
     const [cookie,setCookie]=useState("null");
     var cookies=null;
+    const navigate = useNavigate();
     const checkCookie=(ID)=>{
         cookies= document.cookie.split(';').map(cook=> cook.split('=')).reduce((acc,[key,value])=>({...acc,[key.trim()]:value}),{});
         const date = new Date();
