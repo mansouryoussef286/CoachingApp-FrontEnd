@@ -39,7 +39,7 @@ export const Header = () => {
         else if (cookies.role==null )
         {
           
-            navigate("/signup")
+            navigate("/signin")
 
         }
      }
