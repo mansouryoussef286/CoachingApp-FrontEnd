@@ -34,9 +34,6 @@ console.log(workoutID);
     return (
         <CardComponent classes='workout-Card text-primary' >
             <div className='d-flex align-items-start justify-content-center flex-wrap' id='workouts'>
-                <div className="site-calendar-demo-card">
-                    <Calendar fullscreen={false} onChange={onPanelChange} className='site-calendar-demo-card ' />
-                </div>
                 <div className='workout-text-div text-center'>
                     <table class="table table-striped" id='WorkOuts'>
                         <thead>

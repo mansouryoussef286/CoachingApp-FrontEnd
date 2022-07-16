@@ -50,10 +50,10 @@ export const ExcersiceCard = () => {
         )
     }
     const printWorkouts = (workouts) => {
-        return (workouts.map((excercise) => {
+        return (workouts.map((excercise, index) => {
             return (
                 <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">{index + 1}</th>
                     <td>{excercise.description}</td>
                     <td>{excercise.link}</td>
                     <td>

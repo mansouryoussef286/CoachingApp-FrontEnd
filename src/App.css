@@ -42,6 +42,12 @@
     align-items: flex-start;
 }
 
+@media(max-width:500px) {
+    .carousel-overlay {
+        width: 350px;
+    }
+}
+
 
 /* end carousel css */
 
