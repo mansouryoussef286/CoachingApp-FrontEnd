@@ -34,17 +34,6 @@ export const CoachCard = () => {
                 "date": today,
                 "coachId": ID
 
-<<<<<<< HEAD
-            }).then((response) => {
-                navigate("/");
-            })
-                .catch((err) => { console.log(err) })
-        }
-        else if (cookies.role == 'Coach' || cookies.role == null) {
-            alert("Can not Sub signin as client");
-            navigate("/");
-        }
-=======
         }).then((response) => {          navigate("/");
     })
         .catch((err)=>{console.log(err)})
@@ -54,7 +43,6 @@ export const CoachCard = () => {
          alert("Can not Sub signin as client");
         navigate("/");
        }
->>>>>>> b932e2b1e218b6eee41a412956418aed100c367d
     }
 
     console.log('hello' + cookie);
