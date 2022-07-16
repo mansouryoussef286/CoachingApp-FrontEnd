@@ -92,6 +92,8 @@ export const Signin = () => {
       // console.log(status);
       console.log(response);
       if (response.status == 200) {
+        document.cookie=`role=${response.data.role}`;
+        
         if(response.data.role=="Client")
         {
           console.log("client");

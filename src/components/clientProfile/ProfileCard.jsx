@@ -28,7 +28,7 @@ export const ProfileCard = () => {
     else{
         console.log("dataaaaa"+data);
 
-       info =data[0].result;
+       info =data.result;
 
        console.log("infoo"+info);
     }

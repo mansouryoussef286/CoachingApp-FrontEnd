@@ -13,7 +13,7 @@ import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 import { useFetch } from '../../useFetch';
 
 export const CoachCard = () => {
-    const { data, loading, error, refetch } = useFetch("https://localhost:7109/api/Coach");
+    const { data, loading, error, refetch,useAuth } = useFetch("https://easyfit.azurewebsites.net/api/Coach");
 
     if (loading) return (<div className='center-div'> <Spinner animation="grow" /></div>);
     if (data==null) return (<div className='center-div'> <Spinner animation="grow" /></div>);
@@ -22,6 +22,8 @@ export const CoachCard = () => {
     
 
     console.log(data);
+    console.log(useAuth);
+
 
     const printCoachCards = (coaches) => {
         return (
