@@ -22,18 +22,22 @@ export const ProfileCard = () => {
     const [displayResponsive, setDisplayResponsive] = useState(false);
 
     
-    const { data, loading, error, refetch } = useFetch("https://easyfit.azurewebsites.net/api/Client/GetProfile/ClientProfile");
-    if (loading) return (<div className='center-div'> <Spinner animation="grow" /></div>);
-    if (data==null) return (<div className='center-div'> <Spinner animation="grow" /></div>);
-    else{
-        console.log("dataaaaa"+data);
+    // const { data, loading, error, refetch } = useFetch("https://easyfit.azurewebsites.net/api/Client/GetProfile/ClientProfile");
+    // if (loading) return (<div className='center-div'> <Spinner animation="grow" /></div>);
+    // if (data==null) return (<div className='center-div'> <Spinner animation="grow" /></div>);
+    // else{
+    //     console.log("dataaaaa"+data);
 
+<<<<<<< HEAD
        info =data.result;
+=======
+    //    info =data.result;
+>>>>>>> b0f2908e535da8a10deb204c1352eb8bf8a2f199
 
-       console.log("infoo"+info);
-    }
+    //    console.log("infoo"+info);
+    // }
 
-    if (error) return (<h1>error...</h1>);
+    // if (error) return (<h1>error...</h1>);
 
     
    
@@ -112,7 +116,7 @@ export const ProfileCard = () => {
                     <button className='btn btn-secondary' label="Show" icon="pi pi-external-link" onClick={() => onClick('displayResponsive')}>edit profile</button>
                     {/* <Dialog visible={displayBasic} style={{ width: '35vw' }} onHide={() => onHide('displayBasic')}> */}
                     <Dialog visible={displayResponsive} onHide={() => onHide('displayResponsive')} breakpoints={{ '960px': '75vw' }} style={{ width: '50vw' }} >
-                        <DialogEdit data={info} fetch={refetch} />
+                        <DialogEdit data={info}  />
                     </Dialog>
                 </div>
             </CardComponent>):
