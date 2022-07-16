@@ -20,7 +20,9 @@ export const Sidebar = () => {
                  else if (selected=='Logout')
                 {
                     axios.get("https://easyfit.azurewebsites.net/api/Account/LogOut",).then((response) => {
-                        if(response.status==200)
+                     document.cookie = 'role=client; expires = Thu, 21 Aug 2014 20:00:00 UTC';
+                        
+                    if(response.status==200)
                           navigate("/");
 
     
