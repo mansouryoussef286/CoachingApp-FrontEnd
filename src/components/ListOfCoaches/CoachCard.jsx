@@ -29,7 +29,6 @@ export const CoachCard = () => {
     if (error) return (<h1>error...</h1>);
 
     console.log(data);
-    
 
 
     const printCoachCards = (coaches) => {

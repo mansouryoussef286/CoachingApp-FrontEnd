@@ -25,7 +25,7 @@ export const DialogAddWorkout = (props) => {
 	}
 
 	const addWorkout = () => {
-		console.log(register);
+		// console.log(register);
 		// axios.post("https://localhost:7109/api/workout", 
 		axios.post("https://easyfit.azurewebsites.net/api/workout", 
 		{

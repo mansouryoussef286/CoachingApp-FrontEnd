@@ -5,8 +5,802 @@
             "duration": 75,
             "coachID": 8,
             "name": "workout2",
+            "coach": {
+                "id": 8,
+                "userId": "126288b1-e754-48b8-7c63-08da64f1674c",
+                "age": 0,
+                "lastName": "Mohamed",
+                "firstName": "hena",
+                "mobileNum": "01145879",
+                "gender": false,
+                "city": "alex",
+                "country": "egypt",
+                "yearsExperience": 5,
+                "rating": 3,
+                "numberOfRating": null,
+                "image": null,
+                "about": "string",
+                "user": {
+                    "client": null,
+                    "id": "126288b1-e754-48b8-7c63-08da64f1674c",
+                    "userName": "mohamed",
+                    "normalizedUserName": "MOHAMED",
+                    "email": "mohamed@example.com",
+                    "normalizedEmail": "MOHAMED@EXAMPLE.COM",
+                    "emailConfirmed": false,
+                    "passwordHash": "AQAAAAEAACcQAAAAEE9tLLqPKdacFKxZb5e66npM6xXw3vNwNx3whgcitOyzRk5TuUKktur5JfZkgMp43A==",
+                    "securityStamp": "NKANDYDNIXAVBURAQS6RXNPJLJTXSV4V",
+                    "concurrencyStamp": "e32f0783-c43e-4015-8782-e41214b3bc4b",
+                    "phoneNumber": null,
+                    "phoneNumberConfirmed": false,
+                    "twoFactorEnabled": false,
+                    "lockoutEnd": null,
+                    "lockoutEnabled": true,
+                    "accessFailedCount": 0
+                },
+                "speciality": null,
+                "specialityNavigation": null,
+                "certificates": [],
+                "excercises": [{
+                        "id": 11,
+                        "description": "bench press",
+                        "link": "www.benchpress.com/youtube",
+                        "coachID": 8,
+                        "workout_Exercises": [{
+                                "workoutID": 7,
+                                "excerciseID": 11,
+                                "sets": 4,
+                                "reps": 12,
+                                "notes": "notes",
+                                "rank": 1
+                            },
+                            {
+                                "workoutID": 8,
+                                "excerciseID": 11,
+                                "sets": 5,
+                                "reps": 8,
+                                "notes": "la2a",
+                                "rank": 1,
+                                "workout": {
+                                    "id": 8,
+                                    "notes": "notessss",
+                                    "duration": 60,
+                                    "coachID": 8,
+                                    "name": "wokouttt",
+                                    "client_Workout_WSubs": [],
+                                    "workout_Exercises": [{
+                                        "workoutID": 8,
+                                        "excerciseID": 4,
+                                        "sets": 10,
+                                        "reps": 8,
+                                        "notes": "ammal atest",
+                                        "rank": 1,
+                                        "excercise": {
+                                            "id": 4,
+                                            "description": "aa",
+                                            "link": "aa",
+                                            "coachID": 4,
+                                            "coach": null,
+                                            "workout_Exercises": [{
+                                                "workoutID": 7,
+                                                "excerciseID": 4,
+                                                "sets": 10,
+                                                "reps": 8,
+                                                "notes": "ammal atest",
+                                                "rank": 1
+                                            }]
+                                        }
+                                    }],
+                                    "workout_WorkoutSets": []
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": 15,
+                        "description": "description",
+                        "link": "www.55555555555555555555555.com",
+                        "coachID": 8,
+                        "workout_Exercises": [{
+                            "workoutID": 7,
+                            "excerciseID": 15,
+                            "sets": 4,
+                            "reps": 10,
+                            "notes": "noo",
+                            "rank": 2
+                        }]
+                    }
+                ],
+                "meals": [],
+                "nutrition_Subscriptions": [],
+                "workoutSets": [],
+                "workout_Subscriptions": [],
+                "workouts": [{
+                        "id": 8,
+                        "notes": "notessss",
+                        "duration": 60,
+                        "coachID": 8,
+                        "name": "wokouttt",
+                        "client_Workout_WSubs": [],
+                        "workout_Exercises": [{
+                                "workoutID": 8,
+                                "excerciseID": 4,
+                                "sets": 10,
+                                "reps": 8,
+                                "notes": "ammal atest",
+                                "rank": 1,
+                                "excercise": {
+                                    "id": 4,
+                                    "description": "aa",
+                                    "link": "aa",
+                                    "coachID": 4,
+                                    "coach": null,
+                                    "workout_Exercises": [{
+                                        "workoutID": 7,
+                                        "excerciseID": 4,
+                                        "sets": 10,
+                                        "reps": 8,
+                                        "notes": "ammal atest",
+                                        "rank": 1
+                                    }]
+                                }
+                            },
+                            {
+                                "workoutID": 8,
+                                "excerciseID": 11,
+                                "sets": 5,
+                                "reps": 8,
+                                "notes": "la2a",
+                                "rank": 1,
+                                "excercise": {
+                                    "id": 11,
+                                    "description": "bench press",
+                                    "link": "www.benchpress.com/youtube",
+                                    "coachID": 8,
+                                    "workout_Exercises": [{
+                                        "workoutID": 7,
+                                        "excerciseID": 11,
+                                        "sets": 4,
+                                        "reps": 12,
+                                        "notes": "notes",
+                                        "rank": 1
+                                    }]
+                                }
+                            }
+                        ],
+                        "workout_WorkoutSets": []
+                    },
+                    {
+                        "id": 15,
+                        "notes": "this is the first workout",
+                        "duration": 60,
+                        "coachID": 8,
+                        "name": "day1",
+                        "client_Workout_WSubs": [],
+                        "workout_Exercises": [],
+                        "workout_WorkoutSets": []
+                    }
+                ],
+                "client_WSubs": null
+            },
             "client_Workout_WSubs": [],
-            "workout_Exercises": [],
+            "workout_Exercises": [{
+                    "workoutID": 7,
+                    "excerciseID": 4,
+                    "sets": 10,
+                    "reps": 8,
+                    "notes": "ammal atest",
+                    "rank": 1,
+                    "excercise": {
+                        "id": 4,
+                        "description": "aa",
+                        "link": "aa",
+                        "coachID": 4,
+                        "coach": null,
+                        "workout_Exercises": [{
+                            "workoutID": 8,
+                            "excerciseID": 4,
+                            "sets": 10,
+                            "reps": 8,
+                            "notes": "ammal atest",
+                            "rank": 1,
+                            "workout": {
+                                "id": 8,
+                                "notes": "notessss",
+                                "duration": 60,
+                                "coachID": 8,
+                                "name": "wokouttt",
+                                "coach": {
+                                    "id": 8,
+                                    "userId": "126288b1-e754-48b8-7c63-08da64f1674c",
+                                    "age": 0,
+                                    "lastName": "Mohamed",
+                                    "firstName": "hena",
+                                    "mobileNum": "01145879",
+                                    "gender": false,
+                                    "city": "alex",
+                                    "country": "egypt",
+                                    "yearsExperience": 5,
+                                    "rating": 3,
+                                    "numberOfRating": null,
+                                    "image": null,
+                                    "about": "string",
+                                    "user": {
+                                        "client": null,
+                                        "id": "126288b1-e754-48b8-7c63-08da64f1674c",
+                                        "userName": "mohamed",
+                                        "normalizedUserName": "MOHAMED",
+                                        "email": "mohamed@example.com",
+                                        "normalizedEmail": "MOHAMED@EXAMPLE.COM",
+                                        "emailConfirmed": false,
+                                        "passwordHash": "AQAAAAEAACcQAAAAEE9tLLqPKdacFKxZb5e66npM6xXw3vNwNx3whgcitOyzRk5TuUKktur5JfZkgMp43A==",
+                                        "securityStamp": "NKANDYDNIXAVBURAQS6RXNPJLJTXSV4V",
+                                        "concurrencyStamp": "e32f0783-c43e-4015-8782-e41214b3bc4b",
+                                        "phoneNumber": null,
+                                        "phoneNumberConfirmed": false,
+                                        "twoFactorEnabled": false,
+                                        "lockoutEnd": null,
+                                        "lockoutEnabled": true,
+                                        "accessFailedCount": 0
+                                    },
+                                    "speciality": null,
+                                    "specialityNavigation": null,
+                                    "certificates": [],
+                                    "excercises": [{
+                                            "id": 11,
+                                            "description": "bench press",
+                                            "link": "www.benchpress.com/youtube",
+                                            "coachID": 8,
+                                            "workout_Exercises": [{
+                                                    "workoutID": 7,
+                                                    "excerciseID": 11,
+                                                    "sets": 4,
+                                                    "reps": 12,
+                                                    "notes": "notes",
+                                                    "rank": 1
+                                                },
+                                                {
+                                                    "workoutID": 8,
+                                                    "excerciseID": 11,
+                                                    "sets": 5,
+                                                    "reps": 8,
+                                                    "notes": "la2a",
+                                                    "rank": 1
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 15,
+                                            "description": "description",
+                                            "link": "www.55555555555555555555555.com",
+                                            "coachID": 8,
+                                            "workout_Exercises": [{
+                                                "workoutID": 7,
+                                                "excerciseID": 15,
+                                                "sets": 4,
+                                                "reps": 10,
+                                                "notes": "noo",
+                                                "rank": 2
+                                            }]
+                                        }
+                                    ],
+                                    "meals": [],
+                                    "nutrition_Subscriptions": [],
+                                    "workoutSets": [],
+                                    "workout_Subscriptions": [],
+                                    "workouts": [{
+                                        "id": 15,
+                                        "notes": "this is the first workout",
+                                        "duration": 60,
+                                        "coachID": 8,
+                                        "name": "day1",
+                                        "client_Workout_WSubs": [],
+                                        "workout_Exercises": [],
+                                        "workout_WorkoutSets": []
+                                    }],
+                                    "client_WSubs": null
+                                },
+                                "client_Workout_WSubs": [],
+                                "workout_Exercises": [{
+                                    "workoutID": 8,
+                                    "excerciseID": 11,
+                                    "sets": 5,
+                                    "reps": 8,
+                                    "notes": "la2a",
+                                    "rank": 1,
+                                    "excercise": {
+                                        "id": 11,
+                                        "description": "bench press",
+                                        "link": "www.benchpress.com/youtube",
+                                        "coachID": 8,
+                                        "coach": {
+                                            "id": 8,
+                                            "userId": "126288b1-e754-48b8-7c63-08da64f1674c",
+                                            "age": 0,
+                                            "lastName": "Mohamed",
+                                            "firstName": "hena",
+                                            "mobileNum": "01145879",
+                                            "gender": false,
+                                            "city": "alex",
+                                            "country": "egypt",
+                                            "yearsExperience": 5,
+                                            "rating": 3,
+                                            "numberOfRating": null,
+                                            "image": null,
+                                            "about": "string",
+                                            "user": {
+                                                "client": null,
+                                                "id": "126288b1-e754-48b8-7c63-08da64f1674c",
+                                                "userName": "mohamed",
+                                                "normalizedUserName": "MOHAMED",
+                                                "email": "mohamed@example.com",
+                                                "normalizedEmail": "MOHAMED@EXAMPLE.COM",
+                                                "emailConfirmed": false,
+                                                "passwordHash": "AQAAAAEAACcQAAAAEE9tLLqPKdacFKxZb5e66npM6xXw3vNwNx3whgcitOyzRk5TuUKktur5JfZkgMp43A==",
+                                                "securityStamp": "NKANDYDNIXAVBURAQS6RXNPJLJTXSV4V",
+                                                "concurrencyStamp": "e32f0783-c43e-4015-8782-e41214b3bc4b",
+                                                "phoneNumber": null,
+                                                "phoneNumberConfirmed": false,
+                                                "twoFactorEnabled": false,
+                                                "lockoutEnd": null,
+                                                "lockoutEnabled": true,
+                                                "accessFailedCount": 0
+                                            },
+                                            "speciality": null,
+                                            "specialityNavigation": null,
+                                            "certificates": [],
+                                            "excercises": [{
+                                                "id": 15,
+                                                "description": "description",
+                                                "link": "www.55555555555555555555555.com",
+                                                "coachID": 8,
+                                                "workout_Exercises": [{
+                                                    "workoutID": 7,
+                                                    "excerciseID": 15,
+                                                    "sets": 4,
+                                                    "reps": 10,
+                                                    "notes": "noo",
+                                                    "rank": 2
+                                                }]
+                                            }],
+                                            "meals": [],
+                                            "nutrition_Subscriptions": [],
+                                            "workoutSets": [],
+                                            "workout_Subscriptions": [],
+                                            "workouts": [{
+                                                "id": 15,
+                                                "notes": "this is the first workout",
+                                                "duration": 60,
+                                                "coachID": 8,
+                                                "name": "day1",
+                                                "client_Workout_WSubs": [],
+                                                "workout_Exercises": [],
+                                                "workout_WorkoutSets": []
+                                            }],
+                                            "client_WSubs": null
+                                        },
+                                        "workout_Exercises": [{
+                                            "workoutID": 7,
+                                            "excerciseID": 11,
+                                            "sets": 4,
+                                            "reps": 12,
+                                            "notes": "notes",
+                                            "rank": 1
+                                        }]
+                                    }
+                                }],
+                                "workout_WorkoutSets": []
+                            }
+                        }]
+                    }
+                },
+                {
+                    "workoutID": 7,
+                    "excerciseID": 11,
+                    "sets": 4,
+                    "reps": 12,
+                    "notes": "notes",
+                    "rank": 1,
+                    "excercise": {
+                        "id": 11,
+                        "description": "bench press",
+                        "link": "www.benchpress.com/youtube",
+                        "coachID": 8,
+                        "coach": {
+                            "id": 8,
+                            "userId": "126288b1-e754-48b8-7c63-08da64f1674c",
+                            "age": 0,
+                            "lastName": "Mohamed",
+                            "firstName": "hena",
+                            "mobileNum": "01145879",
+                            "gender": false,
+                            "city": "alex",
+                            "country": "egypt",
+                            "yearsExperience": 5,
+                            "rating": 3,
+                            "numberOfRating": null,
+                            "image": null,
+                            "about": "string",
+                            "user": {
+                                "client": null,
+                                "id": "126288b1-e754-48b8-7c63-08da64f1674c",
+                                "userName": "mohamed",
+                                "normalizedUserName": "MOHAMED",
+                                "email": "mohamed@example.com",
+                                "normalizedEmail": "MOHAMED@EXAMPLE.COM",
+                                "emailConfirmed": false,
+                                "passwordHash": "AQAAAAEAACcQAAAAEE9tLLqPKdacFKxZb5e66npM6xXw3vNwNx3whgcitOyzRk5TuUKktur5JfZkgMp43A==",
+                                "securityStamp": "NKANDYDNIXAVBURAQS6RXNPJLJTXSV4V",
+                                "concurrencyStamp": "e32f0783-c43e-4015-8782-e41214b3bc4b",
+                                "phoneNumber": null,
+                                "phoneNumberConfirmed": false,
+                                "twoFactorEnabled": false,
+                                "lockoutEnd": null,
+                                "lockoutEnabled": true,
+                                "accessFailedCount": 0
+                            },
+                            "speciality": null,
+                            "specialityNavigation": null,
+                            "certificates": [],
+                            "excercises": [{
+                                "id": 15,
+                                "description": "description",
+                                "link": "www.55555555555555555555555.com",
+                                "coachID": 8,
+                                "workout_Exercises": [{
+                                    "workoutID": 7,
+                                    "excerciseID": 15,
+                                    "sets": 4,
+                                    "reps": 10,
+                                    "notes": "noo",
+                                    "rank": 2
+                                }]
+                            }],
+                            "meals": [],
+                            "nutrition_Subscriptions": [],
+                            "workoutSets": [],
+                            "workout_Subscriptions": [],
+                            "workouts": [{
+                                    "id": 8,
+                                    "notes": "notessss",
+                                    "duration": 60,
+                                    "coachID": 8,
+                                    "name": "wokouttt",
+                                    "client_Workout_WSubs": [],
+                                    "workout_Exercises": [{
+                                            "workoutID": 8,
+                                            "excerciseID": 4,
+                                            "sets": 10,
+                                            "reps": 8,
+                                            "notes": "ammal atest",
+                                            "rank": 1,
+                                            "excercise": {
+                                                "id": 4,
+                                                "description": "aa",
+                                                "link": "aa",
+                                                "coachID": 4,
+                                                "coach": null,
+                                                "workout_Exercises": [{
+                                                    "workoutID": 7,
+                                                    "excerciseID": 4,
+                                                    "sets": 10,
+                                                    "reps": 8,
+                                                    "notes": "ammal atest",
+                                                    "rank": 1
+                                                }]
+                                            }
+                                        },
+                                        {
+                                            "workoutID": 8,
+                                            "excerciseID": 11,
+                                            "sets": 5,
+                                            "reps": 8,
+                                            "notes": "la2a",
+                                            "rank": 1
+                                        }
+                                    ],
+                                    "workout_WorkoutSets": []
+                                },
+                                {
+                                    "id": 15,
+                                    "notes": "this is the first workout",
+                                    "duration": 60,
+                                    "coachID": 8,
+                                    "name": "day1",
+                                    "client_Workout_WSubs": [],
+                                    "workout_Exercises": [],
+                                    "workout_WorkoutSets": []
+                                }
+                            ],
+                            "client_WSubs": null
+                        },
+                        "workout_Exercises": [{
+                            "workoutID": 8,
+                            "excerciseID": 11,
+                            "sets": 5,
+                            "reps": 8,
+                            "notes": "la2a",
+                            "rank": 1,
+                            "workout": {
+                                "id": 8,
+                                "notes": "notessss",
+                                "duration": 60,
+                                "coachID": 8,
+                                "name": "wokouttt",
+                                "coach": {
+                                    "id": 8,
+                                    "userId": "126288b1-e754-48b8-7c63-08da64f1674c",
+                                    "age": 0,
+                                    "lastName": "Mohamed",
+                                    "firstName": "hena",
+                                    "mobileNum": "01145879",
+                                    "gender": false,
+                                    "city": "alex",
+                                    "country": "egypt",
+                                    "yearsExperience": 5,
+                                    "rating": 3,
+                                    "numberOfRating": null,
+                                    "image": null,
+                                    "about": "string",
+                                    "user": {
+                                        "client": null,
+                                        "id": "126288b1-e754-48b8-7c63-08da64f1674c",
+                                        "userName": "mohamed",
+                                        "normalizedUserName": "MOHAMED",
+                                        "email": "mohamed@example.com",
+                                        "normalizedEmail": "MOHAMED@EXAMPLE.COM",
+                                        "emailConfirmed": false,
+                                        "passwordHash": "AQAAAAEAACcQAAAAEE9tLLqPKdacFKxZb5e66npM6xXw3vNwNx3whgcitOyzRk5TuUKktur5JfZkgMp43A==",
+                                        "securityStamp": "NKANDYDNIXAVBURAQS6RXNPJLJTXSV4V",
+                                        "concurrencyStamp": "e32f0783-c43e-4015-8782-e41214b3bc4b",
+                                        "phoneNumber": null,
+                                        "phoneNumberConfirmed": false,
+                                        "twoFactorEnabled": false,
+                                        "lockoutEnd": null,
+                                        "lockoutEnabled": true,
+                                        "accessFailedCount": 0
+                                    },
+                                    "speciality": null,
+                                    "specialityNavigation": null,
+                                    "certificates": [],
+                                    "excercises": [{
+                                        "id": 15,
+                                        "description": "description",
+                                        "link": "www.55555555555555555555555.com",
+                                        "coachID": 8,
+                                        "workout_Exercises": [{
+                                            "workoutID": 7,
+                                            "excerciseID": 15,
+                                            "sets": 4,
+                                            "reps": 10,
+                                            "notes": "noo",
+                                            "rank": 2
+                                        }]
+                                    }],
+                                    "meals": [],
+                                    "nutrition_Subscriptions": [],
+                                    "workoutSets": [],
+                                    "workout_Subscriptions": [],
+                                    "workouts": [{
+                                        "id": 15,
+                                        "notes": "this is the first workout",
+                                        "duration": 60,
+                                        "coachID": 8,
+                                        "name": "day1",
+                                        "client_Workout_WSubs": [],
+                                        "workout_Exercises": [],
+                                        "workout_WorkoutSets": []
+                                    }],
+                                    "client_WSubs": null
+                                },
+                                "client_Workout_WSubs": [],
+                                "workout_Exercises": [{
+                                    "workoutID": 8,
+                                    "excerciseID": 4,
+                                    "sets": 10,
+                                    "reps": 8,
+                                    "notes": "ammal atest",
+                                    "rank": 1,
+                                    "excercise": {
+                                        "id": 4,
+                                        "description": "aa",
+                                        "link": "aa",
+                                        "coachID": 4,
+                                        "coach": null,
+                                        "workout_Exercises": [{
+                                            "workoutID": 7,
+                                            "excerciseID": 4,
+                                            "sets": 10,
+                                            "reps": 8,
+                                            "notes": "ammal atest",
+                                            "rank": 1
+                                        }]
+                                    }
+                                }],
+                                "workout_WorkoutSets": []
+                            }
+                        }]
+                    }
+                },
+                {
+                    "workoutID": 7,
+                    "excerciseID": 15,
+                    "sets": 4,
+                    "reps": 10,
+                    "notes": "noo",
+                    "rank": 2,
+                    "excercise": {
+                        "id": 15,
+                        "description": "description",
+                        "link": "www.55555555555555555555555.com",
+                        "coachID": 8,
+                        "coach": {
+                            "id": 8,
+                            "userId": "126288b1-e754-48b8-7c63-08da64f1674c",
+                            "age": 0,
+                            "lastName": "Mohamed",
+                            "firstName": "hena",
+                            "mobileNum": "01145879",
+                            "gender": false,
+                            "city": "alex",
+                            "country": "egypt",
+                            "yearsExperience": 5,
+                            "rating": 3,
+                            "numberOfRating": null,
+                            "image": null,
+                            "about": "string",
+                            "user": {
+                                "client": null,
+                                "id": "126288b1-e754-48b8-7c63-08da64f1674c",
+                                "userName": "mohamed",
+                                "normalizedUserName": "MOHAMED",
+                                "email": "mohamed@example.com",
+                                "normalizedEmail": "MOHAMED@EXAMPLE.COM",
+                                "emailConfirmed": false,
+                                "passwordHash": "AQAAAAEAACcQAAAAEE9tLLqPKdacFKxZb5e66npM6xXw3vNwNx3whgcitOyzRk5TuUKktur5JfZkgMp43A==",
+                                "securityStamp": "NKANDYDNIXAVBURAQS6RXNPJLJTXSV4V",
+                                "concurrencyStamp": "e32f0783-c43e-4015-8782-e41214b3bc4b",
+                                "phoneNumber": null,
+                                "phoneNumberConfirmed": false,
+                                "twoFactorEnabled": false,
+                                "lockoutEnd": null,
+                                "lockoutEnabled": true,
+                                "accessFailedCount": 0
+                            },
+                            "speciality": null,
+                            "specialityNavigation": null,
+                            "certificates": [],
+                            "excercises": [{
+                                "id": 11,
+                                "description": "bench press",
+                                "link": "www.benchpress.com/youtube",
+                                "coachID": 8,
+                                "workout_Exercises": [{
+                                        "workoutID": 7,
+                                        "excerciseID": 11,
+                                        "sets": 4,
+                                        "reps": 12,
+                                        "notes": "notes",
+                                        "rank": 1
+                                    },
+                                    {
+                                        "workoutID": 8,
+                                        "excerciseID": 11,
+                                        "sets": 5,
+                                        "reps": 8,
+                                        "notes": "la2a",
+                                        "rank": 1,
+                                        "workout": {
+                                            "id": 8,
+                                            "notes": "notessss",
+                                            "duration": 60,
+                                            "coachID": 8,
+                                            "name": "wokouttt",
+                                            "client_Workout_WSubs": [],
+                                            "workout_Exercises": [{
+                                                "workoutID": 8,
+                                                "excerciseID": 4,
+                                                "sets": 10,
+                                                "reps": 8,
+                                                "notes": "ammal atest",
+                                                "rank": 1,
+                                                "excercise": {
+                                                    "id": 4,
+                                                    "description": "aa",
+                                                    "link": "aa",
+                                                    "coachID": 4,
+                                                    "coach": null,
+                                                    "workout_Exercises": [{
+                                                        "workoutID": 7,
+                                                        "excerciseID": 4,
+                                                        "sets": 10,
+                                                        "reps": 8,
+                                                        "notes": "ammal atest",
+                                                        "rank": 1
+                                                    }]
+                                                }
+                                            }],
+                                            "workout_WorkoutSets": []
+                                        }
+                                    }
+                                ]
+                            }],
+                            "meals": [],
+                            "nutrition_Subscriptions": [],
+                            "workoutSets": [],
+                            "workout_Subscriptions": [],
+                            "workouts": [{
+                                    "id": 8,
+                                    "notes": "notessss",
+                                    "duration": 60,
+                                    "coachID": 8,
+                                    "name": "wokouttt",
+                                    "client_Workout_WSubs": [],
+                                    "workout_Exercises": [{
+                                            "workoutID": 8,
+                                            "excerciseID": 4,
+                                            "sets": 10,
+                                            "reps": 8,
+                                            "notes": "ammal atest",
+                                            "rank": 1,
+                                            "excercise": {
+                                                "id": 4,
+                                                "description": "aa",
+                                                "link": "aa",
+                                                "coachID": 4,
+                                                "coach": null,
+                                                "workout_Exercises": [{
+                                                    "workoutID": 7,
+                                                    "excerciseID": 4,
+                                                    "sets": 10,
+                                                    "reps": 8,
+                                                    "notes": "ammal atest",
+                                                    "rank": 1
+                                                }]
+                                            }
+                                        },
+                                        {
+                                            "workoutID": 8,
+                                            "excerciseID": 11,
+                                            "sets": 5,
+                                            "reps": 8,
+                                            "notes": "la2a",
+                                            "rank": 1,
+                                            "excercise": {
+                                                "id": 11,
+                                                "description": "bench press",
+                                                "link": "www.benchpress.com/youtube",
+                                                "coachID": 8,
+                                                "workout_Exercises": [{
+                                                    "workoutID": 7,
+                                                    "excerciseID": 11,
+                                                    "sets": 4,
+                                                    "reps": 12,
+                                                    "notes": "notes",
+                                                    "rank": 1
+                                                }]
+                                            }
+                                        }
+                                    ],
+                                    "workout_WorkoutSets": []
+                                },
+                                {
+                                    "id": 15,
+                                    "notes": "this is the first workout",
+                                    "duration": 60,
+                                    "coachID": 8,
+                                    "name": "day1",
+                                    "client_Workout_WSubs": [],
+                                    "workout_Exercises": [],
+                                    "workout_WorkoutSets": []
+                                }
+                            ],
+                            "client_WSubs": null
+                        },
+                        "workout_Exercises": []
+                    }
+                }
+            ],
             "workout_WorkoutSets": []
         },
         {
@@ -15,6 +809,1546 @@
             "duration": 60,
             "coachID": 8,
             "name": "wokouttt",
+            "coach": {
+                "id": 8,
+                "userId": "126288b1-e754-48b8-7c63-08da64f1674c",
+                "age": 0,
+                "lastName": "Mohamed",
+                "firstName": "hena",
+                "mobileNum": "01145879",
+                "gender": false,
+                "city": "alex",
+                "country": "egypt",
+                "yearsExperience": 5,
+                "rating": 3,
+                "numberOfRating": null,
+                "image": null,
+                "about": "string",
+                "user": {
+                    "client": null,
+                    "id": "126288b1-e754-48b8-7c63-08da64f1674c",
+                    "userName": "mohamed",
+                    "normalizedUserName": "MOHAMED",
+                    "email": "mohamed@example.com",
+                    "normalizedEmail": "MOHAMED@EXAMPLE.COM",
+                    "emailConfirmed": false,
+                    "passwordHash": "AQAAAAEAACcQAAAAEE9tLLqPKdacFKxZb5e66npM6xXw3vNwNx3whgcitOyzRk5TuUKktur5JfZkgMp43A==",
+                    "securityStamp": "NKANDYDNIXAVBURAQS6RXNPJLJTXSV4V",
+                    "concurrencyStamp": "e32f0783-c43e-4015-8782-e41214b3bc4b",
+                    "phoneNumber": null,
+                    "phoneNumberConfirmed": false,
+                    "twoFactorEnabled": false,
+                    "lockoutEnd": null,
+                    "lockoutEnabled": true,
+                    "accessFailedCount": 0
+                },
+                "speciality": null,
+                "specialityNavigation": null,
+                "certificates": [],
+                "excercises": [{
+                        "id": 11,
+                        "description": "bench press",
+                        "link": "www.benchpress.com/youtube",
+                        "coachID": 8,
+                        "workout_Exercises": [{
+                                "workoutID": 7,
+                                "excerciseID": 11,
+                                "sets": 4,
+                                "reps": 12,
+                                "notes": "notes",
+                                "rank": 1,
+                                "workout": {
+                                    "id": 7,
+                                    "notes": "comment",
+                                    "duration": 75,
+                                    "coachID": 8,
+                                    "name": "workout2",
+                                    "client_Workout_WSubs": [],
+                                    "workout_Exercises": [{
+                                            "workoutID": 7,
+                                            "excerciseID": 4,
+                                            "sets": 10,
+                                            "reps": 8,
+                                            "notes": "ammal atest",
+                                            "rank": 1,
+                                            "excercise": {
+                                                "id": 4,
+                                                "description": "aa",
+                                                "link": "aa",
+                                                "coachID": 4,
+                                                "coach": null,
+                                                "workout_Exercises": [{
+                                                    "workoutID": 8,
+                                                    "excerciseID": 4,
+                                                    "sets": 10,
+                                                    "reps": 8,
+                                                    "notes": "ammal atest",
+                                                    "rank": 1
+                                                }]
+                                            }
+                                        },
+                                        {
+                                            "workoutID": 7,
+                                            "excerciseID": 15,
+                                            "sets": 4,
+                                            "reps": 10,
+                                            "notes": "noo",
+                                            "rank": 2,
+                                            "excercise": {
+                                                "id": 15,
+                                                "description": "description",
+                                                "link": "www.55555555555555555555555.com",
+                                                "coachID": 8,
+                                                "workout_Exercises": []
+                                            }
+                                        }
+                                    ],
+                                    "workout_WorkoutSets": []
+                                }
+                            },
+                            {
+                                "workoutID": 8,
+                                "excerciseID": 11,
+                                "sets": 5,
+                                "reps": 8,
+                                "notes": "la2a",
+                                "rank": 1
+                            }
+                        ]
+                    },
+                    {
+                        "id": 15,
+                        "description": "description",
+                        "link": "www.55555555555555555555555.com",
+                        "coachID": 8,
+                        "workout_Exercises": [{
+                            "workoutID": 7,
+                            "excerciseID": 15,
+                            "sets": 4,
+                            "reps": 10,
+                            "notes": "noo",
+                            "rank": 2,
+                            "workout": {
+                                "id": 7,
+                                "notes": "comment",
+                                "duration": 75,
+                                "coachID": 8,
+                                "name": "workout2",
+                                "client_Workout_WSubs": [],
+                                "workout_Exercises": [{
+                                        "workoutID": 7,
+                                        "excerciseID": 4,
+                                        "sets": 10,
+                                        "reps": 8,
+                                        "notes": "ammal atest",
+                                        "rank": 1,
+                                        "excercise": {
+                                            "id": 4,
+                                            "description": "aa",
+                                            "link": "aa",
+                                            "coachID": 4,
+                                            "coach": null,
+                                            "workout_Exercises": [{
+                                                "workoutID": 8,
+                                                "excerciseID": 4,
+                                                "sets": 10,
+                                                "reps": 8,
+                                                "notes": "ammal atest",
+                                                "rank": 1
+                                            }]
+                                        }
+                                    },
+                                    {
+                                        "workoutID": 7,
+                                        "excerciseID": 11,
+                                        "sets": 4,
+                                        "reps": 12,
+                                        "notes": "notes",
+                                        "rank": 1,
+                                        "excercise": {
+                                            "id": 11,
+                                            "description": "bench press",
+                                            "link": "www.benchpress.com/youtube",
+                                            "coachID": 8,
+                                            "workout_Exercises": [{
+                                                "workoutID": 8,
+                                                "excerciseID": 11,
+                                                "sets": 5,
+                                                "reps": 8,
+                                                "notes": "la2a",
+                                                "rank": 1
+                                            }]
+                                        }
+                                    }
+                                ],
+                                "workout_WorkoutSets": []
+                            }
+                        }]
+                    }
+                ],
+                "meals": [],
+                "nutrition_Subscriptions": [],
+                "workoutSets": [],
+                "workout_Subscriptions": [],
+                "workouts": [{
+                        "id": 7,
+                        "notes": "comment",
+                        "duration": 75,
+                        "coachID": 8,
+                        "name": "workout2",
+                        "client_Workout_WSubs": [],
+                        "workout_Exercises": [{
+                                "workoutID": 7,
+                                "excerciseID": 4,
+                                "sets": 10,
+                                "reps": 8,
+                                "notes": "ammal atest",
+                                "rank": 1,
+                                "excercise": {
+                                    "id": 4,
+                                    "description": "aa",
+                                    "link": "aa",
+                                    "coachID": 4,
+                                    "coach": null,
+                                    "workout_Exercises": [{
+                                        "workoutID": 8,
+                                        "excerciseID": 4,
+                                        "sets": 10,
+                                        "reps": 8,
+                                        "notes": "ammal atest",
+                                        "rank": 1
+                                    }]
+                                }
+                            },
+                            {
+                                "workoutID": 7,
+                                "excerciseID": 11,
+                                "sets": 4,
+                                "reps": 12,
+                                "notes": "notes",
+                                "rank": 1,
+                                "excercise": {
+                                    "id": 11,
+                                    "description": "bench press",
+                                    "link": "www.benchpress.com/youtube",
+                                    "coachID": 8,
+                                    "workout_Exercises": [{
+                                        "workoutID": 8,
+                                        "excerciseID": 11,
+                                        "sets": 5,
+                                        "reps": 8,
+                                        "notes": "la2a",
+                                        "rank": 1
+                                    }]
+                                }
+                            },
+                            {
+                                "workoutID": 7,
+                                "excerciseID": 15,
+                                "sets": 4,
+                                "reps": 10,
+                                "notes": "noo",
+                                "rank": 2,
+                                "excercise": {
+                                    "id": 15,
+                                    "description": "description",
+                                    "link": "www.55555555555555555555555.com",
+                                    "coachID": 8,
+                                    "workout_Exercises": []
+                                }
+                            }
+                        ],
+                        "workout_WorkoutSets": []
+                    },
+                    {
+                        "id": 15,
+                        "notes": "this is the first workout",
+                        "duration": 60,
+                        "coachID": 8,
+                        "name": "day1",
+                        "client_Workout_WSubs": [],
+                        "workout_Exercises": [],
+                        "workout_WorkoutSets": []
+                    }
+                ],
+                "client_WSubs": null
+            },
+            "client_Workout_WSubs": [],
+            "workout_Exercises": [{
+                    "workoutID": 8,
+                    "excerciseID": 4,
+                    "sets": 10,
+                    "reps": 8,
+                    "notes": "ammal atest",
+                    "rank": 1,
+                    "excercise": {
+                        "id": 4,
+                        "description": "aa",
+                        "link": "aa",
+                        "coachID": 4,
+                        "coach": null,
+                        "workout_Exercises": [{
+                            "workoutID": 7,
+                            "excerciseID": 4,
+                            "sets": 10,
+                            "reps": 8,
+                            "notes": "ammal atest",
+                            "rank": 1,
+                            "workout": {
+                                "id": 7,
+                                "notes": "comment",
+                                "duration": 75,
+                                "coachID": 8,
+                                "name": "workout2",
+                                "coach": {
+                                    "id": 8,
+                                    "userId": "126288b1-e754-48b8-7c63-08da64f1674c",
+                                    "age": 0,
+                                    "lastName": "Mohamed",
+                                    "firstName": "hena",
+                                    "mobileNum": "01145879",
+                                    "gender": false,
+                                    "city": "alex",
+                                    "country": "egypt",
+                                    "yearsExperience": 5,
+                                    "rating": 3,
+                                    "numberOfRating": null,
+                                    "image": null,
+                                    "about": "string",
+                                    "user": {
+                                        "client": null,
+                                        "id": "126288b1-e754-48b8-7c63-08da64f1674c",
+                                        "userName": "mohamed",
+                                        "normalizedUserName": "MOHAMED",
+                                        "email": "mohamed@example.com",
+                                        "normalizedEmail": "MOHAMED@EXAMPLE.COM",
+                                        "emailConfirmed": false,
+                                        "passwordHash": "AQAAAAEAACcQAAAAEE9tLLqPKdacFKxZb5e66npM6xXw3vNwNx3whgcitOyzRk5TuUKktur5JfZkgMp43A==",
+                                        "securityStamp": "NKANDYDNIXAVBURAQS6RXNPJLJTXSV4V",
+                                        "concurrencyStamp": "e32f0783-c43e-4015-8782-e41214b3bc4b",
+                                        "phoneNumber": null,
+                                        "phoneNumberConfirmed": false,
+                                        "twoFactorEnabled": false,
+                                        "lockoutEnd": null,
+                                        "lockoutEnabled": true,
+                                        "accessFailedCount": 0
+                                    },
+                                    "speciality": null,
+                                    "specialityNavigation": null,
+                                    "certificates": [],
+                                    "excercises": [{
+                                            "id": 11,
+                                            "description": "bench press",
+                                            "link": "www.benchpress.com/youtube",
+                                            "coachID": 8,
+                                            "workout_Exercises": [{
+                                                    "workoutID": 7,
+                                                    "excerciseID": 11,
+                                                    "sets": 4,
+                                                    "reps": 12,
+                                                    "notes": "notes",
+                                                    "rank": 1
+                                                },
+                                                {
+                                                    "workoutID": 8,
+                                                    "excerciseID": 11,
+                                                    "sets": 5,
+                                                    "reps": 8,
+                                                    "notes": "la2a",
+                                                    "rank": 1
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 15,
+                                            "description": "description",
+                                            "link": "www.55555555555555555555555.com",
+                                            "coachID": 8,
+                                            "workout_Exercises": [{
+                                                "workoutID": 7,
+                                                "excerciseID": 15,
+                                                "sets": 4,
+                                                "reps": 10,
+                                                "notes": "noo",
+                                                "rank": 2
+                                            }]
+                                        }
+                                    ],
+                                    "meals": [],
+                                    "nutrition_Subscriptions": [],
+                                    "workoutSets": [],
+                                    "workout_Subscriptions": [],
+                                    "workouts": [{
+                                        "id": 15,
+                                        "notes": "this is the first workout",
+                                        "duration": 60,
+                                        "coachID": 8,
+                                        "name": "day1",
+                                        "client_Workout_WSubs": [],
+                                        "workout_Exercises": [],
+                                        "workout_WorkoutSets": []
+                                    }],
+                                    "client_WSubs": null
+                                },
+                                "client_Workout_WSubs": [],
+                                "workout_Exercises": [{
+                                        "workoutID": 7,
+                                        "excerciseID": 11,
+                                        "sets": 4,
+                                        "reps": 12,
+                                        "notes": "notes",
+                                        "rank": 1,
+                                        "excercise": {
+                                            "id": 11,
+                                            "description": "bench press",
+                                            "link": "www.benchpress.com/youtube",
+                                            "coachID": 8,
+                                            "coach": {
+                                                "id": 8,
+                                                "userId": "126288b1-e754-48b8-7c63-08da64f1674c",
+                                                "age": 0,
+                                                "lastName": "Mohamed",
+                                                "firstName": "hena",
+                                                "mobileNum": "01145879",
+                                                "gender": false,
+                                                "city": "alex",
+                                                "country": "egypt",
+                                                "yearsExperience": 5,
+                                                "rating": 3,
+                                                "numberOfRating": null,
+                                                "image": null,
+                                                "about": "string",
+                                                "user": {
+                                                    "client": null,
+                                                    "id": "126288b1-e754-48b8-7c63-08da64f1674c",
+                                                    "userName": "mohamed",
+                                                    "normalizedUserName": "MOHAMED",
+                                                    "email": "mohamed@example.com",
+                                                    "normalizedEmail": "MOHAMED@EXAMPLE.COM",
+                                                    "emailConfirmed": false,
+                                                    "passwordHash": "AQAAAAEAACcQAAAAEE9tLLqPKdacFKxZb5e66npM6xXw3vNwNx3whgcitOyzRk5TuUKktur5JfZkgMp43A==",
+                                                    "securityStamp": "NKANDYDNIXAVBURAQS6RXNPJLJTXSV4V",
+                                                    "concurrencyStamp": "e32f0783-c43e-4015-8782-e41214b3bc4b",
+                                                    "phoneNumber": null,
+                                                    "phoneNumberConfirmed": false,
+                                                    "twoFactorEnabled": false,
+                                                    "lockoutEnd": null,
+                                                    "lockoutEnabled": true,
+                                                    "accessFailedCount": 0
+                                                },
+                                                "speciality": null,
+                                                "specialityNavigation": null,
+                                                "certificates": [],
+                                                "excercises": [{
+                                                    "id": 15,
+                                                    "description": "description",
+                                                    "link": "www.55555555555555555555555.com",
+                                                    "coachID": 8,
+                                                    "workout_Exercises": [{
+                                                        "workoutID": 7,
+                                                        "excerciseID": 15,
+                                                        "sets": 4,
+                                                        "reps": 10,
+                                                        "notes": "noo",
+                                                        "rank": 2
+                                                    }]
+                                                }],
+                                                "meals": [],
+                                                "nutrition_Subscriptions": [],
+                                                "workoutSets": [],
+                                                "workout_Subscriptions": [],
+                                                "workouts": [{
+                                                    "id": 15,
+                                                    "notes": "this is the first workout",
+                                                    "duration": 60,
+                                                    "coachID": 8,
+                                                    "name": "day1",
+                                                    "client_Workout_WSubs": [],
+                                                    "workout_Exercises": [],
+                                                    "workout_WorkoutSets": []
+                                                }],
+                                                "client_WSubs": null
+                                            },
+                                            "workout_Exercises": [{
+                                                "workoutID": 8,
+                                                "excerciseID": 11,
+                                                "sets": 5,
+                                                "reps": 8,
+                                                "notes": "la2a",
+                                                "rank": 1
+                                            }]
+                                        }
+                                    },
+                                    {
+                                        "workoutID": 7,
+                                        "excerciseID": 15,
+                                        "sets": 4,
+                                        "reps": 10,
+                                        "notes": "noo",
+                                        "rank": 2,
+                                        "excercise": {
+                                            "id": 15,
+                                            "description": "description",
+                                            "link": "www.55555555555555555555555.com",
+                                            "coachID": 8,
+                                            "coach": {
+                                                "id": 8,
+                                                "userId": "126288b1-e754-48b8-7c63-08da64f1674c",
+                                                "age": 0,
+                                                "lastName": "Mohamed",
+                                                "firstName": "hena",
+                                                "mobileNum": "01145879",
+                                                "gender": false,
+                                                "city": "alex",
+                                                "country": "egypt",
+                                                "yearsExperience": 5,
+                                                "rating": 3,
+                                                "numberOfRating": null,
+                                                "image": null,
+                                                "about": "string",
+                                                "user": {
+                                                    "client": null,
+                                                    "id": "126288b1-e754-48b8-7c63-08da64f1674c",
+                                                    "userName": "mohamed",
+                                                    "normalizedUserName": "MOHAMED",
+                                                    "email": "mohamed@example.com",
+                                                    "normalizedEmail": "MOHAMED@EXAMPLE.COM",
+                                                    "emailConfirmed": false,
+                                                    "passwordHash": "AQAAAAEAACcQAAAAEE9tLLqPKdacFKxZb5e66npM6xXw3vNwNx3whgcitOyzRk5TuUKktur5JfZkgMp43A==",
+                                                    "securityStamp": "NKANDYDNIXAVBURAQS6RXNPJLJTXSV4V",
+                                                    "concurrencyStamp": "e32f0783-c43e-4015-8782-e41214b3bc4b",
+                                                    "phoneNumber": null,
+                                                    "phoneNumberConfirmed": false,
+                                                    "twoFactorEnabled": false,
+                                                    "lockoutEnd": null,
+                                                    "lockoutEnabled": true,
+                                                    "accessFailedCount": 0
+                                                },
+                                                "speciality": null,
+                                                "specialityNavigation": null,
+                                                "certificates": [],
+                                                "excercises": [{
+                                                    "id": 11,
+                                                    "description": "bench press",
+                                                    "link": "www.benchpress.com/youtube",
+                                                    "coachID": 8,
+                                                    "workout_Exercises": [{
+                                                            "workoutID": 7,
+                                                            "excerciseID": 11,
+                                                            "sets": 4,
+                                                            "reps": 12,
+                                                            "notes": "notes",
+                                                            "rank": 1
+                                                        },
+                                                        {
+                                                            "workoutID": 8,
+                                                            "excerciseID": 11,
+                                                            "sets": 5,
+                                                            "reps": 8,
+                                                            "notes": "la2a",
+                                                            "rank": 1
+                                                        }
+                                                    ]
+                                                }],
+                                                "meals": [],
+                                                "nutrition_Subscriptions": [],
+                                                "workoutSets": [],
+                                                "workout_Subscriptions": [],
+                                                "workouts": [{
+                                                    "id": 15,
+                                                    "notes": "this is the first workout",
+                                                    "duration": 60,
+                                                    "coachID": 8,
+                                                    "name": "day1",
+                                                    "client_Workout_WSubs": [],
+                                                    "workout_Exercises": [],
+                                                    "workout_WorkoutSets": []
+                                                }],
+                                                "client_WSubs": null
+                                            },
+                                            "workout_Exercises": []
+                                        }
+                                    }
+                                ],
+                                "workout_WorkoutSets": []
+                            }
+                        }]
+                    }
+                },
+                {
+                    "workoutID": 8,
+                    "excerciseID": 11,
+                    "sets": 5,
+                    "reps": 8,
+                    "notes": "la2a",
+                    "rank": 1,
+                    "excercise": {
+                        "id": 11,
+                        "description": "bench press",
+                        "link": "www.benchpress.com/youtube",
+                        "coachID": 8,
+                        "coach": {
+                            "id": 8,
+                            "userId": "126288b1-e754-48b8-7c63-08da64f1674c",
+                            "age": 0,
+                            "lastName": "Mohamed",
+                            "firstName": "hena",
+                            "mobileNum": "01145879",
+                            "gender": false,
+                            "city": "alex",
+                            "country": "egypt",
+                            "yearsExperience": 5,
+                            "rating": 3,
+                            "numberOfRating": null,
+                            "image": null,
+                            "about": "string",
+                            "user": {
+                                "client": null,
+                                "id": "126288b1-e754-48b8-7c63-08da64f1674c",
+                                "userName": "mohamed",
+                                "normalizedUserName": "MOHAMED",
+                                "email": "mohamed@example.com",
+                                "normalizedEmail": "MOHAMED@EXAMPLE.COM",
+                                "emailConfirmed": false,
+                                "passwordHash": "AQAAAAEAACcQAAAAEE9tLLqPKdacFKxZb5e66npM6xXw3vNwNx3whgcitOyzRk5TuUKktur5JfZkgMp43A==",
+                                "securityStamp": "NKANDYDNIXAVBURAQS6RXNPJLJTXSV4V",
+                                "concurrencyStamp": "e32f0783-c43e-4015-8782-e41214b3bc4b",
+                                "phoneNumber": null,
+                                "phoneNumberConfirmed": false,
+                                "twoFactorEnabled": false,
+                                "lockoutEnd": null,
+                                "lockoutEnabled": true,
+                                "accessFailedCount": 0
+                            },
+                            "speciality": null,
+                            "specialityNavigation": null,
+                            "certificates": [],
+                            "excercises": [{
+                                "id": 15,
+                                "description": "description",
+                                "link": "www.55555555555555555555555.com",
+                                "coachID": 8,
+                                "workout_Exercises": [{
+                                    "workoutID": 7,
+                                    "excerciseID": 15,
+                                    "sets": 4,
+                                    "reps": 10,
+                                    "notes": "noo",
+                                    "rank": 2,
+                                    "workout": {
+                                        "id": 7,
+                                        "notes": "comment",
+                                        "duration": 75,
+                                        "coachID": 8,
+                                        "name": "workout2",
+                                        "client_Workout_WSubs": [],
+                                        "workout_Exercises": [{
+                                                "workoutID": 7,
+                                                "excerciseID": 4,
+                                                "sets": 10,
+                                                "reps": 8,
+                                                "notes": "ammal atest",
+                                                "rank": 1,
+                                                "excercise": {
+                                                    "id": 4,
+                                                    "description": "aa",
+                                                    "link": "aa",
+                                                    "coachID": 4,
+                                                    "coach": null,
+                                                    "workout_Exercises": [{
+                                                        "workoutID": 8,
+                                                        "excerciseID": 4,
+                                                        "sets": 10,
+                                                        "reps": 8,
+                                                        "notes": "ammal atest",
+                                                        "rank": 1
+                                                    }]
+                                                }
+                                            },
+                                            {
+                                                "workoutID": 7,
+                                                "excerciseID": 11,
+                                                "sets": 4,
+                                                "reps": 12,
+                                                "notes": "notes",
+                                                "rank": 1
+                                            }
+                                        ],
+                                        "workout_WorkoutSets": []
+                                    }
+                                }]
+                            }],
+                            "meals": [],
+                            "nutrition_Subscriptions": [],
+                            "workoutSets": [],
+                            "workout_Subscriptions": [],
+                            "workouts": [{
+                                    "id": 7,
+                                    "notes": "comment",
+                                    "duration": 75,
+                                    "coachID": 8,
+                                    "name": "workout2",
+                                    "client_Workout_WSubs": [],
+                                    "workout_Exercises": [{
+                                            "workoutID": 7,
+                                            "excerciseID": 4,
+                                            "sets": 10,
+                                            "reps": 8,
+                                            "notes": "ammal atest",
+                                            "rank": 1,
+                                            "excercise": {
+                                                "id": 4,
+                                                "description": "aa",
+                                                "link": "aa",
+                                                "coachID": 4,
+                                                "coach": null,
+                                                "workout_Exercises": [{
+                                                    "workoutID": 8,
+                                                    "excerciseID": 4,
+                                                    "sets": 10,
+                                                    "reps": 8,
+                                                    "notes": "ammal atest",
+                                                    "rank": 1
+                                                }]
+                                            }
+                                        },
+                                        {
+                                            "workoutID": 7,
+                                            "excerciseID": 11,
+                                            "sets": 4,
+                                            "reps": 12,
+                                            "notes": "notes",
+                                            "rank": 1
+                                        },
+                                        {
+                                            "workoutID": 7,
+                                            "excerciseID": 15,
+                                            "sets": 4,
+                                            "reps": 10,
+                                            "notes": "noo",
+                                            "rank": 2,
+                                            "excercise": {
+                                                "id": 15,
+                                                "description": "description",
+                                                "link": "www.55555555555555555555555.com",
+                                                "coachID": 8,
+                                                "workout_Exercises": []
+                                            }
+                                        }
+                                    ],
+                                    "workout_WorkoutSets": []
+                                },
+                                {
+                                    "id": 15,
+                                    "notes": "this is the first workout",
+                                    "duration": 60,
+                                    "coachID": 8,
+                                    "name": "day1",
+                                    "client_Workout_WSubs": [],
+                                    "workout_Exercises": [],
+                                    "workout_WorkoutSets": []
+                                }
+                            ],
+                            "client_WSubs": null
+                        },
+                        "workout_Exercises": [{
+                            "workoutID": 7,
+                            "excerciseID": 11,
+                            "sets": 4,
+                            "reps": 12,
+                            "notes": "notes",
+                            "rank": 1,
+                            "workout": {
+                                "id": 7,
+                                "notes": "comment",
+                                "duration": 75,
+                                "coachID": 8,
+                                "name": "workout2",
+                                "coach": {
+                                    "id": 8,
+                                    "userId": "126288b1-e754-48b8-7c63-08da64f1674c",
+                                    "age": 0,
+                                    "lastName": "Mohamed",
+                                    "firstName": "hena",
+                                    "mobileNum": "01145879",
+                                    "gender": false,
+                                    "city": "alex",
+                                    "country": "egypt",
+                                    "yearsExperience": 5,
+                                    "rating": 3,
+                                    "numberOfRating": null,
+                                    "image": null,
+                                    "about": "string",
+                                    "user": {
+                                        "client": null,
+                                        "id": "126288b1-e754-48b8-7c63-08da64f1674c",
+                                        "userName": "mohamed",
+                                        "normalizedUserName": "MOHAMED",
+                                        "email": "mohamed@example.com",
+                                        "normalizedEmail": "MOHAMED@EXAMPLE.COM",
+                                        "emailConfirmed": false,
+                                        "passwordHash": "AQAAAAEAACcQAAAAEE9tLLqPKdacFKxZb5e66npM6xXw3vNwNx3whgcitOyzRk5TuUKktur5JfZkgMp43A==",
+                                        "securityStamp": "NKANDYDNIXAVBURAQS6RXNPJLJTXSV4V",
+                                        "concurrencyStamp": "e32f0783-c43e-4015-8782-e41214b3bc4b",
+                                        "phoneNumber": null,
+                                        "phoneNumberConfirmed": false,
+                                        "twoFactorEnabled": false,
+                                        "lockoutEnd": null,
+                                        "lockoutEnabled": true,
+                                        "accessFailedCount": 0
+                                    },
+                                    "speciality": null,
+                                    "specialityNavigation": null,
+                                    "certificates": [],
+                                    "excercises": [{
+                                        "id": 15,
+                                        "description": "description",
+                                        "link": "www.55555555555555555555555.com",
+                                        "coachID": 8,
+                                        "workout_Exercises": [{
+                                            "workoutID": 7,
+                                            "excerciseID": 15,
+                                            "sets": 4,
+                                            "reps": 10,
+                                            "notes": "noo",
+                                            "rank": 2
+                                        }]
+                                    }],
+                                    "meals": [],
+                                    "nutrition_Subscriptions": [],
+                                    "workoutSets": [],
+                                    "workout_Subscriptions": [],
+                                    "workouts": [{
+                                        "id": 15,
+                                        "notes": "this is the first workout",
+                                        "duration": 60,
+                                        "coachID": 8,
+                                        "name": "day1",
+                                        "client_Workout_WSubs": [],
+                                        "workout_Exercises": [],
+                                        "workout_WorkoutSets": []
+                                    }],
+                                    "client_WSubs": null
+                                },
+                                "client_Workout_WSubs": [],
+                                "workout_Exercises": [{
+                                        "workoutID": 7,
+                                        "excerciseID": 4,
+                                        "sets": 10,
+                                        "reps": 8,
+                                        "notes": "ammal atest",
+                                        "rank": 1,
+                                        "excercise": {
+                                            "id": 4,
+                                            "description": "aa",
+                                            "link": "aa",
+                                            "coachID": 4,
+                                            "coach": null,
+                                            "workout_Exercises": [{
+                                                "workoutID": 8,
+                                                "excerciseID": 4,
+                                                "sets": 10,
+                                                "reps": 8,
+                                                "notes": "ammal atest",
+                                                "rank": 1
+                                            }]
+                                        }
+                                    },
+                                    {
+                                        "workoutID": 7,
+                                        "excerciseID": 15,
+                                        "sets": 4,
+                                        "reps": 10,
+                                        "notes": "noo",
+                                        "rank": 2,
+                                        "excercise": {
+                                            "id": 15,
+                                            "description": "description",
+                                            "link": "www.55555555555555555555555.com",
+                                            "coachID": 8,
+                                            "coach": {
+                                                "id": 8,
+                                                "userId": "126288b1-e754-48b8-7c63-08da64f1674c",
+                                                "age": 0,
+                                                "lastName": "Mohamed",
+                                                "firstName": "hena",
+                                                "mobileNum": "01145879",
+                                                "gender": false,
+                                                "city": "alex",
+                                                "country": "egypt",
+                                                "yearsExperience": 5,
+                                                "rating": 3,
+                                                "numberOfRating": null,
+                                                "image": null,
+                                                "about": "string",
+                                                "user": {
+                                                    "client": null,
+                                                    "id": "126288b1-e754-48b8-7c63-08da64f1674c",
+                                                    "userName": "mohamed",
+                                                    "normalizedUserName": "MOHAMED",
+                                                    "email": "mohamed@example.com",
+                                                    "normalizedEmail": "MOHAMED@EXAMPLE.COM",
+                                                    "emailConfirmed": false,
+                                                    "passwordHash": "AQAAAAEAACcQAAAAEE9tLLqPKdacFKxZb5e66npM6xXw3vNwNx3whgcitOyzRk5TuUKktur5JfZkgMp43A==",
+                                                    "securityStamp": "NKANDYDNIXAVBURAQS6RXNPJLJTXSV4V",
+                                                    "concurrencyStamp": "e32f0783-c43e-4015-8782-e41214b3bc4b",
+                                                    "phoneNumber": null,
+                                                    "phoneNumberConfirmed": false,
+                                                    "twoFactorEnabled": false,
+                                                    "lockoutEnd": null,
+                                                    "lockoutEnabled": true,
+                                                    "accessFailedCount": 0
+                                                },
+                                                "speciality": null,
+                                                "specialityNavigation": null,
+                                                "certificates": [],
+                                                "excercises": [],
+                                                "meals": [],
+                                                "nutrition_Subscriptions": [],
+                                                "workoutSets": [],
+                                                "workout_Subscriptions": [],
+                                                "workouts": [{
+                                                    "id": 15,
+                                                    "notes": "this is the first workout",
+                                                    "duration": 60,
+                                                    "coachID": 8,
+                                                    "name": "day1",
+                                                    "client_Workout_WSubs": [],
+                                                    "workout_Exercises": [],
+                                                    "workout_WorkoutSets": []
+                                                }],
+                                                "client_WSubs": null
+                                            },
+                                            "workout_Exercises": []
+                                        }
+                                    }
+                                ],
+                                "workout_WorkoutSets": []
+                            }
+                        }]
+                    }
+                }
+            ],
+            "workout_WorkoutSets": []
+        },
+        {
+            "id": 15,
+            "notes": "this is the first workout",
+            "duration": 60,
+            "coachID": 8,
+            "name": "day1",
+            "coach": {
+                "id": 8,
+                "userId": "126288b1-e754-48b8-7c63-08da64f1674c",
+                "age": 0,
+                "lastName": "Mohamed",
+                "firstName": "hena",
+                "mobileNum": "01145879",
+                "gender": false,
+                "city": "alex",
+                "country": "egypt",
+                "yearsExperience": 5,
+                "rating": 3,
+                "numberOfRating": null,
+                "image": null,
+                "about": "string",
+                "user": {
+                    "client": null,
+                    "id": "126288b1-e754-48b8-7c63-08da64f1674c",
+                    "userName": "mohamed",
+                    "normalizedUserName": "MOHAMED",
+                    "email": "mohamed@example.com",
+                    "normalizedEmail": "MOHAMED@EXAMPLE.COM",
+                    "emailConfirmed": false,
+                    "passwordHash": "AQAAAAEAACcQAAAAEE9tLLqPKdacFKxZb5e66npM6xXw3vNwNx3whgcitOyzRk5TuUKktur5JfZkgMp43A==",
+                    "securityStamp": "NKANDYDNIXAVBURAQS6RXNPJLJTXSV4V",
+                    "concurrencyStamp": "e32f0783-c43e-4015-8782-e41214b3bc4b",
+                    "phoneNumber": null,
+                    "phoneNumberConfirmed": false,
+                    "twoFactorEnabled": false,
+                    "lockoutEnd": null,
+                    "lockoutEnabled": true,
+                    "accessFailedCount": 0
+                },
+                "speciality": null,
+                "specialityNavigation": null,
+                "certificates": [],
+                "excercises": [{
+                        "id": 11,
+                        "description": "bench press",
+                        "link": "www.benchpress.com/youtube",
+                        "coachID": 8,
+                        "workout_Exercises": [{
+                                "workoutID": 7,
+                                "excerciseID": 11,
+                                "sets": 4,
+                                "reps": 12,
+                                "notes": "notes",
+                                "rank": 1,
+                                "workout": {
+                                    "id": 7,
+                                    "notes": "comment",
+                                    "duration": 75,
+                                    "coachID": 8,
+                                    "name": "workout2",
+                                    "client_Workout_WSubs": [],
+                                    "workout_Exercises": [{
+                                            "workoutID": 7,
+                                            "excerciseID": 4,
+                                            "sets": 10,
+                                            "reps": 8,
+                                            "notes": "ammal atest",
+                                            "rank": 1,
+                                            "excercise": {
+                                                "id": 4,
+                                                "description": "aa",
+                                                "link": "aa",
+                                                "coachID": 4,
+                                                "coach": null,
+                                                "workout_Exercises": [{
+                                                    "workoutID": 8,
+                                                    "excerciseID": 4,
+                                                    "sets": 10,
+                                                    "reps": 8,
+                                                    "notes": "ammal atest",
+                                                    "rank": 1,
+                                                    "workout": {
+                                                        "id": 8,
+                                                        "notes": "notessss",
+                                                        "duration": 60,
+                                                        "coachID": 8,
+                                                        "name": "wokouttt",
+                                                        "client_Workout_WSubs": [],
+                                                        "workout_Exercises": [{
+                                                            "workoutID": 8,
+                                                            "excerciseID": 11,
+                                                            "sets": 5,
+                                                            "reps": 8,
+                                                            "notes": "la2a",
+                                                            "rank": 1
+                                                        }],
+                                                        "workout_WorkoutSets": []
+                                                    }
+                                                }]
+                                            }
+                                        },
+                                        {
+                                            "workoutID": 7,
+                                            "excerciseID": 15,
+                                            "sets": 4,
+                                            "reps": 10,
+                                            "notes": "noo",
+                                            "rank": 2,
+                                            "excercise": {
+                                                "id": 15,
+                                                "description": "description",
+                                                "link": "www.55555555555555555555555.com",
+                                                "coachID": 8,
+                                                "workout_Exercises": []
+                                            }
+                                        }
+                                    ],
+                                    "workout_WorkoutSets": []
+                                }
+                            },
+                            {
+                                "workoutID": 8,
+                                "excerciseID": 11,
+                                "sets": 5,
+                                "reps": 8,
+                                "notes": "la2a",
+                                "rank": 1,
+                                "workout": {
+                                    "id": 8,
+                                    "notes": "notessss",
+                                    "duration": 60,
+                                    "coachID": 8,
+                                    "name": "wokouttt",
+                                    "client_Workout_WSubs": [],
+                                    "workout_Exercises": [{
+                                        "workoutID": 8,
+                                        "excerciseID": 4,
+                                        "sets": 10,
+                                        "reps": 8,
+                                        "notes": "ammal atest",
+                                        "rank": 1,
+                                        "excercise": {
+                                            "id": 4,
+                                            "description": "aa",
+                                            "link": "aa",
+                                            "coachID": 4,
+                                            "coach": null,
+                                            "workout_Exercises": [{
+                                                "workoutID": 7,
+                                                "excerciseID": 4,
+                                                "sets": 10,
+                                                "reps": 8,
+                                                "notes": "ammal atest",
+                                                "rank": 1,
+                                                "workout": {
+                                                    "id": 7,
+                                                    "notes": "comment",
+                                                    "duration": 75,
+                                                    "coachID": 8,
+                                                    "name": "workout2",
+                                                    "client_Workout_WSubs": [],
+                                                    "workout_Exercises": [{
+                                                            "workoutID": 7,
+                                                            "excerciseID": 11,
+                                                            "sets": 4,
+                                                            "reps": 12,
+                                                            "notes": "notes",
+                                                            "rank": 1
+                                                        },
+                                                        {
+                                                            "workoutID": 7,
+                                                            "excerciseID": 15,
+                                                            "sets": 4,
+                                                            "reps": 10,
+                                                            "notes": "noo",
+                                                            "rank": 2,
+                                                            "excercise": {
+                                                                "id": 15,
+                                                                "description": "description",
+                                                                "link": "www.55555555555555555555555.com",
+                                                                "coachID": 8,
+                                                                "workout_Exercises": []
+                                                            }
+                                                        }
+                                                    ],
+                                                    "workout_WorkoutSets": []
+                                                }
+                                            }]
+                                        }
+                                    }],
+                                    "workout_WorkoutSets": []
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": 15,
+                        "description": "description",
+                        "link": "www.55555555555555555555555.com",
+                        "coachID": 8,
+                        "workout_Exercises": [{
+                            "workoutID": 7,
+                            "excerciseID": 15,
+                            "sets": 4,
+                            "reps": 10,
+                            "notes": "noo",
+                            "rank": 2,
+                            "workout": {
+                                "id": 7,
+                                "notes": "comment",
+                                "duration": 75,
+                                "coachID": 8,
+                                "name": "workout2",
+                                "client_Workout_WSubs": [],
+                                "workout_Exercises": [{
+                                        "workoutID": 7,
+                                        "excerciseID": 4,
+                                        "sets": 10,
+                                        "reps": 8,
+                                        "notes": "ammal atest",
+                                        "rank": 1,
+                                        "excercise": {
+                                            "id": 4,
+                                            "description": "aa",
+                                            "link": "aa",
+                                            "coachID": 4,
+                                            "coach": null,
+                                            "workout_Exercises": [{
+                                                "workoutID": 8,
+                                                "excerciseID": 4,
+                                                "sets": 10,
+                                                "reps": 8,
+                                                "notes": "ammal atest",
+                                                "rank": 1,
+                                                "workout": {
+                                                    "id": 8,
+                                                    "notes": "notessss",
+                                                    "duration": 60,
+                                                    "coachID": 8,
+                                                    "name": "wokouttt",
+                                                    "client_Workout_WSubs": [],
+                                                    "workout_Exercises": [{
+                                                        "workoutID": 8,
+                                                        "excerciseID": 11,
+                                                        "sets": 5,
+                                                        "reps": 8,
+                                                        "notes": "la2a",
+                                                        "rank": 1,
+                                                        "excercise": {
+                                                            "id": 11,
+                                                            "description": "bench press",
+                                                            "link": "www.benchpress.com/youtube",
+                                                            "coachID": 8,
+                                                            "workout_Exercises": [{
+                                                                "workoutID": 7,
+                                                                "excerciseID": 11,
+                                                                "sets": 4,
+                                                                "reps": 12,
+                                                                "notes": "notes",
+                                                                "rank": 1
+                                                            }]
+                                                        }
+                                                    }],
+                                                    "workout_WorkoutSets": []
+                                                }
+                                            }]
+                                        }
+                                    },
+                                    {
+                                        "workoutID": 7,
+                                        "excerciseID": 11,
+                                        "sets": 4,
+                                        "reps": 12,
+                                        "notes": "notes",
+                                        "rank": 1,
+                                        "excercise": {
+                                            "id": 11,
+                                            "description": "bench press",
+                                            "link": "www.benchpress.com/youtube",
+                                            "coachID": 8,
+                                            "workout_Exercises": [{
+                                                "workoutID": 8,
+                                                "excerciseID": 11,
+                                                "sets": 5,
+                                                "reps": 8,
+                                                "notes": "la2a",
+                                                "rank": 1,
+                                                "workout": {
+                                                    "id": 8,
+                                                    "notes": "notessss",
+                                                    "duration": 60,
+                                                    "coachID": 8,
+                                                    "name": "wokouttt",
+                                                    "client_Workout_WSubs": [],
+                                                    "workout_Exercises": [{
+                                                        "workoutID": 8,
+                                                        "excerciseID": 4,
+                                                        "sets": 10,
+                                                        "reps": 8,
+                                                        "notes": "ammal atest",
+                                                        "rank": 1,
+                                                        "excercise": {
+                                                            "id": 4,
+                                                            "description": "aa",
+                                                            "link": "aa",
+                                                            "coachID": 4,
+                                                            "coach": null,
+                                                            "workout_Exercises": [{
+                                                                "workoutID": 7,
+                                                                "excerciseID": 4,
+                                                                "sets": 10,
+                                                                "reps": 8,
+                                                                "notes": "ammal atest",
+                                                                "rank": 1
+                                                            }]
+                                                        }
+                                                    }],
+                                                    "workout_WorkoutSets": []
+                                                }
+                                            }]
+                                        }
+                                    }
+                                ],
+                                "workout_WorkoutSets": []
+                            }
+                        }]
+                    }
+                ],
+                "meals": [],
+                "nutrition_Subscriptions": [],
+                "workoutSets": [],
+                "workout_Subscriptions": [],
+                "workouts": [{
+                        "id": 7,
+                        "notes": "comment",
+                        "duration": 75,
+                        "coachID": 8,
+                        "name": "workout2",
+                        "client_Workout_WSubs": [],
+                        "workout_Exercises": [{
+                                "workoutID": 7,
+                                "excerciseID": 4,
+                                "sets": 10,
+                                "reps": 8,
+                                "notes": "ammal atest",
+                                "rank": 1,
+                                "excercise": {
+                                    "id": 4,
+                                    "description": "aa",
+                                    "link": "aa",
+                                    "coachID": 4,
+                                    "coach": null,
+                                    "workout_Exercises": [{
+                                        "workoutID": 8,
+                                        "excerciseID": 4,
+                                        "sets": 10,
+                                        "reps": 8,
+                                        "notes": "ammal atest",
+                                        "rank": 1,
+                                        "workout": {
+                                            "id": 8,
+                                            "notes": "notessss",
+                                            "duration": 60,
+                                            "coachID": 8,
+                                            "name": "wokouttt",
+                                            "client_Workout_WSubs": [],
+                                            "workout_Exercises": [{
+                                                "workoutID": 8,
+                                                "excerciseID": 11,
+                                                "sets": 5,
+                                                "reps": 8,
+                                                "notes": "la2a",
+                                                "rank": 1,
+                                                "excercise": {
+                                                    "id": 11,
+                                                    "description": "bench press",
+                                                    "link": "www.benchpress.com/youtube",
+                                                    "coachID": 8,
+                                                    "workout_Exercises": [{
+                                                        "workoutID": 7,
+                                                        "excerciseID": 11,
+                                                        "sets": 4,
+                                                        "reps": 12,
+                                                        "notes": "notes",
+                                                        "rank": 1
+                                                    }]
+                                                }
+                                            }],
+                                            "workout_WorkoutSets": []
+                                        }
+                                    }]
+                                }
+                            },
+                            {
+                                "workoutID": 7,
+                                "excerciseID": 11,
+                                "sets": 4,
+                                "reps": 12,
+                                "notes": "notes",
+                                "rank": 1,
+                                "excercise": {
+                                    "id": 11,
+                                    "description": "bench press",
+                                    "link": "www.benchpress.com/youtube",
+                                    "coachID": 8,
+                                    "workout_Exercises": [{
+                                        "workoutID": 8,
+                                        "excerciseID": 11,
+                                        "sets": 5,
+                                        "reps": 8,
+                                        "notes": "la2a",
+                                        "rank": 1,
+                                        "workout": {
+                                            "id": 8,
+                                            "notes": "notessss",
+                                            "duration": 60,
+                                            "coachID": 8,
+                                            "name": "wokouttt",
+                                            "client_Workout_WSubs": [],
+                                            "workout_Exercises": [{
+                                                "workoutID": 8,
+                                                "excerciseID": 4,
+                                                "sets": 10,
+                                                "reps": 8,
+                                                "notes": "ammal atest",
+                                                "rank": 1,
+                                                "excercise": {
+                                                    "id": 4,
+                                                    "description": "aa",
+                                                    "link": "aa",
+                                                    "coachID": 4,
+                                                    "coach": null,
+                                                    "workout_Exercises": [{
+                                                        "workoutID": 7,
+                                                        "excerciseID": 4,
+                                                        "sets": 10,
+                                                        "reps": 8,
+                                                        "notes": "ammal atest",
+                                                        "rank": 1
+                                                    }]
+                                                }
+                                            }],
+                                            "workout_WorkoutSets": []
+                                        }
+                                    }]
+                                }
+                            },
+                            {
+                                "workoutID": 7,
+                                "excerciseID": 15,
+                                "sets": 4,
+                                "reps": 10,
+                                "notes": "noo",
+                                "rank": 2,
+                                "excercise": {
+                                    "id": 15,
+                                    "description": "description",
+                                    "link": "www.55555555555555555555555.com",
+                                    "coachID": 8,
+                                    "workout_Exercises": []
+                                }
+                            }
+                        ],
+                        "workout_WorkoutSets": []
+                    },
+                    {
+                        "id": 8,
+                        "notes": "notessss",
+                        "duration": 60,
+                        "coachID": 8,
+                        "name": "wokouttt",
+                        "client_Workout_WSubs": [],
+                        "workout_Exercises": [{
+                                "workoutID": 8,
+                                "excerciseID": 4,
+                                "sets": 10,
+                                "reps": 8,
+                                "notes": "ammal atest",
+                                "rank": 1,
+                                "excercise": {
+                                    "id": 4,
+                                    "description": "aa",
+                                    "link": "aa",
+                                    "coachID": 4,
+                                    "coach": null,
+                                    "workout_Exercises": [{
+                                        "workoutID": 7,
+                                        "excerciseID": 4,
+                                        "sets": 10,
+                                        "reps": 8,
+                                        "notes": "ammal atest",
+                                        "rank": 1,
+                                        "workout": {
+                                            "id": 7,
+                                            "notes": "comment",
+                                            "duration": 75,
+                                            "coachID": 8,
+                                            "name": "workout2",
+                                            "client_Workout_WSubs": [],
+                                            "workout_Exercises": [{
+                                                    "workoutID": 7,
+                                                    "excerciseID": 11,
+                                                    "sets": 4,
+                                                    "reps": 12,
+                                                    "notes": "notes",
+                                                    "rank": 1,
+                                                    "excercise": {
+                                                        "id": 11,
+                                                        "description": "bench press",
+                                                        "link": "www.benchpress.com/youtube",
+                                                        "coachID": 8,
+                                                        "workout_Exercises": [{
+                                                            "workoutID": 8,
+                                                            "excerciseID": 11,
+                                                            "sets": 5,
+                                                            "reps": 8,
+                                                            "notes": "la2a",
+                                                            "rank": 1
+                                                        }]
+                                                    }
+                                                },
+                                                {
+                                                    "workoutID": 7,
+                                                    "excerciseID": 15,
+                                                    "sets": 4,
+                                                    "reps": 10,
+                                                    "notes": "noo",
+                                                    "rank": 2,
+                                                    "excercise": {
+                                                        "id": 15,
+                                                        "description": "description",
+                                                        "link": "www.55555555555555555555555.com",
+                                                        "coachID": 8,
+                                                        "workout_Exercises": []
+                                                    }
+                                                }
+                                            ],
+                                            "workout_WorkoutSets": []
+                                        }
+                                    }]
+                                }
+                            },
+                            {
+                                "workoutID": 8,
+                                "excerciseID": 11,
+                                "sets": 5,
+                                "reps": 8,
+                                "notes": "la2a",
+                                "rank": 1,
+                                "excercise": {
+                                    "id": 11,
+                                    "description": "bench press",
+                                    "link": "www.benchpress.com/youtube",
+                                    "coachID": 8,
+                                    "workout_Exercises": [{
+                                        "workoutID": 7,
+                                        "excerciseID": 11,
+                                        "sets": 4,
+                                        "reps": 12,
+                                        "notes": "notes",
+                                        "rank": 1,
+                                        "workout": {
+                                            "id": 7,
+                                            "notes": "comment",
+                                            "duration": 75,
+                                            "coachID": 8,
+                                            "name": "workout2",
+                                            "client_Workout_WSubs": [],
+                                            "workout_Exercises": [{
+                                                    "workoutID": 7,
+                                                    "excerciseID": 4,
+                                                    "sets": 10,
+                                                    "reps": 8,
+                                                    "notes": "ammal atest",
+                                                    "rank": 1,
+                                                    "excercise": {
+                                                        "id": 4,
+                                                        "description": "aa",
+                                                        "link": "aa",
+                                                        "coachID": 4,
+                                                        "coach": null,
+                                                        "workout_Exercises": [{
+                                                            "workoutID": 8,
+                                                            "excerciseID": 4,
+                                                            "sets": 10,
+                                                            "reps": 8,
+                                                            "notes": "ammal atest",
+                                                            "rank": 1
+                                                        }]
+                                                    }
+                                                },
+                                                {
+                                                    "workoutID": 7,
+                                                    "excerciseID": 15,
+                                                    "sets": 4,
+                                                    "reps": 10,
+                                                    "notes": "noo",
+                                                    "rank": 2,
+                                                    "excercise": {
+                                                        "id": 15,
+                                                        "description": "description",
+                                                        "link": "www.55555555555555555555555.com",
+                                                        "coachID": 8,
+                                                        "workout_Exercises": []
+                                                    }
+                                                }
+                                            ],
+                                            "workout_WorkoutSets": []
+                                        }
+                                    }]
+                                }
+                            }
+                        ],
+                        "workout_WorkoutSets": []
+                    }
+                ],
+                "client_WSubs": null
+            },
             "client_Workout_WSubs": [],
             "workout_Exercises": [],
             "workout_WorkoutSets": []
@@ -36,7 +2370,15 @@
             "description": "bi cip",
             "link": "string",
             "coachID": 8,
-            "workout_Exercises": []
+            "workout_Exercises": [{
+                "workoutID": 2,
+                "excerciseID": 4,
+                "sets": 10,
+                "reps": 8,
+                "notes": "ammal atest",
+                "rank": 1,
+                "excercise": null
+            }]
         },
         {
             "id": 9,
@@ -2980,22 +5322,21 @@
             "sub": null
         }
     ],
-    "clientProfile":[
-        {
-            "result": {
-              "id": 1,
-              "userId": "2ffea414-98f3-40ea-26c5-08da4d75279c",
-              "age": 20,
-              "lastName": "string                                            ",
-              "firstName": "yousif                                            ",
-              "mobileNum": "01113311203",
-              "gender": true,
-              "city": "alexandria",
-              "country": "Egypt",
-              "height": 100,
-              "weight": 50,
-              "image": null,
-              "user": {
+    "clientProfile": [{
+        "result": {
+            "id": 1,
+            "userId": "2ffea414-98f3-40ea-26c5-08da4d75279c",
+            "age": 20,
+            "lastName": "string                                            ",
+            "firstName": "yousif                                            ",
+            "mobileNum": "01113311203",
+            "gender": true,
+            "city": "alexandria",
+            "country": "Egypt",
+            "height": 100,
+            "weight": 50,
+            "image": null,
+            "user": {
                 "coach": null,
                 "id": "2ffea414-98f3-40ea-26c5-08da4d75279c",
                 "userName": "Yousif",
@@ -3012,21 +5353,20 @@
                 "lockoutEnd": null,
                 "lockoutEnabled": true,
                 "accessFailedCount": 0
-              },
-              "client_Meal_NSubs": [],
-              "client_NSubs": [],
-              "client_WSubs": [],
-              "client_Workout_WSubs": []
             },
-            "id": 1,
-            "exception": null,
-            "status": 5,
-            "isCanceled": false,
-            "isCompleted": true,
-            "isCompletedSuccessfully": true,
-            "creationOptions": 0,
-            "asyncState": null,
-            "isFaulted": false
-          }
-    ]
+            "client_Meal_NSubs": [],
+            "client_NSubs": [],
+            "client_WSubs": [],
+            "client_Workout_WSubs": []
+        },
+        "id": 1,
+        "exception": null,
+        "status": 5,
+        "isCanceled": false,
+        "isCompleted": true,
+        "isCompletedSuccessfully": true,
+        "creationOptions": 0,
+        "asyncState": null,
+        "isFaulted": false
+    }]
 }
