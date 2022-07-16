@@ -22,7 +22,7 @@ export const CoachCard = () => {
     
 
     console.log(data);
-    console.log(useAuth);
+    console.log(useAuth());
 
 
     const printCoachCards = (coaches) => {
