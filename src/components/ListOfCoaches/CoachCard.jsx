@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Spinner from 'react-bootstrap/Spinner';
 
@@ -14,15 +14,22 @@ import { useFetch } from '../../useFetch';
 
 export const CoachCard = () => {
     const { data, loading, error, refetch,useAuth } = useFetch("https://easyfit.azurewebsites.net/api/Coach");
+    const [cookie,setCookie]=useState({})
+    useEffect(() => {
+        var cookies= document.cookie.split(';').map(cook=> cook.split('=')).reduce((acc,[key,value])=>({...acc,[key.trim()]:value}),{});
+        console.log(cookies);
+        setCookie(cookies);
+        console.log('hello'+cookie);
 
+            }
+    , []);
     if (loading) return (<div className='center-div'> <Spinner animation="grow" /></div>);
     if (data==null) return (<div className='center-div'> <Spinner animation="grow" /></div>);
 
     if (error) return (<h1>error...</h1>);
-    
 
     console.log(data);
-    console.log(useAuth);
+    
 
 
     const printCoachCards = (coaches) => {
