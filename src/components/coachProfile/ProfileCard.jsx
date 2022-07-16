@@ -5,6 +5,7 @@ import { CardComponent } from './CardComponent';
 import { Dialog } from 'primereact/dialog';
 
 import { DialogEdit } from './DialogEdit'
+import { useFetch } from '../../useFetch';
 export const ProfileCard = () => {
     let [client, setClient] = useState(
         {
@@ -27,6 +28,38 @@ export const ProfileCard = () => {
     const [displayBasic, setDisplayBasic] = useState(false);
     const [position, setPosition] = useState('center');
     const [displayResponsive, setDisplayResponsive] = useState(false);
+
+
+    const { data, loading, error, refetch } = useFetch("https://easyfit.azurewebsites.net/api/Coach/profile");
+    if (loading) return (<div className='center-div'> <Spinner animation="grow" /></div>);
+    if (data==null) return (<div className='center-div'> <Spinner animation="grow" /></div>);
+    else{
+        console.log("dataaaaa"+data);
+
+
+       info =data.result;
+
+ 
+       console.log("infoo"+info);
+    }
+
+    if (error) return (<h1>error...</h1>);
+
+    const checkgender=()=>{
+        if(info.gender)
+        {
+            return "male";
+
+        }
+        else
+        {
+            return "Female";
+
+        }
+    }
+
+
+
 
     const dialogFuncMap = {
         'displayBasic': setDisplayBasic,
@@ -60,28 +93,29 @@ export const ProfileCard = () => {
                     </div>
                     <div>
                         <br />
-                        {client.age}
+                        {info.age}
                         <br />
-                        {client.gender}
+                        { checkgender() }
                         <br />
-                        {client.email}
+                        {info.mobileNum}
                         <br />
-                        {client.gender}
+                        {info.city}<span>,</span>{info.country}
                         <br />
-                        {client.mobile}
+                        {info.weight} <span>Kg</span>
                         <br />
-                        {client.address.city}<span>,</span>{client.address.Country}
-                        <br />
-                        {client.weight} <span>Kg</span>
-                        <br />
-                        {client.height} <span>Cm</span>
+                        {info.height} <span>Cm</span>
                     </div>
+
+
+
+
+
                 </div>
                 <div className="text-center py-2">
                     <button className='btn btn-secondary' label="Show" icon="pi pi-external-link" onClick={() => onClick('displayResponsive')}>edit profile</button>
                     {/* <Dialog visible={displayBasic} style={{ width: '35vw' }} onHide={() => onHide('displayBasic')}> */}
                     <Dialog visible={displayResponsive} onHide={() => onHide('displayResponsive')} breakpoints={{ '960px': '75vw' }} style={{ width: '50vw' }} >
-                        <DialogEdit data={client} />
+                    <DialogEdit data={info} fetch={refetch} />
                     </Dialog>
                 </div>
             </CardComponent>
