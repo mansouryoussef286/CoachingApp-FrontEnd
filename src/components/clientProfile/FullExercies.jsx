@@ -3,37 +3,31 @@ import { CardComponent } from './CardComponent'
 import { Calendar } from 'antd';
 import moment from 'moment';
 import { useFetch } from '../../useFetch';
-import { Link,useNavigate} from 'react-router-dom';
-import Spinner from 'react-bootstrap/Spinner';
+import { Navigate, useLocation } from 'react-router'
 
 
 
+export const FullExercies = (props) => {
+const location = useLocation();
+let workoutID=location.state;
+console.log(workoutID);
+    const { data, loading, error, refetch } = useFetch(`https://easyfit.azurewebsites.net/api/Exercise/getExerciseByWorkOutId?WorkoutId=${workoutID}&SubId=4`);
 
-export const WorkoutCard = () => {
-    const navigate = useNavigate();
-
-    const { data, loading, error, refetch } = useFetch('https://easyfit.azurewebsites.net/api/Workout/workoutClientSub?SubId=4');
-
-    if (loading) return (<div className='center-div'> <Spinner animation="grow" /></div>);
-    if (data == null) return (<div className='center-div'> <Spinner animation="grow" /></div>);
-
-    if (error) return (<h1>error...</h1>);
 
     const onPanelChange = (value, mode) => {
         console.log(value.format('YYYY-MM-DD'), mode);
     };
 
-    const printWorkouts = (workouts) => {
-        return (workouts.map((workout, index) => {
+    const printWorkouts = (x) => {
+        return (x.map((exercies, index) => {
             return (<tr>
                 <th scope="row">{index + 1}</th>
-                <td>{workout.name}</td>
-                <td>{workout.duration}</td>
-                <td>{workout.notes}</td>
-                <td>
-                    <button className='btn btn-danger' onClick={() => navigate("/FullExercies" , {state: workout.id})} >open</button>
-                    
-                </td>
+                <td>{exercies.excercise.description}</td>
+                <td>{exercies.excercise.link}</td>
+                <td>{exercies.sets}</td>
+                <td>{exercies.reps}</td>
+                <td><input type="checkbox"/></td>
+                
             </tr>)
         }))
     }
@@ -48,14 +42,15 @@ export const WorkoutCard = () => {
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Duration</th>
-                                <th scope="col">Notes</th>
+                                <th scope="col">Descripation</th>
+                                <th scope="col">Link</th>
+                                <th scope="col">Sets</th>
+                                <th scope="col">Reps</th>
                                 <th scope="col"></th>
                             </tr>
                         </thead>
                         <tbody>
-                            {printWorkouts(data)}
+                            {data && printWorkouts(data)}
                         </tbody>
                     </table>
                 </div>

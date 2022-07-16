@@ -8,8 +8,8 @@ import "@fortawesome/fontawesome-free";
 import 'primeicons/primeicons.css';
 // import components
 import LandingPage from './components/LandingPage.jsx';
-import { AboutUs } from './components/aboutus';
-import{ Contact }from './components/contactus';
+import { AboutUs } from './components/Aboutus';
+import{ Contact }from './components/Contactus';
 
 import { Signin } from './components/SignInComponents/Signin'
 import { ClientSingnup } from './components/ClientSignUp'
@@ -25,6 +25,7 @@ import { Carousell } from './components/landingPageComponents/Carousell';
 import { ListOfCoaches } from './components/ListOfCoaches';
 import { DialogEditWorkout } from './components/coachProfile/DialogEditWorkout';
 import ProtectedRoute from './ProtectedRouter';
+import { FullExercies } from './components/clientProfile/FullExercies';
 
 
 function App() {
@@ -33,19 +34,22 @@ function App() {
             <Routes>
             <Route path="/" element={<LandingPage/>}/>
 
-            <Route path="aboutus" element={<AboutUs/>} />
-            <Route path="contactus" element={<Contact/>} />
+            
 
             <Route path="Signin" element={<Signin/>} />
             <Route path="clientinfo" element={<ClientInfo/>} />
             <Route path="signup" element={<ClientSingnup/>} />
             <Route path="coachsignup" element={<CoachSignUp/>} />
             <Route path="ClientProfile" element={<ClientProfile/>} />
+            <Route path="FullExercies" element={<FullExercies/>} />
             <Route path="CoachProfile" element={<CoachProfile/>} />
             <Route path="DialogEditWorkout" element={<DialogEditWorkout/>} />
             {/* <Route element={<ProtectedRoute/>}>
             </Route> */}
 
+            <Route path="Aboutus" element={<AboutUs/>} />
+            <Route path="Contactus" element={<Contact/>} />
+            
             <Route path="carousel" element={<Carousell/>}/>
             {/* <Route path="login" element={<Login/>} /> */}
             <Route path="list" element={<ListOfCoaches/>} />

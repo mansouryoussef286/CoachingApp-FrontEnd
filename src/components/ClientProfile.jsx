@@ -25,11 +25,11 @@ export const ClientProfile = () => {
         credentials: "include",
     }
 
-    const response =  fetch("https://localhost:7109/api/Client/GetProfile/ClientProfile", metadata).catch((err) => {
-        console.log(err)
-    });
+    // const response =  fetch("https://localhost:7109/api/Client/GetProfile/ClientProfile", metadata).catch((err) => {
+    //     console.log(err)
+    // });
 
-    console.log(response);
+    // console.log(response);
 
     return (
         <>

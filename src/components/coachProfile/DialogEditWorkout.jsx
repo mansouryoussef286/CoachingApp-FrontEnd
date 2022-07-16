@@ -48,7 +48,8 @@ export const DialogEditWorkout = (props) => {
 		}
 	}
 
-	const { data: exercises, loading, error, refetch } = useFetch('http://localhost:8888/excercises');
+	// const { data: exercises, loading, error, refetch } = useFetch('http://localhost:8888/excercises');
+	const { data: exercises, loading, error, refetch } = useFetch('https://easyfit.azurewebsites.net/api/Exercise');
 
 	if (loading) return (<div className='center-div'> <Spinner animation="grow" /></div>);
 	if (exercises == null) return (<div className='center-div'> <Spinner animation="grow" /></div>);
@@ -77,6 +78,7 @@ export const DialogEditWorkout = (props) => {
 			name: workoutExcercises.name,
 			workout_Exercises: wExsss
 		});
+		// axios.put(`https://localhost:7109/api/Workout/${location.state.id}`,
 		axios.put(`https://easyfit.azurewebsites.net/api/Workout/${location.state.id}`,
 			{
 				id: location.state.id,
@@ -149,7 +151,7 @@ export const DialogEditWorkout = (props) => {
 								<span>Excercises </span>
 								<div className='d-flex '>
 									<select className='' onChange={handlerInput} id='dropdownexcercises'>
-										{exercises.map((exercise) => <option value={exercise.id}>{exercise.description} </option>)}
+										{/* {exercises.map((exercise) => <option value={exercise.id}>{exercise.description} </option>)} */}
 
 									</select>
 									<input type="number" name="sets" placeholder="sets" style={{ "width": "18%" }} value={sets} onChange={handlerInput} />
