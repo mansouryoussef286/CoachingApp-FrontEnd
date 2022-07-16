@@ -112,7 +112,7 @@ export const DialogEdit = (props) => {
                                                                 <input
                                                                         type="text"
                                                                         id="Name"
-                                                                        name="Name"
+                                                                        name="firstName"
                                                                         placeholder="Enter Name"
                                                                         value={register.firstName}
                                                                         onChange={handlerInput}
@@ -139,7 +139,7 @@ export const DialogEdit = (props) => {
                                                                 <input
                                                                         type="number"
                                                                         id="Age"
-                                                                        name="Age"
+                                                                        name="age"
                                                                         placeholder="Enter Age"
                                                                         value={register.age}
                                                                         onChange={handlerInput}
@@ -152,7 +152,7 @@ export const DialogEdit = (props) => {
                                                                 <input
                                                                         type="number"
                                                                         id="Mobile"
-                                                                        name="Mobile"
+                                                                        name="mobileNum"
                                                                         placeholder="Enter Mobile Number"
                                                                         value={register.mobileNum}
                                                                         onChange={handlerInput}
@@ -165,7 +165,7 @@ export const DialogEdit = (props) => {
                                                                 <span>Address </span>
                                                                 <input type="text"
                                                                         id="street"
-                                                                        name="street" placeholder="1234 Main St"
+                                                                        name="country" placeholder="1234 Main St"
                                                                         value={register.country}
                                                                         onChange={handlerInput}
                                                                 />
@@ -175,7 +175,7 @@ export const DialogEdit = (props) => {
                                                         <div className='inputB'>
                                                                 <input
                                                                         type="text"
-                                                                        id="City" name="City"
+                                                                        id="city" name="City"
                                                                         placeholder="Enter City"
                                                                         value={register.city}
                                                                         onChange={handlerInput}
