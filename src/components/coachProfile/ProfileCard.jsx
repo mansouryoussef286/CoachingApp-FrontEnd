@@ -6,6 +6,7 @@ import { Dialog } from 'primereact/dialog';
 
 import { DialogEdit } from './DialogEdit'
 import { useFetch } from '../../useFetch';
+import Spinner from 'react-bootstrap/Spinner';
 export const ProfileCard = () => {
     let [client, setClient] = useState(
         {
@@ -24,7 +25,7 @@ export const ProfileCard = () => {
         }
     );
 
-
+    let info=null;
     const [displayBasic, setDisplayBasic] = useState(false);
     const [position, setPosition] = useState('center');
     const [displayResponsive, setDisplayResponsive] = useState(false);
@@ -89,7 +90,7 @@ export const ProfileCard = () => {
                         <img className='w-100 h-100' alt="Card" src="assets/images/coach.png" onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} />
                     </div>
                     <div className='align-self-center NameDiv'>
-                        {client.name}
+                        {info.firstName}
                     </div>
                     <div>
                         <br />
