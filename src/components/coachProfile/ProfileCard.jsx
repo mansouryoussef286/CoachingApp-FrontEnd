@@ -101,10 +101,7 @@ export const ProfileCard = () => {
                         {info.mobileNum}
                         <br />
                         {info.city}<span>,</span>{info.country}
-                        <br />
-                        {info.weight} <span>Kg</span>
-                        <br />
-                        {info.height} <span>Cm</span>
+                      
                     </div>
 
 
