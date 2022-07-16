@@ -129,6 +129,14 @@ export const CoachSignUpp = () => {
         
                 "id": 0,
                 "userId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+                "age": register.Age,
+                "lastName": "string",
+                "firstName": register.Name,
+                "mobileNum": register.Mobile,
+                "gender": true,
+                "city": register.City,
+                "country": register.street,
+                "yearsExperience": register.YearsofExperiance,
                 "userName": register.Name, 
                 "passWord": register.Pass,
                 "email": register.Email
