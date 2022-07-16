@@ -57,7 +57,7 @@ export const Signin = () => {
 
     if (e.target.name === 'Username') {
       if (regExEmail.test(username) === false || username === '') {
-        setMessage3('Email us not valid');
+        // setMessage3('Username us not valid');
         setTimeout(() => {
           setMessage3('');
         }, 3000);
@@ -137,8 +137,8 @@ export const Signin = () => {
             <h2>Sign in</h2>
             <form action="">
               <div className='inputB'>
-                <span>  <FontAwesomeIcon icon={faUser} />	&nbsp;Email </span>
-                <input type="text" id="Usname" name="Username" placeholder="Email" value={username} onChange={(e) => { onChangeHandler(e); inputValidate(e); }} />
+                <span>  <FontAwesomeIcon icon={faUser} />	&nbsp;User Name </span>
+                <input type="text" id="Usname" name="Username" placeholder="UserName" value={username} onChange={(e) => { onChangeHandler(e); inputValidate(e); }} />
                 <span className='text-danger mt-1'>{message3} </span>
               </div>
               <div className="inputB">

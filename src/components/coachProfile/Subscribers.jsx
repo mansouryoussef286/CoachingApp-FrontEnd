@@ -3,14 +3,14 @@ import { CardComponent } from './CardComponent'
 
 import { useFetch } from '../../useFetch';
 import Spinner from 'react-bootstrap/Spinner';
-
+import axios from 'axios';
 export const Subscribers = () => {
     const { data, loading, error, refetch } = useFetch('https://easyfit.azurewebsites.net/api/WSubscription/WorkoutSubsCoach');
 
     if (loading) return (<div className='center-div'> <Spinner animation="grow" /></div>);
     if (data == null) return (<div className='center-div'> <Spinner animation="grow" /></div>);
     if (error) return (<h1>error...</h1>);
-
+    
     // console.log(data);
 
     const approveSub = (cID, sID, startdate, status) => {
@@ -20,7 +20,19 @@ export const Subscribers = () => {
             date.getMonth() + 1,
             date.getDate()
         ].join('-');
-        console.log(cID, sID, startdate, status, today);
+
+        // console.log(cID, sID, startdate, status, today);
+
+        axios.put("https://easyfit.azurewebsites.net/api/WSubscription/CoachChangeSubStatus", {
+            ClientId: cID,
+            SubId: sID,
+            StartDate: startdate,
+            status: status,
+            RequestDate:  today
+        }).then((response) => {
+            // console.log(response);
+            refetch();
+        }).catch(err=>console.log(err));
     }
 
     const printWorkouts = (clientSub) => {
@@ -42,7 +54,7 @@ export const Subscribers = () => {
             }
         }))
     }
-    
+
     return (
         <CardComponent classes='workout-Card ' >
             <h3>
