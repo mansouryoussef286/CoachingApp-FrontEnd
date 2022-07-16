@@ -4,6 +4,8 @@ import { Navbar, Container, NavDropdown,Nav } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
+
 
 
 
@@ -13,6 +15,11 @@ export const Header = () => {
     let [color, setColor] = useState(false);
 
     let [isList, setIsList] = useState(false);
+    let [signup, setSignup] = useState(true);
+
+
+
+
     
     const changeColor = ()=>{
         if(window.scrollY >50){
@@ -20,7 +27,41 @@ export const Header = () => {
         }else{
             setColor(false);
         }
+        
     }
+    const checkCookie=()=>{
+        var cookies= document.cookie.split(';').map(cook=> cook.split('=')).reduce((acc,[key,value])=>({...acc,[key.trim()]:value}),{});
+     
+        if(cookies.role=='Client')
+        {
+         navigate("/ClientProfile")
+        }
+        else if (cookies.role=='Coach')
+        {
+            navigate("/CoachProfile")
+        }
+        else if (cookies.role==null )
+        {
+          
+            navigate("/signin")
+
+        }
+     }
+     const checkCookie2=()=>{
+        var cookies= document.cookie.split(';').map(cook=> cook.split('=')).reduce((acc,[key,value])=>({...acc,[key.trim()]:value}),{});
+     
+        if(cookies.role=='Client'|| cookies.role=='Coach')
+    {
+        setSignup(false);
+        }
+        else 
+        {
+            setSignup(true);
+
+        }
+        
+     }
+
 
     useEffect(()=>{
         window.addEventListener('scroll', changeColor);
@@ -30,10 +71,24 @@ export const Header = () => {
     useEffect(()=>{
         if(window.location.href.includes("list")){
             setIsList(true);
+            console.log(checkCookie2());
         }
     },[])
 
-    const ifIsList = ()=>{
+const logoutfrom=()=>{
+    axios.get("https://easyfit.azurewebsites.net/api/Account/LogOut",).then((response) => {
+        document.cookie = 'role=client; expires = Thu, 21 Aug 2014 20:00:00 UTC';
+        if(response.status==200)
+          {navigate("/");
+        }
+
+
+
+}).catch((err) => 
+console.log(err))
+}
+
+  const ifIsList = ()=>{
         if(isList){
             return(
                 <div></div>
@@ -41,7 +96,6 @@ export const Header = () => {
         }
         function App(){
 
-            const [show,setShow]=useState(true)
         }
     }
     return (
@@ -55,9 +109,9 @@ export const Header = () => {
 
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="aboutus">About Us</Nav.Link>
-                        <Nav.Link href="contactus">Contact Us</Nav.Link>
+                        <Nav.Link onClick={()=>{navigate("/")}}>Home</Nav.Link>
+                        <Nav.Link onClick={()=>{navigate("/aboutus")}}>About Us</Nav.Link>
+                        <Nav.Link onClick={()=>{navigate("/contactus")}}>Contact Us</Nav.Link>
 
 
 
@@ -74,12 +128,12 @@ export const Header = () => {
                     
                     
                     <div className='d-flex justify-content-center align-items-center'>
-
-                        <button className='btn  navbar-button' onClick={()=>{navigate("/CoachProfile")}}> coach profile</button>
-                        <button className='btn  navbar-button' onClick={()=>{navigate("/ClientProfile")}}>profile</button>
-                        <button className='btn  navbar-button' onClick={()=>{navigate("/signin")}}>sign in</button>
-                        <button className='btn  navbar-button' onClick={()=>{navigate("/signup")}}>sign up</button>
-                    </div>
+                      {/* <button className='btn  navbar-button' onClick={()=>{navigate("/CoachProfile")}}> coach profile</button> */}
+                        
+                        <button className='btn  navbar-button' onClick={()=>{checkCookie()}}>profile</button>
+                        {signup? <button className='btn  navbar-button' onClick={()=>{navigate("/signin")}}>sign in</button>: <button className='btn  navbar-button' onClick={()=>{logoutfrom()}}>Log out</button>}
+                        {signup?  <button className='btn  navbar-button' onClick={()=>{navigate("/signup")}}>sign up</button> :null}
+                        </div>
                 </Navbar.Collapse>
             </Container>
         </Navbar>

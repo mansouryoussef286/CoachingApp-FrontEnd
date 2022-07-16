@@ -281,7 +281,9 @@ export const Coaches = () => {
                     </div>
                     <div>
                         <h4 className="mb-1">{coach.firstName} {coach.lastName} </h4>
-                        <h6 className="mt-0 mb-3">Nutration</h6>
+                        <h6 className="mt-0 mb-3">Based:{coach.city}</h6>
+                        <h6 className="mt-0 mb-3">Based:{coach.yearsExperience}</h6>
+
                         <span className={`coach-badge status-avialable`}>available</span>
                         {/* <div className="car-buttons mt-2">
                             <Button icon="pi pi-search" className="p-button p-button-rounded mr-2" />

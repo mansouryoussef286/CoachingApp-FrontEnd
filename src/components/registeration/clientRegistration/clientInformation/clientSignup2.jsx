@@ -74,7 +74,7 @@ export const ClientSignup2 = (props) => {
       console.log(register.Height);
       console.log(register.Weight);
 
-      axios.post("https://localhost:7109/api/Account/ClientRegister", {
+      axios.post("https://easyfit.azurewebsites.net/api/Account/ClientRegister", {
         "id": 0,
         "userId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
         "age": data1.Age,
