@@ -3,13 +3,9 @@ import { CardComponent } from './CardComponent'
 import { Calendar } from 'antd';
 import moment from 'moment';
 import { useFetch } from '../../useFetch';
-import { Link,useNavigate} from 'react-router-dom';
 
 
-
-export const WorkoutCard = () => {
-    const navigate = useNavigate();
-
+export const FullExercies = () => {
     const { data, loading, error, refetch } = useFetch('https://easyfit.azurewebsites.net/api/Workout/Coach');
 
 
@@ -25,7 +21,7 @@ export const WorkoutCard = () => {
                 <td>{workout.duration}</td>
                 <td>{workout.notes}</td>
                 <td>
-                    <button className='btn btn-danger' onClick={() => navigate("/FullExercies" , {state: workout})} >open</button>
+                    <button className='btn btn-danger' >open</button>
                     
                 </td>
             </tr>)

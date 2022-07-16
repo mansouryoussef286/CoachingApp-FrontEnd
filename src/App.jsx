@@ -25,6 +25,7 @@ import { Carousell } from './components/landingPageComponents/Carousell';
 import { ListOfCoaches } from './components/ListOfCoaches';
 import { DialogEditWorkout } from './components/coachProfile/DialogEditWorkout';
 import ProtectedRoute from './ProtectedRouter';
+import { FullExercies } from './components/clientProfile/FullExercies';
 
 
 function App() {
@@ -40,13 +41,14 @@ function App() {
             <Route path="signup" element={<ClientSingnup/>} />
             <Route path="coachsignup" element={<CoachSignUp/>} />
             <Route path="ClientProfile" element={<ClientProfile/>} />
+            <Route path="FullExercies" element={<FullExercies/>} />
             <Route path="CoachProfile" element={<CoachProfile/>} />
             <Route path="DialogEditWorkout" element={<DialogEditWorkout/>} />
             {/* <Route element={<ProtectedRoute/>}>
             </Route> */}
 
-            <Route path="aboutus" element={<AboutUs/>} />
-            <Route path="contactus" element={<Contact/>} />
+            <Route path="Aboutus" element={<AboutUs/>} />
+            <Route path="Contactus" element={<Contact/>} />
             
             <Route path="carousel" element={<Carousell/>}/>
             {/* <Route path="login" element={<Login/>} /> */}
