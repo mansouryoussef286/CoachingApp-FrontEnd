@@ -21,9 +21,9 @@ export const GoalsCard = () => {
             <div className='d-flex flex-lg-nowrap flex-md-nowrap flex-wrap  align-items-center justify-content-center' id='aboutApp' style={{ height: 'auto' }} >
                 <select id="selectNumber" value={""} style={{ width: '130px' }} class="form-select" aria-label="Default select example">
                     <option >Select subscription</option>
-                    {data.map((data) => <option>{data.subID}:{data.coach.firstName} {data.coach.lastName} </option>)}
+                    {data.map((data) => <option>{data.subID}: {data.coach.firstName} {data.coach.lastName} {data.coach.mobileNum}</option>)}
                 </select>
-                <div className='about-section'>
+                <div className='about-section mx-4'>
                     <h6 className='text-capitalize fw-bold'>
                         Goals to get you started on your wellness journey
                     </h6>
