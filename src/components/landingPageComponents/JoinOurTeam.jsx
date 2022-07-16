@@ -13,6 +13,7 @@ export const JoinOurTeam = () => {
         }}>
             <span className='text-capitalize'>
                 join our community of great coaches &nbsp; &nbsp;  
+                
                 <a href='/coachsignup' style={{
                     fontSize: 'smaller',
                     textDecoration: 'underline',
