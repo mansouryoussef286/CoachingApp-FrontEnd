@@ -13,6 +13,9 @@ export const Header = () => {
     let [color, setColor] = useState(false);
 
     let [isList, setIsList] = useState(false);
+
+
+
     
     const changeColor = ()=>{
         if(window.scrollY >50){
@@ -20,7 +23,26 @@ export const Header = () => {
         }else{
             setColor(false);
         }
+        
     }
+    const checkCookie=()=>{
+        var cookies= document.cookie.split(';').map(cook=> cook.split('=')).reduce((acc,[key,value])=>({...acc,[key.trim()]:value}),{});
+     
+        if(cookies.role=='Client')
+        {
+         navigate("/ClientProfile")
+        }
+        else if (cookies.role=='Coach')
+        {
+            navigate("/CoachProfile")
+        }
+        else if (cookies.role==null )
+        {
+          
+            navigate("/signup")
+
+        }
+     }
 
     useEffect(()=>{
         window.addEventListener('scroll', changeColor);
@@ -41,11 +63,11 @@ export const Header = () => {
         }
         function App(){
 
-            const [show,setShow]=useState(true)
         }
     }
     return (
         <Navbar expand="lg"  fixed='top' className={color? 'navbar-custom' :''}>
+            
                 <Container >
                 <Navbar.Brand href="/">
                     <img src='./assets/images/musclelogo.png' className='header-logo'/>
@@ -74,9 +96,9 @@ export const Header = () => {
                     
                     
                     <div className='d-flex justify-content-center align-items-center'>
-
-                        <button className='btn  navbar-button' onClick={()=>{navigate("/CoachProfile")}}> coach profile</button>
-                        <button className='btn  navbar-button' onClick={()=>{navigate("/ClientProfile")}}>profile</button>
+                      {/* <button className='btn  navbar-button' onClick={()=>{navigate("/CoachProfile")}}> coach profile</button> */}
+                        
+                        <button className='btn  navbar-button' onClick={()=>{checkCookie()}}>profile</button>
                         <button className='btn  navbar-button' onClick={()=>{navigate("/signin")}}>sign in</button>
                         <button className='btn  navbar-button' onClick={()=>{navigate("/signup")}}>sign up</button>
                     </div>

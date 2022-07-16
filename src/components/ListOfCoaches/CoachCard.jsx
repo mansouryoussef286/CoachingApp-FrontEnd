@@ -41,7 +41,7 @@ export const CoachCard = () => {
        }
        else if (cookies.role=='Coach'||cookies.role==null)
        {
-        alert("Can not Sub signin as client");
+        // alert("Can not Sub signin as client");
         navigate("/");
        }
     }
