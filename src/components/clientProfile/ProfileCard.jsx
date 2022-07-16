@@ -14,7 +14,7 @@ import { useEffect } from 'react';
 
 export const ProfileCard = () => {
 
-
+    let info=null;
     let [client, setClient] = useState(null);
 
     const [displayBasic, setDisplayBasic] = useState(false);
@@ -25,10 +25,18 @@ export const ProfileCard = () => {
     const { data, loading, error, refetch } = useFetch("https://easyfit.azurewebsites.net/api/Client/GetProfile/ClientProfile");
     if (loading) return (<div className='center-div'> <Spinner animation="grow" /></div>);
     if (data==null) return (<div className='center-div'> <Spinner animation="grow" /></div>);
+    else{
+        console.log("dataaaaa"+data);
+
+
+       info =data.result;
+
+
+       console.log("infoo"+info);
+    }
 
     if (error) return (<h1>error...</h1>);
 
-    const info=data[0].result;
     
    
    
@@ -74,8 +82,10 @@ export const ProfileCard = () => {
     }
 
     return (
-        <>
-            <CardComponent classes='Main-Profile-Card' id='CoachProfile'>
+        <> 
+        
+        {info!=null?
+           (<CardComponent classes='Main-Profile-Card' id='CoachProfile'>
                 <img className="coverImage" src="https://cutewallpaper.org/21/plain-background-hd/Plain-Light-Blue-Background-1920x1080-Drkenfreedmanblog.xyz.png" alt="" />
 
                 <div className='d-flex flex-column mt-3 ' id='CoachProfile'>
@@ -107,7 +117,9 @@ export const ProfileCard = () => {
                         <DialogEdit data={info} fetch={refetch} />
                     </Dialog>
                 </div>
-            </CardComponent>
+            </CardComponent>):
+            <h1>profile not found</h1>
+        }
         </>
     );
 }

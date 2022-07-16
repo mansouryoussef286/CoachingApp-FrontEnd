@@ -31,7 +31,7 @@ export const Coaches = () => {
             numScroll: 1
         }
     ];
-    const { data, loading, error, refetch } = useFetch("https://localhost:7109/api/Coach");
+    const { data, loading, error, refetch } = useFetch("https://easyfit.azurewebsites.net/api/Coach");
 
     if (loading) return (<div> <Spinner animation="grow" /></div>);
     if (data==null) return (<h1>loading...</h1>);
@@ -283,14 +283,14 @@ export const Coaches = () => {
                         <h4 className="mb-1">{coach.firstName} {coach.lastName} </h4>
                         <h6 className="mt-0 mb-3">Nutration</h6>
                         <span className={`coach-badge status-avialable`}>available</span>
-                        <div className="car-buttons mt-2">
+                        {/* <div className="car-buttons mt-2">
                             <Button icon="pi pi-search" className="p-button p-button-rounded mr-2" />
                             <Button icon="pi pi-star-fill" className="p-button-success p-button-rounded mr-2" />
-                            <Button icon="pi pi-Linkedin" className="p-button-help p-button-rounded" />
+                            <Button icon="pi pi-Linkedin" className="p-button-help p-button-rounded" /> */}
 
                             {/* <FontAwesomeIcon icon={faFacebookF} /> */}
-                        <div><a href='#' className='btn btn-primary mt-1'>Profile</a></div>
-                        </div>
+                        {/* <div><a href='#' className='btn btn-primary mt-1'>Profile</a></div> */}
+                        {/* </div> */}
                     </div>
                 </div>
             </div>

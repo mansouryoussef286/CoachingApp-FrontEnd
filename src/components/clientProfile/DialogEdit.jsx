@@ -10,6 +10,7 @@ export const DialogEdit = (props) => {
 
         const [register, setregister] = useState({
                 firstName: props.data.firstName,
+                Email:  "user@example.com",
                 age: props.data.age,
                 mobileNum: props.data.mobileNum,
                 country: props.data.country,
@@ -45,7 +46,11 @@ export const DialogEdit = (props) => {
                         country: x.country,
                         city: x.city,
                         height: x.height,
-                        weight: x.weight
+                        weight: x.weight,
+                        userName: "test",
+                        passWord: "test",
+                        email: "user@example.com",
+                         lastName:"test"
                         //  [eventObject.target.name]:eventObject.target.value
                 })
 
