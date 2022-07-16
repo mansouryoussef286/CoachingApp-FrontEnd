@@ -6,8 +6,12 @@ import { DialogEditWorkout } from './DialogEditWorkout';
 import { useFetch } from '../../useFetch';
 import Spinner from 'react-bootstrap/Spinner';
 import axios from 'axios';
+import { Link,useNavigate} from 'react-router-dom';
+
 
 export const WorkoutCard = () => {
+    const navigate = useNavigate();
+
 
     const [displayBasic, setDisplayBasic] = useState(false);
     const [position, setPosition] = useState('center');
@@ -52,17 +56,18 @@ export const WorkoutCard = () => {
     }
 
     const printWorkouts = (workouts) => {
-        return (workouts.map((workout) => {
+        return (workouts.map((workout,index) => {
             return (<tr>
-                <th scope="row">1</th>
+                <th scope="row">{index+1}</th>
                 <td>{workout.name}</td>
                 <td>{workout.duration}</td>
                 <td>{workout.notes}</td>
                 <td>
-                    <button className='btn btn-warning' label="Show" icon="pi pi-external-link" onClick={() => onClick('displayResponsive2')}>edit</button>
+                    {/* <button className='btn btn-warning' label="Show" icon="pi pi-external-link" onClick={() => onClick('displayResponsive2')}>edit</button> */}
+                    <button className='btn btn-warning' label="Show" icon="pi pi-external-link" onClick={() => navigate("/DialogEditWorkout" , {state: workout})}>edit</button>
                     <button className='btn btn-danger' onClick={() => { deleteExcercise(workout.id) }}>delete</button>
                     <Dialog visible={displayResponsive2} onHide={() => onHide('displayResponsive2')} breakpoints={{ '960px': '75vw' }} style={{ width: '80vw' }} >
-                        <DialogEditWorkout />
+                        <DialogEditWorkout workout={workout} wid={workout.id}/>
                     </Dialog>
                 </td>
             </tr>)

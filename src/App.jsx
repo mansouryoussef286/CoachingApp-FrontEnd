@@ -23,6 +23,7 @@ import { CoachProfile } from './components/CoachProfile';
 
 import { Carousell } from './components/landingPageComponents/Carousell';
 import { ListOfCoaches } from './components/ListOfCoaches';
+import { DialogEditWorkout } from './components/coachProfile/DialogEditWorkout';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
 
             <Route path="ClientProfile" element={<ClientProfile/>} />
             <Route path="CoachProfile" element={<CoachProfile/>} />
+            <Route path="DialogEditWorkout" element={<DialogEditWorkout/>} />
 
             <Route path="carousel" element={<Carousell/>}/>
             {/* <Route path="login" element={<Login/>} /> */}
