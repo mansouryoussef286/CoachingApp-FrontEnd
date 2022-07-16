@@ -11,7 +11,7 @@ export const FullExercies = (props) => {
 const location = useLocation();
 let workoutID=location.state;
 console.log(workoutID);
-    const { data, loading, error, refetch } = useFetch(`https://easyfit.azurewebsites.net/api/Exercise/getExerciseByWorkOutId?WorkoutId=${workoutID}&SubId=1`);
+    const { data, loading, error, refetch } = useFetch(`https://easyfit.azurewebsites.net/api/Exercise/getExerciseByWorkOutId?WorkoutId=${workoutID}&SubId=4`);
 
 
     const onPanelChange = (value, mode) => {
@@ -50,7 +50,7 @@ console.log(workoutID);
                             </tr>
                         </thead>
                         <tbody>
-                            {printWorkouts(data)}
+                            {data && printWorkouts(data)}
                         </tbody>
                     </table>
                 </div>

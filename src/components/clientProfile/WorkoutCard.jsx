@@ -12,7 +12,7 @@ import Spinner from 'react-bootstrap/Spinner';
 export const WorkoutCard = () => {
     const navigate = useNavigate();
 
-    const { data, loading, error, refetch } = useFetch('https://easyfit.azurewebsites.net/api/Workout/workoutClientSub?SubId=1');
+    const { data, loading, error, refetch } = useFetch('https://easyfit.azurewebsites.net/api/Workout/workoutClientSub?SubId=4');
 
     if (loading) return (<div className='center-div'> <Spinner animation="grow" /></div>);
     if (data == null) return (<div className='center-div'> <Spinner animation="grow" /></div>);
