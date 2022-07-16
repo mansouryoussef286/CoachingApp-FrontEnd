@@ -28,15 +28,19 @@ export const CoachCard = () => {
             date.getMonth() + 1,
             date.getDate()
         ].join('-');
-        if (cookies.role == 'Client') {
-            axios.post("https://easyfit.azurewebsites.net/api/WSubscription/NewSubRequest", {
-                "subId": 1,
-                "date": today,
-                "coachId": ID
+       if(cookies.role=='Client')
+       {
+        axios.post("https://easyfit.azurewebsites.net/api/WSubscription/NewSubRequest",{
+            "subId": 4,
+            "date": today,
+            "coachId": ID
 
         }).then((response) => {          navigate("/");
     })
-        .catch((err)=>{console.log(err)})
+        .catch((err)=>{
+            console.log(err)
+            alert("Already subed to that coach");
+            navigate("/");})
        }
        else if (cookies.role=='Coach'||cookies.role==null)
        {
