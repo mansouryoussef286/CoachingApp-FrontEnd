@@ -124,7 +124,7 @@ export const CoachSignUpp = () => {
 
 //call api
 
-        axios.post("https://localhost:7109/api/Account/CoachRegister", {
+        axios.post("https://easyfit.azurewebsites.net/api/Account/CoachRegister", {
 
         
                 "id": 0,
