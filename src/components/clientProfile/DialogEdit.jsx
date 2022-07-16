@@ -218,7 +218,7 @@ export const DialogEdit = (props) => {
                                                                 <input type="button" value="Edit" onClick={()=>{
                                                                         console.log(register);
                                                                         axios.put(`https://easyfit.azurewebsites.net/api/Client/UpdateClient/${props.data.id}`,register)
-                                                                        .then((data)=>{console.log(data);})
+                                                                        .then((data)=>{console.log(data);props.fetch()})
                                                                         .catch((err)=>console.log(err))
                                                                 }}/>
                                                         </div>
