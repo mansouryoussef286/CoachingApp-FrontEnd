@@ -12,7 +12,7 @@ import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 
 import { useFetch } from '../../useFetch';
 import axios from 'axios';
-import { Link,useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 
 export const CoachCard = () => {
