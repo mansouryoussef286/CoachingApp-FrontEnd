@@ -13,7 +13,6 @@ export const Header = () => {
     let [color, setColor] = useState(false);
 
     let [isList, setIsList] = useState(false);
-    const [show,setShow]=useState(false)
     
     const changeColor = ()=>{
         if(window.scrollY >50){
@@ -42,6 +41,7 @@ export const Header = () => {
         }
         function App(){
 
+            const [show,setShow]=useState(true)
         }
     }
     return (
@@ -74,12 +74,11 @@ export const Header = () => {
                     
                     
                     <div className='d-flex justify-content-center align-items-center'>
-                        
-                          {(show)?<button className='btn  navbar-button' onClick={()=>{navigate("/CoachProfile")}}> coach profile</button>:<div></div> }
-                        {  (show)?<button className='btn  navbar-button' onClick={()=>{navigate("/ClientProfile")}}>profile</button>:<div></div>
-                        }
+
+                        <button className='btn  navbar-button' onClick={()=>{navigate("/CoachProfile")}}> coach profile</button>
+                        <button className='btn  navbar-button' onClick={()=>{navigate("/ClientProfile")}}>profile</button>
                         <button className='btn  navbar-button' onClick={()=>{navigate("/signin")}}>sign in</button>
-                        <button className='btn  navbar-button'onClick={()=>{setShow(true);navigate("/signup");}}>sign up</button>
+                        <button className='btn  navbar-button' onClick={()=>{navigate("/signup")}}>sign up</button>
                     </div>
                 </Navbar.Collapse>
             </Container>
