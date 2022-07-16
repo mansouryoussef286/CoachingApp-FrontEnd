@@ -10,7 +10,7 @@ import { Link,useNavigate} from 'react-router-dom';
 export const WorkoutCard = () => {
     const navigate = useNavigate();
 
-    const { data, loading, error, refetch } = useFetch('https://easyfit.azurewebsites.net/api/Workout/Coach');
+    const { data, loading, error, refetch } = useFetch('https://easyfit.azurewebsites.net/api/Workout/workoutClientSub?SubId=1');
 
 
     const onPanelChange = (value, mode) => {
