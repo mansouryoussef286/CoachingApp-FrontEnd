@@ -4,6 +4,8 @@ import { Navbar, Container, NavDropdown,Nav } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
+
 
 
 
@@ -13,6 +15,8 @@ export const Header = () => {
     let [color, setColor] = useState(false);
 
     let [isList, setIsList] = useState(false);
+    let [signup, setSignup] = useState(false);
+
 
 
 
@@ -43,6 +47,21 @@ export const Header = () => {
 
         }
      }
+     const checkCookie2=()=>{
+        var cookies= document.cookie.split(';').map(cook=> cook.split('=')).reduce((acc,[key,value])=>({...acc,[key.trim()]:value}),{});
+     
+        if(cookies.role=='Client'|| cookies.role=='Coach')
+    {
+        setSignup(false);
+        }
+        else 
+        {
+            setSignup(true);
+
+        }
+        
+     }
+
 
     useEffect(()=>{
         window.addEventListener('scroll', changeColor);
@@ -55,7 +74,20 @@ export const Header = () => {
         }
     },[])
 
-    const ifIsList = ()=>{
+const logoutfrom=()=>{
+    axios.get("https://easyfit.azurewebsites.net/api/Account/LogOut",).then((response) => {
+        document.cookie = 'role=client; expires = Thu, 21 Aug 2014 20:00:00 UTC';
+        if(response.status==200)
+          {navigate("/");
+        }
+
+
+
+}).catch((err) => 
+console.log(err))
+}
+
+  const ifIsList = ()=>{
         if(isList){
             return(
                 <div></div>
@@ -67,7 +99,7 @@ export const Header = () => {
     }
     return (
         <Navbar expand="lg"  fixed='top' className={color? 'navbar-custom' :''}>
-            
+            {checkCookie2()}
                 <Container >
                 <Navbar.Brand href="/">
                     <img src='./assets/images/musclelogo.png' className='header-logo'/>
@@ -99,9 +131,9 @@ export const Header = () => {
                       {/* <button className='btn  navbar-button' onClick={()=>{navigate("/CoachProfile")}}> coach profile</button> */}
                         
                         <button className='btn  navbar-button' onClick={()=>{checkCookie()}}>profile</button>
-                        <button className='btn  navbar-button' onClick={()=>{navigate("/signin")}}>sign in</button>
-                        <button className='btn  navbar-button' onClick={()=>{navigate("/signup")}}>sign up</button>
-                    </div>
+                        {signup? <button className='btn  navbar-button' onClick={()=>{navigate("/signin")}}>sign in</button>: <button className='btn  navbar-button' onClick={()=>{logoutfrom()}}>Log out</button>}
+                        {signup?  <button className='btn  navbar-button' onClick={()=>{navigate("/signup")}}>sign up</button> :null}
+                        </div>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
