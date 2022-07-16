@@ -31,7 +31,7 @@ export const ProfileCard = () => {
 
        info =data.result;
 
-
+ 
        console.log("infoo"+info);
     }
 
