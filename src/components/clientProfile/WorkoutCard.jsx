@@ -4,6 +4,8 @@ import { Calendar } from 'antd';
 import moment from 'moment';
 import { useFetch } from '../../useFetch';
 import { Link,useNavigate} from 'react-router-dom';
+import Spinner from 'react-bootstrap/Spinner';
+
 
 
 
@@ -12,6 +14,10 @@ export const WorkoutCard = () => {
 
     const { data, loading, error, refetch } = useFetch('https://easyfit.azurewebsites.net/api/Workout/workoutClientSub?SubId=1');
 
+    if (loading) return (<div className='center-div'> <Spinner animation="grow" /></div>);
+    if (data == null) return (<div className='center-div'> <Spinner animation="grow" /></div>);
+
+    if (error) return (<h1>error...</h1>);
 
     const onPanelChange = (value, mode) => {
         console.log(value.format('YYYY-MM-DD'), mode);
@@ -25,7 +31,7 @@ export const WorkoutCard = () => {
                 <td>{workout.duration}</td>
                 <td>{workout.notes}</td>
                 <td>
-                    <button className='btn btn-danger' onClick={() => navigate("/FullExercies" , {state: workout})} >open</button>
+                    <button className='btn btn-danger' onClick={() => navigate("/FullExercies" , {state: workout.id})} >open</button>
                     
                 </td>
             </tr>)
