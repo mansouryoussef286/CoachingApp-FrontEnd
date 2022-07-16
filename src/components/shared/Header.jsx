@@ -15,7 +15,7 @@ export const Header = () => {
     let [color, setColor] = useState(false);
 
     let [isList, setIsList] = useState(false);
-    let [signup, setSignup] = useState(false);
+    let [signup, setSignup] = useState(true);
 
 
 
@@ -71,6 +71,7 @@ export const Header = () => {
     useEffect(()=>{
         if(window.location.href.includes("list")){
             setIsList(true);
+            console.log(checkCookie2());
         }
     },[])
 
@@ -99,7 +100,6 @@ console.log(err))
     }
     return (
         <Navbar expand="lg"  fixed='top' className={color? 'navbar-custom' :''}>
-            {checkCookie2()}
                 <Container >
                 <Navbar.Brand href="/">
                     <img src='./assets/images/musclelogo.png' className='header-logo'/>
